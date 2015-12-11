@@ -435,7 +435,7 @@ release/moc_mainwindow.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow 
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
 		../Vika3nytt/mainwindow.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_dialogaddsci.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -541,7 +541,7 @@ release/moc_dialogaddsci.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
 		../Vika3nytt/dialogaddsci.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddsci.h -o release\moc_dialogaddsci.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddsci.h -o release\moc_dialogaddsci.cpp
 
 release/moc_dialogeditsci.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -647,7 +647,7 @@ release/moc_dialogeditsci.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
 		../Vika3nytt/dialogeditsci.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogeditsci.h -o release\moc_dialogeditsci.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogeditsci.h -o release\moc_dialogeditsci.cpp
 
 release/moc_dialogeditcom.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -753,7 +753,7 @@ release/moc_dialogeditcom.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
 		../Vika3nytt/dialogeditcom.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogeditcom.h -o release\moc_dialogeditcom.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogeditcom.h -o release\moc_dialogeditcom.cpp
 
 release/moc_dialogaddcom.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -859,7 +859,7 @@ release/moc_dialogaddcom.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
 		../Vika3nytt/dialogaddcom.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddcom.h -o release\moc_dialogaddcom.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddcom.h -o release\moc_dialogaddcom.cpp
 
 release/moc_dialogaddsciconnection.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -1115,7 +1115,7 @@ release/moc_dialogaddsciconnection.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
 		../Vika3nytt/dialogaddsciconnection.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddsciconnection.h -o release\moc_dialogaddsciconnection.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddsciconnection.h -o release\moc_dialogaddsciconnection.cpp
 
 release/moc_dialogaddcompconnection.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -1372,7 +1372,7 @@ release/moc_dialogaddcompconnection.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
 		../Vika3nytt/dialogaddcompconnection.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Einn/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddcompconnection.h -o release\moc_dialogaddcompconnection.cpp
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\dialogaddcompconnection.h -o release\moc_dialogaddcompconnection.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1988,7 +1988,10 @@ release/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
 		../Vika3nytt/dialogaddsci.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
-		../Vika3nytt/dialogeditsci.h
+		../Vika3nytt/dialogeditsci.h \
+		../Vika3nytt/dialogaddcompconnection.h \
+		../Vika3nytt/People.h \
+		../Vika3nytt/dialogaddsciconnection.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Vika3nytt\mainwindow.cpp
 
 release/core.o: ../Vika3nytt/core.cpp ../Vika3nytt/core.h \
@@ -3654,7 +3657,31 @@ release/dialogaddsciconnection.o: ../Vika3nytt/dialogaddsciconnection.cpp ../Vik
 		C:/Qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
-		ui_dialogaddsciconnection.h
+		ui_dialogaddsciconnection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QComboBox \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialogaddsciconnection.o ..\Vika3nytt\dialogaddsciconnection.cpp
 
 release/dialogaddcompconnection.o: ../Vika3nytt/dialogaddcompconnection.cpp ../Vika3nytt/dialogaddcompconnection.h \
@@ -3912,7 +3939,31 @@ release/dialogaddcompconnection.o: ../Vika3nytt/dialogaddcompconnection.cpp ../V
 		C:/Qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
-		ui_dialogaddcompconnection.h
+		ui_dialogaddcompconnection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QComboBox \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialogaddcompconnection.o ..\Vika3nytt\dialogaddcompconnection.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 

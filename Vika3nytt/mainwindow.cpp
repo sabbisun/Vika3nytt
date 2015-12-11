@@ -31,6 +31,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->treeWidget_comp->setColumnWidth(1, 150);
     ui->treeWidget_comp->setColumnWidth(2, 100);*/
 
+    ui->Button_removeSci->setEnabled(false);
+    ui->Button_removeComp->setEnabled(false);
+    ui->Button_editComp->setEnabled(false);
+    ui->Button_addCompConnection->setEnabled(false);
+
 }
 
 MainWindow::~MainWindow()
@@ -396,8 +401,28 @@ void MainWindow::on_Button_removeSci_clicked()
 void MainWindow::on_treeWidget_sci_itemSelectionChanged()
 {
     ui->Button_removeSci->setEnabled(true);
-    ui->Button_editSci->setEnabled(true);
-    ui->Button_addSciConnection->setEnabled(true);
+    if(!ui->treeWidget_sci->currentItem()->parent())
+    {
+        ui->Button_editSci->setEnabled(true);
+        ui->Button_addSciConnection->setEnabled(true);
+    }
+    else
+    {
+        ui->Button_editSci->setEnabled(false);
+        ui->Button_addSciConnection->setEnabled(false);
+    }
+
+//    ui->Button_removeComp->setEnabled(true);
+//    if(!ui->treeWidget_comp->currentItem()->parent())
+//    {
+//        ui->Button_editComp->setEnabled(true);
+//        ui->Button_addCompConnection->setEnabled(true);
+//    }
+//    else
+//    {
+//        ui->Button_editComp->setEnabled(false);
+//        ui->Button_addCompConnection->setEnabled(false);
+//    }
 }
 
 void MainWindow::on_Button_removeComp_clicked()
@@ -446,8 +471,25 @@ void MainWindow::on_Button_removeComp_clicked()
 void MainWindow::on_treeWidget_comp_itemSelectionChanged()
 {
     ui->Button_removeComp->setEnabled(true);
-    ui->Button_editComp->setEnabled(true);
-    ui->Button_addCompConnection->setEnabled(true);
+    if(!ui->treeWidget_comp->currentItem()->parent())
+    {
+        ui->Button_editComp->setEnabled(true);
+        ui->Button_addCompConnection->setEnabled(true);
+    }
+    else
+    {
+        ui->Button_editComp->setEnabled(false);
+        ui->Button_addCompConnection->setEnabled(false);
+    }
+}
+
+void MainWindow::on_Button_editComp_clicked()
+{
+    ui->Button_editComp->setEnabled(false);
+    if(!ui->treeWidget_comp->currentItem()->parent())
+    {
+
+    }
 }
 
 void MainWindow::on_Button_addSciConnection_clicked()
