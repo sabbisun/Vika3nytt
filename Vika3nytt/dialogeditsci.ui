@@ -18,7 +18,7 @@
     <widget class="QLabel" name="label_Dialogname">
      <property name="font">
       <font>
-       <family>Alien Encounters</family>
+       <family>Arial</family>
       </font>
      </property>
      <property name="text">

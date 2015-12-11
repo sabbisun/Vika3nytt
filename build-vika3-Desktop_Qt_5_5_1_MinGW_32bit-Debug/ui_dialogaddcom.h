@@ -56,7 +56,7 @@ public:
         label_addCom = new QLabel(DialogAddCom);
         label_addCom->setObjectName(QStringLiteral("label_addCom"));
         QFont font;
-        font.setFamily(QStringLiteral("Alien Encounters"));
+        font.setFamily(QStringLiteral("Arial"));
         font.setPointSize(36);
         font.setBold(true);
         font.setItalic(false);

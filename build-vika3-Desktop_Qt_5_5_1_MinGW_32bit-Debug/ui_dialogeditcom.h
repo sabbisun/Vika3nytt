@@ -57,7 +57,7 @@ public:
         label_Dialogname = new QLabel(DialogEditCom);
         label_Dialogname->setObjectName(QStringLiteral("label_Dialogname"));
         QFont font;
-        font.setFamily(QStringLiteral("Alien Encounters"));
+        font.setFamily(QStringLiteral("Arial"));
         label_Dialogname->setFont(font);
         label_Dialogname->setTextFormat(Qt::RichText);
         label_Dialogname->setScaledContents(false);

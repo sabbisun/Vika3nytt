@@ -64,7 +64,7 @@ public:
         label_addSci = new QLabel(DialogAddSci);
         label_addSci->setObjectName(QStringLiteral("label_addSci"));
         QFont font;
-        font.setFamily(QStringLiteral("Alien Encounters"));
+        font.setFamily(QStringLiteral("Arial"));
         label_addSci->setFont(font);
         label_addSci->setTextFormat(Qt::RichText);
         label_addSci->setAlignment(Qt::AlignCenter);
