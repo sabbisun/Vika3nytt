@@ -15,5 +15,12 @@ DialogAddCom::~DialogAddCom()
 
 void DialogAddCom::on_checkBox_created_clicked()
 {
-    ui->lineEdit_addCreationYear->setEnabled(true);
+    if(ui->checkBox_created->isChecked())
+    {
+        ui->lineEdit_addCreationYear->setEnabled(true);
+    }
+    else
+    {
+       ui->lineEdit_addCreationYear->setEnabled(false);
+    }
 }

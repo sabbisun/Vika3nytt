@@ -15,5 +15,13 @@ DialogAddSci::~DialogAddSci()
 
 void DialogAddSci::on_checkBox_alive_clicked()
 {
-    ui->lineEdit_addDeathYear->setDisabled(true);
+    if(ui->checkBox_alive->isChecked())
+    {
+        ui->lineEdit_addDeathYear->setEnabled(false);
+    }
+    else
+    {
+         ui->lineEdit_addDeathYear->setEnabled(true);
+    }
+
 }

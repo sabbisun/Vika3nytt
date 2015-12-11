@@ -10,6 +10,7 @@
 #include "core.h"
 #include "people.h"
 #include "machines.h"
+#include "dialogeditcom.h"
 
 using namespace std;
 

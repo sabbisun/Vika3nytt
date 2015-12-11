@@ -15,5 +15,12 @@ DialogEditCom::~DialogEditCom()
 
 void DialogEditCom::on_checkBox_built_clicked()
 {
-    ui->lineEdit_yearDeth->setEnabled(true);
+    if(ui->checkBox_built->isChecked())
+    {
+     ui->lineEdit_yearDeth->setEnabled(true);
+    }
+    else
+    {
+        ui->lineEdit_yearDeth->setEnabled(false);
+    }
 }

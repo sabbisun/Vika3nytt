@@ -411,18 +411,6 @@ void MainWindow::on_treeWidget_sci_itemSelectionChanged()
         ui->Button_editSci->setEnabled(false);
         ui->Button_addSciConnection->setEnabled(false);
     }
-
-//    ui->Button_removeComp->setEnabled(true);
-//    if(!ui->treeWidget_comp->currentItem()->parent())
-//    {
-//        ui->Button_editComp->setEnabled(true);
-//        ui->Button_addCompConnection->setEnabled(true);
-//    }
-//    else
-//    {
-//        ui->Button_editComp->setEnabled(false);
-//        ui->Button_addCompConnection->setEnabled(false);
-//    }
 }
 
 void MainWindow::on_Button_removeComp_clicked()
@@ -488,7 +476,12 @@ void MainWindow::on_Button_editComp_clicked()
     ui->Button_editComp->setEnabled(false);
     if(!ui->treeWidget_comp->currentItem()->parent())
     {
-
+        qDebug() << ui->treeWidget_comp->currentItem()->text(3);
+        qDebug() << ui->treeWidget_comp->currentItem()->text(0);
+        int id = ui->treeWidget_comp->currentItem()->text(3).toInt();
+        DialogEditCom editor;
+        editor.setModal(true);
+        editor.exec();
     }
 }
 
