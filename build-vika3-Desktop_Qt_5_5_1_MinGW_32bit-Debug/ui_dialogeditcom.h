@@ -40,7 +40,7 @@ public:
     QCheckBox *checkBox_built;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_buildYear;
-    QLineEdit *lineEdit_yearDeth;
+    QLineEdit *lineEdit_yearBuilt;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *Button_confirm;
@@ -106,11 +106,11 @@ public:
 
         horizontalLayout_5->addWidget(label_buildYear);
 
-        lineEdit_yearDeth = new QLineEdit(DialogEditCom);
-        lineEdit_yearDeth->setObjectName(QStringLiteral("lineEdit_yearDeth"));
-        lineEdit_yearDeth->setEnabled(false);
+        lineEdit_yearBuilt = new QLineEdit(DialogEditCom);
+        lineEdit_yearBuilt->setObjectName(QStringLiteral("lineEdit_yearBuilt"));
+        lineEdit_yearBuilt->setEnabled(false);
 
-        horizontalLayout_5->addWidget(lineEdit_yearDeth);
+        horizontalLayout_5->addWidget(lineEdit_yearBuilt);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
