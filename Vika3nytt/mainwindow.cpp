@@ -71,7 +71,6 @@ void MainWindow::searchCompMenu(const string search)
         c1 = core.searchComType(search);
         setTreeComp(c1);
     }
-
 }
 
 void MainWindow::setTreeSci()
@@ -80,13 +79,13 @@ void MainWindow::setTreeSci()
     ui->treeWidget_sci->setColumnCount(4);
     ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Age" << "Id");
     ui->treeWidget_sci->setColumnHidden(3, true);
-
-    People scientists = core.sortSciAlpabetFront();
+    People scientists = core.sortSciAlpabetBack();
 
     for(int i = 0; i < scientists.getSize(); i++)
     {
         addTreeRootSci(scientists.getIndi(i));
     }
+     ui->treeWidget_sci->sortByColumn(0,Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeSci(People & scientists)
@@ -109,12 +108,13 @@ void MainWindow::setTreeComp()
     ui->treeWidget_comp->setHeaderLabels(QStringList() << "Name" << "Type" << "Built" << "Id");
     ui->treeWidget_comp->setColumnHidden(3, true);
 
-    Machines computers = core.sortCompAlpabetFront();
+    Machines computers = core.sortCompAlpabetBack();
 
     for(int i = 0; i < computers.getSize(); i++)
     {
         addTreeRootComp(computers.getComputer(i));
     }
+    ui->treeWidget_comp->sortByColumn(0,Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeComp(Machines & computers)
