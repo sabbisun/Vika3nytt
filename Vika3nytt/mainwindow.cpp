@@ -14,13 +14,27 @@ MainWindow::MainWindow(QWidget *parent) :
     createDropSearchForComp();
     setTreeComp();
 
+    int col = 3;
+    int max = 200;
+    for(int i = 0; i < col; i++)
+    {
+        ui->treeWidget_sci->setColumnWidth(i, max);
+        ui->treeWidget_comp->setColumnWidth(i, max);
+        max = max - 50;
+    }
+    /*   //eða:
+    ui->treeWidget_sci->setColumnWidth(0, 200);
+    ui->treeWidget_sci->setColumnWidth(1, 150);
+    ui->treeWidget_sci->setColumnWidth(2, 100);
+
+    ui->treeWidget_comp->setColumnWidth(0, 200);
+    ui->treeWidget_comp->setColumnWidth(1, 150);
+    ui->treeWidget_comp->setColumnWidth(2, 100);*/
 
     ui->Button_removeSci->setEnabled(false);
     ui->Button_removeComp->setEnabled(false);
     ui->Button_editComp->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
-
-
 
 }
 
@@ -79,7 +93,6 @@ void MainWindow::searchCompMenu(const string search)
         c1 = core.searchComType(search);
         setTreeComp(c1);
     }
-
 }
 
 void MainWindow::setTreeSci()
@@ -88,13 +101,13 @@ void MainWindow::setTreeSci()
     ui->treeWidget_sci->setColumnCount(4);
     ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Age" << "Id");
     ui->treeWidget_sci->setColumnHidden(3, true);
-
-    People scientists = core.sortSciAlpabetFront();
+    People scientists = core.sortSciAlpabetBack();
 
     for(int i = 0; i < scientists.getSize(); i++)
     {
         addTreeRootSci(scientists.getIndi(i));
     }
+     ui->treeWidget_sci->sortByColumn(0,Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeSci(People & scientists)
@@ -117,12 +130,13 @@ void MainWindow::setTreeComp()
     ui->treeWidget_comp->setHeaderLabels(QStringList() << "Name" << "Type" << "Built" << "Id");
     ui->treeWidget_comp->setColumnHidden(3, true);
 
-    Machines computers = core.sortCompAlpabetFront();
+    Machines computers = core.sortCompAlpabetBack();
 
     for(int i = 0; i < computers.getSize(); i++)
     {
         addTreeRootComp(computers.getComputer(i));
     }
+    ui->treeWidget_comp->sortByColumn(0,Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeComp(Machines & computers)
@@ -357,7 +371,7 @@ void MainWindow::on_Button_removeSci_clicked()
         //messagebox
         QMessageBox msgBox;
         msgBox.setText("Removal of a scientist");
-        msgBox.setInformativeText("Are you sure you want to remove scientist with the id " + temp + "?");
+        msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         //msgBox.setDefaultButton(QMessageBox::Cancel);  //maybe
         int ret = msgBox.exec();
@@ -419,7 +433,7 @@ void MainWindow::on_Button_removeComp_clicked()
 
         QMessageBox msgBox;
         msgBox.setText("Removal of a scomputer");
-        msgBox.setInformativeText("Are you sure you want to remove the computer with the id " + temp + "?");
+        msgBox.setInformativeText("Are you sure you want to remove the selected computer");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBox.exec();
         // Messagebox asks if user wants to remove or not
