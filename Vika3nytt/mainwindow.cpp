@@ -482,9 +482,14 @@ void MainWindow::on_Button_editComp_clicked()
     {
         qDebug() << ui->treeWidget_comp->currentItem()->text(3);
         qDebug() << ui->treeWidget_comp->currentItem()->text(0);
-        int id = ui->treeWidget_comp->currentItem()->text(3).toInt();
+        QString name = ui->treeWidget_comp->currentItem()->text(0);
+        QString type = ui->treeWidget_comp->currentItem()->text(1);
+        QString buildYear = ui->treeWidget_comp->currentItem()->text(2);
         DialogEditCom editor;
         editor.setModal(true);
+        editor.setName(name);
+        editor.setType(type);
+        editor.setBuildYear(buildYear);
         editor.exec();
     }
 }

@@ -2,6 +2,7 @@
 #define DIALOGEDITCOM_H
 
 #include <QDialog>
+#include <QString>
 
 namespace Ui {
 class DialogEditCom;
@@ -14,6 +15,9 @@ class DialogEditCom : public QDialog
 public:
     explicit DialogEditCom(QWidget *parent = 0);
     ~DialogEditCom();
+    void setName(QString&);
+    void setType(QString&);
+    void setBuildYear(QString&);
 
 private slots:
     void on_checkBox_built_clicked();
