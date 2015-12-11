@@ -18,6 +18,8 @@ public:
 
 private slots:
     void on_checkBox_alive_clicked();
+    void on_checkBox_female_clicked();
+    void on_checkBox_male_clicked();
 
 private:
     Ui::DialogEditSci *ui;
