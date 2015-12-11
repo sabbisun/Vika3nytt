@@ -82,7 +82,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_yearDeth">
+        <widget class="QLineEdit" name="lineEdit_yearBuilt">
          <property name="enabled">
           <bool>false</bool>
          </property>
