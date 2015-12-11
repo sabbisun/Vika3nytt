@@ -25,3 +25,29 @@ void DialogEditSci::on_checkBox_alive_clicked()
     }
 
 }
+
+void DialogEditSci::on_checkBox_male_clicked()
+{
+    if(ui->checkBox_male->isChecked())
+    {
+        ui->checkBox_female->setEnabled(false);
+    }
+    else
+    {
+        ui->checkBox_female->setEnabled(true);
+    }
+
+}
+
+void DialogEditSci::on_checkBox_female_clicked()
+{
+    if(ui->checkBox_female->isChecked())
+    {
+        ui->checkBox_male->setEnabled(false);
+    }
+    else
+    {
+        ui->checkBox_male->setEnabled(true);
+    }
+}
+
