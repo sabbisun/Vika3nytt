@@ -25,7 +25,9 @@ SOURCES += main.cpp\
     dialogaddsci.cpp \
     dialogeditsci.cpp \
     dialogeditcom.cpp \
-    dialogaddcom.cpp
+    dialogaddcom.cpp \
+    dialogaddsciconnection.cpp \
+    dialogaddcompconnection.cpp \
 
 HEADERS  += mainwindow.h \
     core.h \
@@ -39,11 +41,15 @@ HEADERS  += mainwindow.h \
     dialogaddsci.h \
     dialogeditsci.h \
     dialogeditcom.h \
-    dialogaddcom.h
+    dialogaddcom.h \
+    dialogaddsciconnection.h \
+    dialogaddcompconnection.h \
 
 
 FORMS    += mainwindow.ui \
     dialogaddsci.ui \
     dialogeditsci.ui \
     dialogeditcom.ui \
-    dialogaddcom.ui
+    dialogaddcom.ui \
+    dialogaddsciconnection.ui \
+    dialogaddcompconnection.ui \

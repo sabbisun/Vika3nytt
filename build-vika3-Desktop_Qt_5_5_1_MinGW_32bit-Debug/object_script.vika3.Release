@@ -12,9 +12,13 @@ INPUT(
 ./release\dialogeditsci.o
 ./release\dialogeditcom.o
 ./release\dialogaddcom.o
+./release\dialogaddsciconnection.o
+./release\dialogaddcompconnection.o
 ./release\moc_mainwindow.o
 ./release\moc_dialogaddsci.o
 ./release\moc_dialogeditsci.o
 ./release\moc_dialogeditcom.o
 ./release\moc_dialogaddcom.o
+./release\moc_dialogaddsciconnection.o
+./release\moc_dialogaddcompconnection.o
 );

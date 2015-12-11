@@ -100,6 +100,7 @@ private:
     void deleteConnectionWithComp(const int idComp);
     //This is called only when an individual or a computer is delete via core class,
     //If it is deleted then it deletes all relation to set comp og indi
+    QSqlDatabase getDatabase();
 };
 
 #endif // SQLITEDATA_H

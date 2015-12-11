@@ -130,16 +130,19 @@ public:
 
         Button_editSci = new QPushButton(tab_sci);
         Button_editSci->setObjectName(QStringLiteral("Button_editSci"));
+        Button_editSci->setEnabled(false);
 
         horizontalLayout_4->addWidget(Button_editSci);
 
         Button_removeSci = new QPushButton(tab_sci);
         Button_removeSci->setObjectName(QStringLiteral("Button_removeSci"));
+        Button_removeSci->setEnabled(false);
 
         horizontalLayout_4->addWidget(Button_removeSci);
 
         Button_addSciConnection = new QPushButton(tab_sci);
         Button_addSciConnection->setObjectName(QStringLiteral("Button_addSciConnection"));
+        Button_addSciConnection->setEnabled(false);
 
         horizontalLayout_4->addWidget(Button_addSciConnection);
 
@@ -200,16 +203,19 @@ public:
 
         Button_editComp = new QPushButton(tab_comp);
         Button_editComp->setObjectName(QStringLiteral("Button_editComp"));
+        Button_editComp->setEnabled(false);
 
         horizontalLayout->addWidget(Button_editComp);
 
         Button_removeComp = new QPushButton(tab_comp);
         Button_removeComp->setObjectName(QStringLiteral("Button_removeComp"));
+        Button_removeComp->setEnabled(false);
 
         horizontalLayout->addWidget(Button_removeComp);
 
         Button_addCompConnection = new QPushButton(tab_comp);
         Button_addCompConnection->setObjectName(QStringLiteral("Button_addCompConnection"));
+        Button_addCompConnection->setEnabled(false);
 
         horizontalLayout->addWidget(Button_addCompConnection);
 
@@ -226,7 +232,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 658, 22));
+        menuBar->setGeometry(QRect(0, 0, 658, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -238,7 +244,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

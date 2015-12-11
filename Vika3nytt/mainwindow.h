@@ -51,6 +51,11 @@ private slots:
 
     void on_Button_editComp_clicked();
 
+    void on_Button_addSciConnection_clicked();
+
+    void on_Button_addCompConnection_clicked();
+
+
 private:
     Ui::MainWindow *ui;
     Core core;
