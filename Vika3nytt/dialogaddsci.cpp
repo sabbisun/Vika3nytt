@@ -87,3 +87,8 @@ void DialogAddSci::on_checkBox_alive_clicked()
     }
 
 }
+
+void DialogAddSci::on_pushButton_cancelAdd_clicked()
+{
+    this->close();
+}

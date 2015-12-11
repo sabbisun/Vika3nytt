@@ -31,6 +31,8 @@ private slots:
     void on_checkBox_alive_clicked();
 
 
+    void on_pushButton_cancelAdd_clicked();
+
 private:
     Core core;
     Ui::DialogAddSci *ui;

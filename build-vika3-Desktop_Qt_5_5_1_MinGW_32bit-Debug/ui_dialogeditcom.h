@@ -56,6 +56,9 @@ public:
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label_Dialogname = new QLabel(DialogEditCom);
         label_Dialogname->setObjectName(QStringLiteral("label_Dialogname"));
+        QFont font;
+        font.setFamily(QStringLiteral("Alien Encounters"));
+        label_Dialogname->setFont(font);
         label_Dialogname->setTextFormat(Qt::RichText);
         label_Dialogname->setScaledContents(false);
         label_Dialogname->setAlignment(Qt::AlignCenter);
@@ -150,7 +153,7 @@ public:
     void retranslateUi(QDialog *DialogEditCom)
     {
         DialogEditCom->setWindowTitle(QApplication::translate("DialogEditCom", "Dialog", 0));
-        label_Dialogname->setText(QApplication::translate("DialogEditCom", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Edit Computer</span></p></body></html>", 0));
+        label_Dialogname->setText(QApplication::translate("DialogEditCom", "<html><head/><body><p><span style=\" font-size:26pt; font-weight:600;\">Edit Computer</span></p></body></html>", 0));
         label_name->setText(QApplication::translate("DialogEditCom", "Name:                ", 0));
         label_type->setText(QApplication::translate("DialogEditCom", "Type:                 ", 0));
         checkBox_built->setText(QApplication::translate("DialogEditCom", "Built", 0));

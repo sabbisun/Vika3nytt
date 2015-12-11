@@ -55,6 +55,13 @@ public:
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label_addCom = new QLabel(DialogAddCom);
         label_addCom->setObjectName(QStringLiteral("label_addCom"));
+        QFont font;
+        font.setFamily(QStringLiteral("Alien Encounters"));
+        font.setPointSize(36);
+        font.setBold(true);
+        font.setItalic(false);
+        font.setWeight(75);
+        label_addCom->setFont(font);
         label_addCom->setTextFormat(Qt::RichText);
         label_addCom->setAlignment(Qt::AlignCenter);
 
@@ -144,7 +151,7 @@ public:
     void retranslateUi(QDialog *DialogAddCom)
     {
         DialogAddCom->setWindowTitle(QApplication::translate("DialogAddCom", "Dialog", 0));
-        label_addCom->setText(QApplication::translate("DialogAddCom", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Add computer</span></p></body></html>", 0));
+        label_addCom->setText(QApplication::translate("DialogAddCom", "<html><head/><body><p><span style=\" font-size:26pt;\">Add computer</span></p></body></html>", 0));
         label_addName_2->setText(QApplication::translate("DialogAddCom", "Name:                 ", 0));
         label_addName->setText(QApplication::translate("DialogAddCom", "Type:                  ", 0));
         checkBox_created->setText(QApplication::translate("DialogAddCom", "Created?", 0));

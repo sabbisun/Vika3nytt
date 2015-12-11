@@ -63,6 +63,9 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_addSci = new QLabel(DialogAddSci);
         label_addSci->setObjectName(QStringLiteral("label_addSci"));
+        QFont font;
+        font.setFamily(QStringLiteral("Alien Encounters"));
+        label_addSci->setFont(font);
         label_addSci->setTextFormat(Qt::RichText);
         label_addSci->setAlignment(Qt::AlignCenter);
 
@@ -192,7 +195,7 @@ public:
     void retranslateUi(QDialog *DialogAddSci)
     {
         DialogAddSci->setWindowTitle(QApplication::translate("DialogAddSci", "Dialog", 0));
-        label_addSci->setText(QApplication::translate("DialogAddSci", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Add scientist</span></p></body></html>", 0));
+        label_addSci->setText(QApplication::translate("DialogAddSci", "<html><head/><body><p><span style=\" font-size:26pt; font-weight:600;\">Add scientist</span></p></body></html>", 0));
         label_addGivenName->setText(QApplication::translate("DialogAddSci", "Given name:   ", 0));
         label_addSurname->setText(QApplication::translate("DialogAddSci", "Surname:       ", 0));
         label_selectGender->setText(QApplication::translate("DialogAddSci", "Gender:          ", 0));
