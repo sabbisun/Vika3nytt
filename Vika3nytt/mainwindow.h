@@ -49,6 +49,8 @@ private slots:
 
     void on_treeWidget_comp_itemSelectionChanged();
 
+    void on_Button_editComp_clicked();
+
 private:
     Ui::MainWindow *ui;
     Core core;

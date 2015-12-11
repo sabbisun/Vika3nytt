@@ -14,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->Button_removeSci->setEnabled(false);
     ui->Button_removeComp->setEnabled(false);
+    ui->Button_editComp->setEnabled(false);
+    ui->Button_addCompConnection->setEnabled(false);
 
 
 
@@ -385,6 +387,8 @@ void MainWindow::on_Button_removeSci_clicked()
 void MainWindow::on_treeWidget_sci_itemSelectionChanged()
 {
     ui->Button_removeSci->setEnabled(true);
+
+
 }
 
 void MainWindow::on_Button_removeComp_clicked()
@@ -433,4 +437,23 @@ void MainWindow::on_Button_removeComp_clicked()
 void MainWindow::on_treeWidget_comp_itemSelectionChanged()
 {
     ui->Button_removeComp->setEnabled(true);
+    if(!ui->treeWidget_comp->currentItem()->parent())
+    {
+        ui->Button_editComp->setEnabled(true);
+        ui->Button_addCompConnection->setEnabled(true);
+    }
+    else
+    {
+        ui->Button_editComp->setEnabled(false);
+        ui->Button_addCompConnection->setEnabled(false);
+    }
+}
+
+void MainWindow::on_Button_editComp_clicked()
+{
+    ui->Button_editComp->setEnabled(false);
+    if(!ui->treeWidget_comp->currentItem()->parent())
+    {
+
+    }
 }
