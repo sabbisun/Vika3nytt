@@ -339,6 +339,7 @@ void MainWindow::on_Button_addSci_clicked()
    DialogAddSci addSciWindow;
    addSciWindow.setModal(true);
    addSciWindow.exec();
+   setTreeSci();
 }
 
 void MainWindow::on_Button_editSci_clicked()

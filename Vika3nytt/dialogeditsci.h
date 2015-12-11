@@ -13,6 +13,7 @@ class DialogEditSci : public QDialog
 
 public:
     explicit DialogEditSci(QWidget *parent = 0);
+
     ~DialogEditSci();
 
 private:
