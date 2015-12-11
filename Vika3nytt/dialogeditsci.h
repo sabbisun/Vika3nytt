@@ -16,6 +16,9 @@ public:
 
     ~DialogEditSci();
 
+private slots:
+    void on_checkBox_alive_clicked();
+
 private:
     Ui::DialogEditSci *ui;
 };

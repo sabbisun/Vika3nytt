@@ -19,6 +19,7 @@ public:
     ~DialogAddSci();
 
 private slots:
+
     bool on_checkBox_male_clicked(bool checked);
 
     bool on_checkBox_female_clicked(bool checked);
@@ -26,6 +27,9 @@ private slots:
     void on_checkBox_alive_clicked(bool checked);
 
     void on_confirmAddButton_clicked();
+
+    void on_checkBox_alive_clicked();
+
 
 private:
     Core core;

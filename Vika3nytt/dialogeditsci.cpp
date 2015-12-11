@@ -12,3 +12,16 @@ DialogEditSci::~DialogEditSci()
 {
     delete ui;
 }
+
+void DialogEditSci::on_checkBox_alive_clicked()
+{
+    if(ui->checkBox_alive->isChecked())
+    {
+        ui->lineEdit_yearDeth->setEnabled(false);
+    }
+    else
+    {
+        ui->lineEdit_yearDeth->setEnabled(true);
+    }
+
+}

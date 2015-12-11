@@ -72,7 +72,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_addCreationYear"/>
+      <widget class="QLineEdit" name="lineEdit_addCreationYear">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

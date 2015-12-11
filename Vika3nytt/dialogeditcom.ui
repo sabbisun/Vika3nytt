@@ -77,7 +77,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_yearDeth"/>
+        <widget class="QLineEdit" name="lineEdit_yearDeth">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

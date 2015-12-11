@@ -74,3 +74,16 @@ void DialogAddSci::on_confirmAddButton_clicked()
     core.addIndividual(i1,found);
     this->close();
 }
+
+void DialogAddSci::on_checkBox_alive_clicked()
+{
+    if(ui->checkBox_alive->isChecked())
+    {
+        ui->lineEdit_addDeathYear->setEnabled(false);
+    }
+    else
+    {
+         ui->lineEdit_addDeathYear->setEnabled(true);
+    }
+
+}

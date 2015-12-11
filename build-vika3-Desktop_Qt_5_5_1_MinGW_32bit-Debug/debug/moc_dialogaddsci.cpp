@@ -51,7 +51,7 @@ static const uint qt_meta_data_DialogAddSci[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,15 +59,17 @@ static const uint qt_meta_data_DialogAddSci[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x08 /* Private */,
-       4,    1,   37,    2, 0x08 /* Private */,
-       5,    1,   40,    2, 0x08 /* Private */,
-       6,    0,   43,    2, 0x08 /* Private */,
+       1,    1,   39,    2, 0x08 /* Private */,
+       4,    1,   42,    2, 0x08 /* Private */,
+       5,    1,   45,    2, 0x08 /* Private */,
+       6,    0,   48,    2, 0x08 /* Private */,
+       5,    0,   49,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Bool, QMetaType::Bool,    3,
     QMetaType::Bool, QMetaType::Bool,    3,
     QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -85,6 +87,7 @@ void DialogAddSci::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
         case 2: _t->on_checkBox_alive_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 3: _t->on_confirmAddButton_clicked(); break;
+        case 4: _t->on_checkBox_alive_clicked(); break;
         default: ;
         }
     }
@@ -115,13 +118,13 @@ int DialogAddSci::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
