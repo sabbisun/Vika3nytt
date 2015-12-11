@@ -12,3 +12,8 @@ DialogEditCom::~DialogEditCom()
 {
     delete ui;
 }
+
+void DialogEditCom::on_checkBox_built_clicked()
+{
+    ui->lineEdit_yearDeth->setEnabled(true);
+}

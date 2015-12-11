@@ -108,6 +108,7 @@ public:
 
         lineEdit_yearDeth = new QLineEdit(DialogEditCom);
         lineEdit_yearDeth->setObjectName(QStringLiteral("lineEdit_yearDeth"));
+        lineEdit_yearDeth->setEnabled(false);
 
         horizontalLayout_5->addWidget(lineEdit_yearDeth);
 

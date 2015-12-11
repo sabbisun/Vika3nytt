@@ -124,7 +124,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_addDeathYear"/>
+      <widget class="QLineEdit" name="lineEdit_addDeathYear">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -173,24 +177,7 @@
     </layout>
    </item>
   </layout>
-  <zorder>lineEdit_addSurname</zorder>
-  <zorder>lineEdit_2</zorder>
-  <zorder>lineEdit_addBirthYear</zorder>
-  <zorder>lineEdit_addDeathYear</zorder>
-  <zorder>label_addGivenName</zorder>
-  <zorder>label_selectGender</zorder>
-  <zorder>label_birthYear</zorder>
-  <zorder>lineEdit_addDeathYear</zorder>
   <zorder>checkBox_alive</zorder>
-  <zorder>label_deathYear</zorder>
-  <zorder>lineEdit_addGivenName</zorder>
-  <zorder>label_addSurname</zorder>
-  <zorder>lineEdit_addBirthYear</zorder>
-  <zorder>label_birthYear</zorder>
-  <zorder>label_deathYear</zorder>
-  <zorder>lineEdit_addDeathYear</zorder>
-  <zorder>confirmAddButton</zorder>
-  <zorder>pushButton_cancelAdd</zorder>
   <zorder>label_addSci</zorder>
  </widget>
  <resources/>

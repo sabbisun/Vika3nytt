@@ -15,6 +15,9 @@ public:
     explicit DialogAddSci(QWidget *parent = 0);
     ~DialogAddSci();
 
+private slots:
+    void on_checkBox_alive_clicked();
+
 private:
     Ui::DialogAddSci *ui;
 };

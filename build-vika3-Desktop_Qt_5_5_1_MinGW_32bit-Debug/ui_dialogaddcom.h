@@ -104,6 +104,7 @@ public:
 
         lineEdit_addCreationYear = new QLineEdit(DialogAddCom);
         lineEdit_addCreationYear->setObjectName(QStringLiteral("lineEdit_addCreationYear"));
+        lineEdit_addCreationYear->setEnabled(false);
 
         horizontalLayout_8->addWidget(lineEdit_addCreationYear);
 

@@ -15,6 +15,9 @@ public:
     explicit DialogAddCom(QWidget *parent = 0);
     ~DialogAddCom();
 
+private slots:
+    void on_checkBox_created_clicked();
+
 private:
     Ui::DialogAddCom *ui;
 };

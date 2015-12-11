@@ -497,16 +497,9 @@ void MainWindow::on_Button_addSciConnection_clicked()
     DialogAddSciConnection addSciConn;
     addSciConn.setModal(true);
     int idcomp = addSciConn.exec();
-    QModelIndexList selectedList = ui->treeWidget_sci->selectionModel()->selectedRows();
-    int index;
-    for(int i = 0; i < selectedList.count(); i++)
-    {
-           //QMessageBox::information(this,"", QString::number(selectedList.at(i).row()));
-            index = selectedList.at(i).row();
-    }
     //þetta er id-ið af manneskjunni í röð ind
-    QString temp = ui->treeWidget_sci->model()->data(ui->treeWidget_sci->model()->index(index, 3)).toString();
-    int idsci = temp.toInt();
+    QString temp = ui->treeWidget_sci->currentItem()->text(3);
+    int idsci = temp.toUInt();
     core.addConnection(idsci,idcomp);
     setTreeSci();
 }
@@ -516,15 +509,7 @@ void MainWindow::on_Button_addCompConnection_clicked()
     DialogAddCompConnection addCompConn;
     addCompConn.setModal(true);
     int idsci = addCompConn.exec();
-    QModelIndexList selectedList = ui->treeWidget_comp->selectionModel()->selectedRows();
-    int index;
-    for(int i = 0; i < selectedList.count(); i++)
-    {
-           //QMessageBox::information(this,"", QString::number(selectedList.at(i).row()));
-            index = selectedList.at(i).row();
-    }
-    //þetta er id-ið af manneskjunni í röð ind
-    QString temp = ui->treeWidget_comp->model()->data(ui->treeWidget_comp->model()->index(index, 3)).toString();
+    QString temp = ui->treeWidget_comp->currentItem()->text(3);
     int idcomp = temp.toInt();
     core.addConnection(idsci,idcomp);
     setTreeComp();

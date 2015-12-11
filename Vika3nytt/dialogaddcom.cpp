@@ -12,3 +12,8 @@ DialogAddCom::~DialogAddCom()
 {
     delete ui;
 }
+
+void DialogAddCom::on_checkBox_created_clicked()
+{
+    ui->lineEdit_addCreationYear->setEnabled(true);
+}

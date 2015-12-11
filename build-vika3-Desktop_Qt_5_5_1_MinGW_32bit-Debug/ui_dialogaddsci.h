@@ -151,6 +151,7 @@ public:
 
         lineEdit_addDeathYear = new QLineEdit(DialogAddSci);
         lineEdit_addDeathYear->setObjectName(QStringLiteral("lineEdit_addDeathYear"));
+        lineEdit_addDeathYear->setEnabled(true);
 
         horizontalLayout_5->addWidget(lineEdit_addDeathYear);
 
@@ -180,23 +181,7 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_6);
 
-        lineEdit_addSurname->raise();
-        lineEdit_addBirthYear->raise();
-        lineEdit_addDeathYear->raise();
-        label_addGivenName->raise();
-        label_selectGender->raise();
-        label_birthYear->raise();
-        lineEdit_addDeathYear->raise();
         checkBox_alive->raise();
-        label_deathYear->raise();
-        lineEdit_addGivenName->raise();
-        label_addSurname->raise();
-        lineEdit_addBirthYear->raise();
-        label_birthYear->raise();
-        label_deathYear->raise();
-        lineEdit_addDeathYear->raise();
-        confirmAddButton->raise();
-        pushButton_cancelAdd->raise();
         label_addSci->raise();
 
         retranslateUi(DialogAddSci);
