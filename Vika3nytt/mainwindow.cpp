@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialogaddsci.h"
+#include "dialogaddcom.h"
 #include "dialogeditsci.h"
 #include "dialogaddcompconnection.h"
 #include "dialogaddsciconnection.h"
@@ -342,6 +343,8 @@ void MainWindow::on_Button_addSci_clicked()
    setTreeSci();
 }
 
+
+
 void MainWindow::on_Button_editSci_clicked()
 {
     DialogEditSci editSciWindow;
@@ -507,4 +510,13 @@ void MainWindow::on_Button_addCompConnection_clicked()
     int idcomp = temp.toInt();
     core.addConnection(idsci,idcomp);
     setTreeComp();
+}
+
+void MainWindow::on_Button_addComp_clicked()
+{
+       DialogAddCom addComWindow;
+       addComWindow.setModal(true);
+       addComWindow.exec();
+       setTreeComp();
+
 }

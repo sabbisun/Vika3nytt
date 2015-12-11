@@ -17,10 +17,33 @@ void DialogAddCom::on_checkBox_created_clicked()
 {
     if(ui->checkBox_created->isChecked())
     {
-        ui->lineEdit_addCreationYear->setEnabled(true);
+        ui->lineEdit_creationYear->setEnabled(true);
     }
     else
     {
-       ui->lineEdit_addCreationYear->setEnabled(false);
+       ui->lineEdit_creationYear->setEnabled(false);
     }
 }
+
+void DialogAddCom::on_confirmAddButton_clicked()
+{
+    char gender;
+    bool found = true;
+    QString name = ui ->lineEdit_addComName->text();
+    string nafn = name.toStdString();
+    QString qType = ui->lineEdit_addType->text();
+    string type = qType.toStdString();
+    QString creationYear = ui->lineEdit_creationYear->text();
+    int live = creationYear.toInt();
+
+    Computer c1(live, nafn,type);
+    if(name.isEmpty()||qType.isEmpty())
+    {
+       //found = false;
+        // Error
+       //return;
+    }
+    core.addComputer(c1,found);
+    this->close();
+}
+

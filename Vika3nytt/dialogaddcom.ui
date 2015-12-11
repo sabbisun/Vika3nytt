@@ -37,7 +37,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_addGName"/>
+      <widget class="QLineEdit" name="lineEdit_addComName"/>
      </item>
     </layout>
    </item>
@@ -51,7 +51,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_addName"/>
+      <widget class="QLineEdit" name="lineEdit_addType"/>
      </item>
     </layout>
    </item>
@@ -72,11 +72,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_addCreationYear">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="lineEdit_creationYear"/>
      </item>
     </layout>
    </item>

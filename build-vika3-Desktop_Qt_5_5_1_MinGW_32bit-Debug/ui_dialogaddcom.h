@@ -32,14 +32,14 @@ public:
     QLabel *label_addCom;
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_addName_2;
-    QLineEdit *lineEdit_addGName;
+    QLineEdit *lineEdit_addComName;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_addName;
-    QLineEdit *lineEdit_addName;
+    QLineEdit *lineEdit_addType;
     QCheckBox *checkBox_created;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_creationYear;
-    QLineEdit *lineEdit_addCreationYear;
+    QLineEdit *lineEdit_creationYear;
     QHBoxLayout *horizontalLayout_12;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *confirmAddButton;
@@ -67,10 +67,10 @@ public:
 
         horizontalLayout_11->addWidget(label_addName_2);
 
-        lineEdit_addGName = new QLineEdit(DialogAddCom);
-        lineEdit_addGName->setObjectName(QStringLiteral("lineEdit_addGName"));
+        lineEdit_addComName = new QLineEdit(DialogAddCom);
+        lineEdit_addComName->setObjectName(QStringLiteral("lineEdit_addComName"));
 
-        horizontalLayout_11->addWidget(lineEdit_addGName);
+        horizontalLayout_11->addWidget(lineEdit_addComName);
 
 
         verticalLayout_2->addLayout(horizontalLayout_11);
@@ -82,10 +82,10 @@ public:
 
         horizontalLayout_7->addWidget(label_addName);
 
-        lineEdit_addName = new QLineEdit(DialogAddCom);
-        lineEdit_addName->setObjectName(QStringLiteral("lineEdit_addName"));
+        lineEdit_addType = new QLineEdit(DialogAddCom);
+        lineEdit_addType->setObjectName(QStringLiteral("lineEdit_addType"));
 
-        horizontalLayout_7->addWidget(lineEdit_addName);
+        horizontalLayout_7->addWidget(lineEdit_addType);
 
 
         verticalLayout_2->addLayout(horizontalLayout_7);
@@ -102,11 +102,10 @@ public:
 
         horizontalLayout_8->addWidget(label_creationYear);
 
-        lineEdit_addCreationYear = new QLineEdit(DialogAddCom);
-        lineEdit_addCreationYear->setObjectName(QStringLiteral("lineEdit_addCreationYear"));
-        lineEdit_addCreationYear->setEnabled(false);
+        lineEdit_creationYear = new QLineEdit(DialogAddCom);
+        lineEdit_creationYear->setObjectName(QStringLiteral("lineEdit_creationYear"));
 
-        horizontalLayout_8->addWidget(lineEdit_addCreationYear);
+        horizontalLayout_8->addWidget(lineEdit_creationYear);
 
 
         verticalLayout_2->addLayout(horizontalLayout_8);

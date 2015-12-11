@@ -2,6 +2,8 @@
 #define DIALOGADDCOM_H
 
 #include <QDialog>
+#include<core.h>
+#include<machines.h>
 
 namespace Ui {
 class DialogAddCom;
@@ -18,8 +20,15 @@ public:
 private slots:
     void on_checkBox_created_clicked();
 
+    void on_confirmAddButton_clicked();
+
+    void on_lineEdit_addCreationYear_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_addType_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::DialogAddCom *ui;
+    Core core;
 };
 
 #endif // DIALOGADDCOM_H
