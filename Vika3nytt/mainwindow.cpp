@@ -388,33 +388,41 @@ void MainWindow::on_Button_removeComp_clicked()
     ui->Button_removeComp->setEnabled(false);
     QModelIndexList selectedList = ui->treeWidget_comp->selectionModel()->selectedRows();
 
-    int index;
-    for(int i = 0; i < selectedList.count(); i++)
+    if(!ui->treeWidget_comp->currentItem()->parent())
     {
-        index = selectedList.at(i).row();
+        qDebug() << QString("valdir tölvu, parent");
+        int index;
+        for(int i = 0; i < selectedList.count(); i++)
+        {
+            index = selectedList.at(i).row();
+        }
+
+        QString temp = ui->treeWidget_comp->model()->data(ui->treeWidget_comp->model()->index(index, 3)).toString();
+        int id = temp.toInt();
+        // The Id of the computer in row 'index' of table
+
+        QMessageBox msgBox;
+        msgBox.setText("Removal of a scomputer");
+        msgBox.setInformativeText("Are you sure you want to remove the computer with the id " + temp + "?");
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
+        int ret = msgBox.exec();
+        // Messagebox asks if user wants to remove or not
+
+        bool removed;
+
+        switch (ret) {
+            case QMessageBox::Yes:      core.removeComputer(id, removed);
+                                        setTreeComp();
+                                        break;
+            case QMessageBox::Cancel:   // Cancel was clicked
+                                        break;
+            default:                    // should never be reached
+                                        break;
+        }
     }
-
-    QString temp = ui->treeWidget_comp->model()->data(ui->treeWidget_comp->model()->index(index, 3)).toString();
-    int id = temp.toInt();
-    // The Id of the computer in row 'index' of table
-
-    QMessageBox msgBox;
-    msgBox.setText("Removal of a scomputer");
-    msgBox.setInformativeText("Are you sure you want to remove the computer with the id " + temp + "?");
-    msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
-    int ret = msgBox.exec();
-    // Messagebox asks if user wants to remove or not
-
-    bool removed;
-
-    switch (ret) {
-        case QMessageBox::Yes:      core.removeComputer(id, removed);
-                                    setTreeComp();
-                                    break;
-        case QMessageBox::Cancel:   // Cancel was clicked
-                                    break;
-        default:                    // should never be reached
-                                    break;
+    else
+    {
+        qDebug() << QString("valdir vísindamann, child");
     }
 }
 
