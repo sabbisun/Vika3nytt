@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_sci">
        <attribute name="title">
@@ -74,6 +74,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_editSci">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Edit Scientist</string>
               </property>
@@ -81,6 +84,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_removeSci">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Remove</string>
               </property>
@@ -88,6 +94,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_addSciConnection">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Add Connection</string>
               </property>
@@ -149,6 +158,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_editComp">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Edit Computer</string>
               </property>
@@ -156,6 +168,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_removeComp">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Remove</string>
               </property>
@@ -163,6 +178,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_addCompConnection">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Add Connection</string>
               </property>
@@ -184,7 +202,7 @@
      <x>0</x>
      <y>0</y>
      <width>658</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

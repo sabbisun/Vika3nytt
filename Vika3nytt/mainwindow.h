@@ -49,6 +49,10 @@ private slots:
 
     void on_treeWidget_comp_itemSelectionChanged();
 
+    void on_Button_addSciConnection_clicked();
+
+    void on_Button_addCompConnection_clicked();
+
 private:
     Ui::MainWindow *ui;
     Core core;
