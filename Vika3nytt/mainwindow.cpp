@@ -14,6 +14,28 @@ MainWindow::MainWindow(QWidget *parent) :
     createDropSearchForComp();
     setTreeComp();
 
+    int col = 3;
+    int max = 200;
+    for(int i = 0; i < col; i++)
+    {
+        ui->treeWidget_sci->setColumnWidth(i, max);
+        ui->treeWidget_comp->setColumnWidth(i, max);
+        max = max - 50;
+    }
+    /*   //eða:
+    ui->treeWidget_sci->setColumnWidth(0, 200);
+    ui->treeWidget_sci->setColumnWidth(1, 150);
+    ui->treeWidget_sci->setColumnWidth(2, 100);
+
+    ui->treeWidget_comp->setColumnWidth(0, 200);
+    ui->treeWidget_comp->setColumnWidth(1, 150);
+    ui->treeWidget_comp->setColumnWidth(2, 100);*/
+
+    ui->Button_removeSci->setEnabled(false);
+    ui->Button_removeComp->setEnabled(false);
+    ui->Button_editComp->setEnabled(false);
+    ui->Button_addCompConnection->setEnabled(false);
+
 }
 
 MainWindow::~MainWindow()
@@ -349,7 +371,7 @@ void MainWindow::on_Button_removeSci_clicked()
         //messagebox
         QMessageBox msgBox;
         msgBox.setText("Removal of a scientist");
-        msgBox.setInformativeText("Are you sure you want to remove scientist with the id " + temp + "?");
+        msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         //msgBox.setDefaultButton(QMessageBox::Cancel);  //maybe
         int ret = msgBox.exec();
@@ -379,8 +401,28 @@ void MainWindow::on_Button_removeSci_clicked()
 void MainWindow::on_treeWidget_sci_itemSelectionChanged()
 {
     ui->Button_removeSci->setEnabled(true);
-    ui->Button_editSci->setEnabled(true);
-    ui->Button_addSciConnection->setEnabled(true);
+    if(!ui->treeWidget_sci->currentItem()->parent())
+    {
+        ui->Button_editSci->setEnabled(true);
+        ui->Button_addSciConnection->setEnabled(true);
+    }
+    else
+    {
+        ui->Button_editSci->setEnabled(false);
+        ui->Button_addSciConnection->setEnabled(false);
+    }
+
+//    ui->Button_removeComp->setEnabled(true);
+//    if(!ui->treeWidget_comp->currentItem()->parent())
+//    {
+//        ui->Button_editComp->setEnabled(true);
+//        ui->Button_addCompConnection->setEnabled(true);
+//    }
+//    else
+//    {
+//        ui->Button_editComp->setEnabled(false);
+//        ui->Button_addCompConnection->setEnabled(false);
+//    }
 }
 
 void MainWindow::on_Button_removeComp_clicked()
@@ -403,7 +445,7 @@ void MainWindow::on_Button_removeComp_clicked()
 
         QMessageBox msgBox;
         msgBox.setText("Removal of a scomputer");
-        msgBox.setInformativeText("Are you sure you want to remove the computer with the id " + temp + "?");
+        msgBox.setInformativeText("Are you sure you want to remove the selected computer");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBox.exec();
         // Messagebox asks if user wants to remove or not
@@ -429,8 +471,25 @@ void MainWindow::on_Button_removeComp_clicked()
 void MainWindow::on_treeWidget_comp_itemSelectionChanged()
 {
     ui->Button_removeComp->setEnabled(true);
-    ui->Button_editComp->setEnabled(true);
-    ui->Button_addCompConnection->setEnabled(true);
+    if(!ui->treeWidget_comp->currentItem()->parent())
+    {
+        ui->Button_editComp->setEnabled(true);
+        ui->Button_addCompConnection->setEnabled(true);
+    }
+    else
+    {
+        ui->Button_editComp->setEnabled(false);
+        ui->Button_addCompConnection->setEnabled(false);
+    }
+}
+
+void MainWindow::on_Button_editComp_clicked()
+{
+    ui->Button_editComp->setEnabled(false);
+    if(!ui->treeWidget_comp->currentItem()->parent())
+    {
+
+    }
 }
 
 void MainWindow::on_Button_addSciConnection_clicked()
