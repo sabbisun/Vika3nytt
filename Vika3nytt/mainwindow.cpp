@@ -347,9 +347,35 @@ void MainWindow::on_Button_addSci_clicked()
 
 void MainWindow::on_Button_editSci_clicked()
 {
-    DialogEditSci editSciWindow;
-    editSciWindow.setModal(true);
-    editSciWindow.exec();
+    ui->Button_editSci->setEnabled(false);
+    if(!ui->treeWidget_sci->currentItem()->parent())
+    {
+        QString id = ui->treeWidget_sci->currentItem()->text(3);
+        QString gender = ui->treeWidget_sci->currentItem()->text(1);
+
+        int trueID = id.toInt(); //leita að gaur með þetta id og fá nöfnin og árin
+        QString name, surname, bYear, dYear;
+
+        People temp = core.sortSciAlpabetFront();
+        for(int i = 0; i < temp.getSize(); i++)
+        {
+            if(temp.getIndi(i).getId() == trueID)
+            {
+                name = QString::fromStdString(temp.getIndi(i).getName());
+                surname = QString::fromStdString(temp.getIndi(i).getSurname());
+                bYear = QString::number(temp.getIndi(i).getBirth());
+                dYear = QString::number(temp.getIndi(i).getDeath());
+            }
+        }
+        DialogEditSci editor;
+        editor.setModal(true);        
+        editor.setName(name);
+        editor.setSurname(surname);
+        editor.setGender(gender);
+        editor.setByear(bYear);
+        editor.setDyear(dYear);
+        editor.exec();
+    }
 }
 
 void MainWindow::on_Button_removeSci_clicked()

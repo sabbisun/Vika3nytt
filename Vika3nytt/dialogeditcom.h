@@ -16,9 +16,9 @@ class DialogEditCom : public QDialog
 public:
     explicit DialogEditCom(QWidget *parent = 0);
     ~DialogEditCom();
-    void setName(QString&);
-    void setType(QString&);
-    void setBuildYear(QString&);
+    void setName(QString& q);
+    void setType(QString& q);
+    void setBuildYear(QString& q);
 
 private slots:
     void on_checkBox_built_clicked();

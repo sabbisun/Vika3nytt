@@ -17,7 +17,7 @@ void DialogEditCom::on_checkBox_built_clicked()
 {
     if(ui->checkBox_built->isChecked())
     {
-     ui->lineEdit_yearBuilt->setEnabled(true);
+        ui->lineEdit_yearBuilt->setEnabled(true);
     }
     else
     {
@@ -64,5 +64,5 @@ void DialogEditCom::on_Button_confirm_clicked()
 
 void DialogEditCom::on_Button_cancel_clicked()
 {
-    //finna close skipun
+    this->close();
 }
