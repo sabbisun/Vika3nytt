@@ -86,9 +86,7 @@ void DialogAddCom::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->on_checkBox_created_clicked(); break;
         case 1: _t->on_confirmAddButton_clicked(); break;
-        //case 2: _t->on_lineEdit_addCreationYear_cursorPositionChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        //case 3: _t->on_lineEdit_addType_cursorPositionChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 4: _t->on_pushButton_cancelAdd_clicked(); break;
+        case 2: _t->on_pushButton_cancelAdd_clicked(); break;
         default: ;
         }
     }

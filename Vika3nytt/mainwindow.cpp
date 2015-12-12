@@ -422,7 +422,23 @@ void MainWindow::on_Button_removeSci_clicked()
     else
     {
         qDebug() << QString("valdir tölvu, child");
-        //ui->treeWidget_sci->currentItem()->
+        QString comIdQ = ui->treeWidget_sci->currentItem()->text(3);
+        QString sciIdQ = ui->treeWidget_sci->currentItem()->parent()->text(3);
+        QString comNameQ =  ui->treeWidget_sci->currentItem()->text(0);
+        QString sciNameQ =  ui->treeWidget_sci->currentItem()->parent()->text(0);
+
+        int sciId = sciIdQ.toInt();
+        int comId = comIdQ.toInt();
+
+        //core.removeConnection(sciId, comId);
+
+        QMessageBox msgBoxRmCon;
+        msgBoxRmCon.setText("Removal of a connection");
+        QString text = "Are you sure you want to disconnect: \nScientist: " + sciNameQ + "\nComputer: " + comNameQ;
+        msgBoxRmCon.setInformativeText(text);
+        msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
+        int ret = msgBoxRmCon.exec();
+
     }
 
 
