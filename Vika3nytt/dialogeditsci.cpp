@@ -1,6 +1,8 @@
 #include "dialogeditsci.h"
 #include "ui_dialogeditsci.h"
 
+QString qId = "";
+
 DialogEditSci::DialogEditSci(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::DialogEditSci)
@@ -11,6 +13,11 @@ DialogEditSci::DialogEditSci(QWidget *parent) :
 DialogEditSci::~DialogEditSci()
 {
     delete ui;
+}
+
+void DialogEditSci::setId(QString &q)
+{
+    qId = q;
 }
 
 void DialogEditSci::setName(QString &q)
@@ -73,11 +80,11 @@ void DialogEditSci::on_checkBox_male_clicked()
 {
     if(ui->checkBox_male->isChecked())
     {
-        ui->checkBox_female->setEnabled(false);
+        ui->checkBox_female->setChecked(false);
     }
     else
     {
-        ui->checkBox_female->setEnabled(true);
+        ui->checkBox_female->setChecked(true);
     }
 }
 
@@ -85,11 +92,11 @@ void DialogEditSci::on_checkBox_female_clicked()
 {
     if(ui->checkBox_female->isChecked())
     {
-        ui->checkBox_male->setEnabled(false);
+        ui->checkBox_male->setChecked(false);
     }
     else
     {
-        ui->checkBox_male->setEnabled(true);
+        ui->checkBox_male->setChecked(true);
     }
 }
 
@@ -101,7 +108,15 @@ void DialogEditSci::on_Button_cancel_clicked()
 void DialogEditSci::on_Button_confirm_clicked()
 {
     QString name = ui->lineEdit_name->text();
+    if(name == "")
+    {
+        //error
+    }
     QString surname = ui->lineEdit_surname->text();
+    if(surname == "")
+    {
+        //error
+    }
     QString gender;
     if(ui->checkBox_female->isChecked())
     {
@@ -111,11 +126,15 @@ void DialogEditSci::on_Button_confirm_clicked()
     {
         gender = "m";
     }
-    else
+    else if (!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
     {
         //error: must choose gender
     }
     QString byear = ui->lineEdit_yearBirth->text();
+    if(byear == "")
+    {
+        //error
+    }
     QString dyear;
     if(ui->checkBox_alive->isChecked())
     {
@@ -125,7 +144,18 @@ void DialogEditSci::on_Button_confirm_clicked()
     {
         dyear = ui->lineEdit_yearDeth->text();
     }
-
+    else if(!ui->checkBox_alive->isChecked() && ui->lineEdit_yearDeth->text() == "")
+    {
+        //error
+    }
+    int id = qId.toInt();
+    core.updateIndiName(name.toStdString(), id);
+    core.updateIndiSurname(surname.toStdString(), id);
+    core.updateIndiGender(QString(gender).toStdString()[0], id);
+    core.updateIndiBYear(byear.toInt(), id);
+    core.updateIndiDYear(dyear.toInt(), id);
+    qId = ""; //global...
+    this->close();
 }
 
 

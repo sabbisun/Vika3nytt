@@ -368,7 +368,8 @@ void MainWindow::on_Button_editSci_clicked()
             }
         }
         DialogEditSci editor;
-        editor.setModal(true);        
+        editor.setModal(true);
+        editor.setId(id);
         editor.setName(name);
         editor.setSurname(surname);
         editor.setGender(gender);
@@ -376,6 +377,8 @@ void MainWindow::on_Button_editSci_clicked()
         editor.setDyear(dYear);
         editor.exec();
     }
+    setTreeSci();
+    ui->Button_editSci->setEnabled(true);
 }
 
 void MainWindow::on_Button_removeSci_clicked()

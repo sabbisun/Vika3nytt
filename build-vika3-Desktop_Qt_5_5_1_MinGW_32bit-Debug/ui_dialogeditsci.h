@@ -59,6 +59,7 @@ public:
     {
         if (DialogEditSci->objectName().isEmpty())
             DialogEditSci->setObjectName(QStringLiteral("DialogEditSci"));
+        DialogEditSci->setEnabled(true);
         DialogEditSci->resize(450, 350);
         verticalLayout_2 = new QVBoxLayout(DialogEditSci);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));

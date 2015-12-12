@@ -2,6 +2,7 @@
 #define DIALOGEDITSCI_H
 
 #include <QDialog>
+#include "core.h"
 
 namespace Ui {
 class DialogEditSci;
@@ -15,6 +16,7 @@ public:
     explicit DialogEditSci(QWidget *parent = 0);
     ~DialogEditSci();
 
+    void setId(QString& q);
     void setName(QString& q);
     void setSurname(QString& q);
     void setGender(QString& q);
@@ -32,6 +34,7 @@ private slots:
 
 private:
     Ui::DialogEditSci *ui;
+    Core core;
 };
 
 #endif // DIALOGEDITSCI_H
