@@ -1,6 +1,8 @@
 #include "dialogeditcom.h"
 #include "ui_dialogeditcom.h"
 
+QString qsId;
+
 DialogEditCom::DialogEditCom(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::DialogEditCom)
@@ -11,6 +13,11 @@ DialogEditCom::DialogEditCom(QWidget *parent) :
 DialogEditCom::~DialogEditCom()
 {
     delete ui;
+}
+
+void DialogEditCom::setId(QString &q)
+{
+    qsId = q;
 }
 
 void DialogEditCom::on_checkBox_built_clicked()
@@ -53,13 +60,41 @@ void DialogEditCom::setBuildYear(QString & q)
 void DialogEditCom::on_Button_confirm_clicked()
 {
     QString name = ui->lineEdit_name->text();
+    if(ui->lineEdit_name->text() == "")
+    {
+        //error
+    }
     QString type = ui->lineEdit_type->text();
-    QString yearBuilt = ui->lineEdit_yearBuilt->text();
-    bool checked = ui->checkBox_built->isChecked();
+    if(ui->lineEdit_type->text() == "")
+    {
+        //error
+    }
+    QString yearBuilt;// = ui->lineEdit_yearBuilt->text();
+    if(ui->checkBox_built->isChecked())
+    {
+        yearBuilt = QString::number(0);
+    }
+    else if(!ui->checkBox_built->isChecked() && ui->lineEdit_yearBuilt->text() != "")
+    {
+        yearBuilt = ui->lineEdit_yearBuilt->text();
+    }
+    else if(!ui->checkBox_built->isChecked() && ui->lineEdit_yearBuilt->text() == "")
+    {
+        //error
+    }
+
+    /*bool checked = ui->checkBox_built->isChecked();
     if((name == "") || (type == "") || ((checked) && (yearBuilt == "")))
     {
         qDebug() << QString("not enough info");
-    }
+    }*/
+
+    int id = qsId.toInt();
+    core.updateCompName(name.toStdString(), id);
+    core.updateCompType(type.toStdString(), id);
+    core.updateCompBYear(yearBuilt.toInt(), id);
+    qsId = "";
+    this->close();
 }
 
 void DialogEditCom::on_Button_cancel_clicked()

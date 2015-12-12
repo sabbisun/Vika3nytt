@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <QString>
-#include <core.h>
+#include "core.h"
 
 namespace Ui {
 class DialogEditCom;
@@ -16,6 +16,7 @@ class DialogEditCom : public QDialog
 public:
     explicit DialogEditCom(QWidget *parent = 0);
     ~DialogEditCom();
+    void setId(QString& q);
     void setName(QString& q);
     void setType(QString& q);
     void setBuildYear(QString& q);
@@ -29,6 +30,7 @@ private slots:
 
 private:
     Ui::DialogEditCom *ui;
+    Core core;
 };
 
 #endif // DIALOGEDITCOM_H

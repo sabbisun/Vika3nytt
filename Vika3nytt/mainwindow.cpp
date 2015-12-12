@@ -545,16 +545,20 @@ void MainWindow::on_Button_editComp_clicked()
     {
         qDebug() << ui->treeWidget_comp->currentItem()->text(3);
         qDebug() << ui->treeWidget_comp->currentItem()->text(0);
+        QString id = ui->treeWidget_comp->currentItem()->text(3);
         QString name = ui->treeWidget_comp->currentItem()->text(0);
         QString type = ui->treeWidget_comp->currentItem()->text(1);
         QString buildYear = ui->treeWidget_comp->currentItem()->text(2);
         DialogEditCom editor;
         editor.setModal(true);
+        editor.setId(id);
         editor.setName(name);
         editor.setType(type);
         editor.setBuildYear(buildYear);
         editor.exec();
     }
+    setTreeComp();
+    ui->Button_editComp->setEnabled(true);
 }
 
 void MainWindow::on_Button_addSciConnection_clicked()
