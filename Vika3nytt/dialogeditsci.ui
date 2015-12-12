@@ -39,7 +39,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
       <widget class="QLabel" name="label_name">
        <property name="text">
@@ -49,6 +49,13 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_name"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_nameError">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -63,6 +70,13 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_surname"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_surnameError">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -116,6 +130,13 @@
      <item>
       <widget class="QLineEdit" name="lineEdit_yearBirth"/>
      </item>
+     <item>
+      <widget class="QLabel" name="label_birthError">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -140,6 +161,13 @@
         <widget class="QLineEdit" name="lineEdit_yearDeth">
          <property name="enabled">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_deathError">
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>

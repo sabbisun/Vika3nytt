@@ -30,12 +30,14 @@ class Ui_DialogEditSci
 public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label_Dialogname;
-    QHBoxLayout *horizontalLayout_4;
+    QHBoxLayout *horizontalLayout_7;
     QLabel *label_name;
     QLineEdit *lineEdit_name;
+    QLabel *label_nameError;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_surname;
     QLineEdit *lineEdit_surname;
+    QLabel *label_surnameError;
     QHBoxLayout *horizontalLayout;
     QLabel *label_gender;
     QCheckBox *checkBox_male;
@@ -44,11 +46,13 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_birth;
     QLineEdit *lineEdit_yearBirth;
+    QLabel *label_birthError;
     QVBoxLayout *verticalLayout;
     QCheckBox *checkBox_alive;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_death;
     QLineEdit *lineEdit_yearDeth;
+    QLabel *label_deathError;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *Button_confirm;
@@ -74,20 +78,25 @@ public:
 
         verticalLayout_2->addWidget(label_Dialogname);
 
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
         label_name = new QLabel(DialogEditSci);
         label_name->setObjectName(QStringLiteral("label_name"));
 
-        horizontalLayout_4->addWidget(label_name);
+        horizontalLayout_7->addWidget(label_name);
 
         lineEdit_name = new QLineEdit(DialogEditSci);
         lineEdit_name->setObjectName(QStringLiteral("lineEdit_name"));
 
-        horizontalLayout_4->addWidget(lineEdit_name);
+        horizontalLayout_7->addWidget(lineEdit_name);
+
+        label_nameError = new QLabel(DialogEditSci);
+        label_nameError->setObjectName(QStringLiteral("label_nameError"));
+
+        horizontalLayout_7->addWidget(label_nameError);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_4);
+        verticalLayout_2->addLayout(horizontalLayout_7);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
@@ -100,6 +109,11 @@ public:
         lineEdit_surname->setObjectName(QStringLiteral("lineEdit_surname"));
 
         horizontalLayout_3->addWidget(lineEdit_surname);
+
+        label_surnameError = new QLabel(DialogEditSci);
+        label_surnameError->setObjectName(QStringLiteral("label_surnameError"));
+
+        horizontalLayout_3->addWidget(label_surnameError);
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
@@ -140,6 +154,11 @@ public:
 
         horizontalLayout_2->addWidget(lineEdit_yearBirth);
 
+        label_birthError = new QLabel(DialogEditSci);
+        label_birthError->setObjectName(QStringLiteral("label_birthError"));
+
+        horizontalLayout_2->addWidget(label_birthError);
+
 
         verticalLayout_2->addLayout(horizontalLayout_2);
 
@@ -162,6 +181,11 @@ public:
         lineEdit_yearDeth->setEnabled(true);
 
         horizontalLayout_5->addWidget(lineEdit_yearDeth);
+
+        label_deathError = new QLabel(DialogEditSci);
+        label_deathError->setObjectName(QStringLiteral("label_deathError"));
+
+        horizontalLayout_5->addWidget(label_deathError);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -203,13 +227,17 @@ public:
         DialogEditSci->setWindowTitle(QApplication::translate("DialogEditSci", "Dialog", 0));
         label_Dialogname->setText(QApplication::translate("DialogEditSci", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Edit Scientist</span></p></body></html>", 0));
         label_name->setText(QApplication::translate("DialogEditSci", "Given Name:", 0));
+        label_nameError->setText(QString());
         label_surname->setText(QApplication::translate("DialogEditSci", "Surname:    ", 0));
+        label_surnameError->setText(QString());
         label_gender->setText(QApplication::translate("DialogEditSci", "Gender:", 0));
         checkBox_male->setText(QApplication::translate("DialogEditSci", "Male", 0));
         checkBox_female->setText(QApplication::translate("DialogEditSci", "Female", 0));
         label_birth->setText(QApplication::translate("DialogEditSci", "Year of birth  ", 0));
+        label_birthError->setText(QString());
         checkBox_alive->setText(QApplication::translate("DialogEditSci", "Alive", 0));
         label_death->setText(QApplication::translate("DialogEditSci", "Year of death", 0));
+        label_deathError->setText(QString());
         Button_confirm->setText(QApplication::translate("DialogEditSci", "Confirm", 0));
         Button_cancel->setText(QApplication::translate("DialogEditSci", "Cancel", 0));
     } // retranslateUi

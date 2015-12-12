@@ -60,25 +60,25 @@ void DialogEditCom::setBuildYear(QString & q)
 void DialogEditCom::on_Button_confirm_clicked()
 {
     QString name = ui->lineEdit_name->text();
-    if(ui->lineEdit_name->text() == "")
+    if(name.isEmpty())
     {
         //error
     }
     QString type = ui->lineEdit_type->text();
-    if(ui->lineEdit_type->text() == "")
+    if(type.isEmpty())
     {
         //error
     }
-    QString yearBuilt;// = ui->lineEdit_yearBuilt->text();
+    QString yearBuilt;
     if(ui->checkBox_built->isChecked())
     {
         yearBuilt = QString::number(0);
     }
-    else if(!ui->checkBox_built->isChecked() && ui->lineEdit_yearBuilt->text() != "")
+    else if(!ui->checkBox_built->isChecked() && !yearBuilt.isEmpty())
     {
         yearBuilt = ui->lineEdit_yearBuilt->text();
     }
-    else if(!ui->checkBox_built->isChecked() && ui->lineEdit_yearBuilt->text() == "")
+    else if(!ui->checkBox_built->isChecked() && yearBuilt.isEmpty())
     {
         //error
     }

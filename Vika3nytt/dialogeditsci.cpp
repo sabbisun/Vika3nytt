@@ -108,14 +108,14 @@ void DialogEditSci::on_Button_cancel_clicked()
 void DialogEditSci::on_Button_confirm_clicked()
 {
     QString name = ui->lineEdit_name->text();
-    if(name == "")
+    if(name.isEmpty())
     {
-        //error
+        ui->label_nameError->setText("name cannot be empty");
     }
     QString surname = ui->lineEdit_surname->text();
-    if(surname == "")
+    if(surname.isEmpty())
     {
-        //error
+        ui->label_surnameError->setText("surname cannot be empty");
     }
     QString gender;
     if(ui->checkBox_female->isChecked())
@@ -131,22 +131,22 @@ void DialogEditSci::on_Button_confirm_clicked()
         //error: must choose gender
     }
     QString byear = ui->lineEdit_yearBirth->text();
-    if(byear == "")
+    if(byear.isEmpty())
     {
-        //error
+        ui->label_birthError->setText("enter birth");
     }
     QString dyear;
     if(ui->checkBox_alive->isChecked())
     {
         dyear = QString::number(0);
     }
-    else if(!ui->checkBox_alive->isChecked() && ui->lineEdit_yearDeth->text() != "")
+    else if(!ui->checkBox_alive->isChecked() && !dyear.isEmpty())
     {
         dyear = ui->lineEdit_yearDeth->text();
     }
-    else if(!ui->checkBox_alive->isChecked() && ui->lineEdit_yearDeth->text() == "")
+    else //if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
     {
-        //error
+        ui->label_deathError->setText("enter death");
     }
     int id = qId.toInt();
     core.updateIndiName(name.toStdString(), id);

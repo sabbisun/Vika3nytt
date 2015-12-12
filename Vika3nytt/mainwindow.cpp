@@ -201,7 +201,7 @@ void MainWindow::addTreeChildSci(QTreeWidgetItem *parent, Computer computer)
 
     if(computer.getYear() == 0)
     {
-        built = "Unbuilt";
+        built = "Not built";
     }
     else
     {
@@ -230,7 +230,7 @@ void MainWindow::addTreeRootComp(Computer computer)
 
     if(computer.getYear() == 0)
     {
-        built = "Unbuilt";
+        built = "Not built";
     }
     else
     {
