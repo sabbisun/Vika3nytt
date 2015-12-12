@@ -727,6 +727,29 @@ moc_dialogaddsci.cpp: ../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDia
 
 moc_dialogeditsci.cpp: ../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../Vika3nytt/core.h \
+		../Vika3nytt/people.h \
+		../Vika3nytt/individual.h \
+		../Vika3nytt/machines.h \
+		../Vika3nytt/computer.h \
+		../Vika3nytt/sqlitedata.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsql.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		../Vika3nytt/globalconstants.h \
 		../Vika3nytt/dialogeditsci.h
 	/Users/thordis/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/thordis/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/thordis/Vika3nytt/Vika3nytt -I/Users/thordis/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/thordis/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/thordis/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/thordis/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/thordis/Qt/5.5/clang_64/lib ../Vika3nytt/dialogeditsci.h -o moc_dialogeditsci.cpp
 
@@ -1094,6 +1117,29 @@ dialogaddsci.o: ../Vika3nytt/dialogaddsci.cpp ../Vika3nytt/dialogaddsci.h \
 dialogeditsci.o: ../Vika3nytt/dialogeditsci.cpp ../Vika3nytt/dialogeditsci.h \
 		../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
+		../Vika3nytt/core.h \
+		../Vika3nytt/people.h \
+		../Vika3nytt/individual.h \
+		../Vika3nytt/machines.h \
+		../Vika3nytt/computer.h \
+		../Vika3nytt/sqlitedata.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsql.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
+		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
+		../Vika3nytt/globalconstants.h \
 		ui_dialogeditsci.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dialogeditsci.o ../Vika3nytt/dialogeditsci.cpp
 
