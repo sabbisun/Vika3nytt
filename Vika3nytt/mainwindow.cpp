@@ -384,21 +384,11 @@ void MainWindow::on_Button_editSci_clicked()
 void MainWindow::on_Button_removeSci_clicked()
 {
     ui->Button_removeSci->setEnabled(false);
-
     if(!ui->treeWidget_sci->currentItem()->parent())
     {
         qDebug() << QString("valdir vísindamann, parent");
-        QModelIndexList selectedList = ui->treeWidget_sci->selectionModel()->selectedRows();
 
-        int index;
-        for(int i = 0; i < selectedList.count(); i++)
-        {
-            //QMessageBox::information(this,"", QString::number(selectedList.at(i).row()));
-            index = selectedList.at(i).row();
-        }
-
-        //þetta er id-ið af manneskjunni í röð index
-        QString temp = ui->treeWidget_sci->model()->data(ui->treeWidget_sci->model()->index(index, 3)).toString();
+        QString temp = ui->treeWidget_sci->currentItem()->text(3);
         int id = temp.toInt();
 
         //messagebox
@@ -407,11 +397,11 @@ void MainWindow::on_Button_removeSci_clicked()
         msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         //msgBox.setDefaultButton(QMessageBox::Cancel);  //maybe
-        int ret = msgBox.exec();
+        int read = msgBox.exec();
 
         bool removed;   //taka seinna
 
-        switch (ret) {
+        switch (read) {
             case QMessageBox::Yes:      core.removeIndividual(id, removed);
                                         setTreeSci();
                                         break;
@@ -420,7 +410,6 @@ void MainWindow::on_Button_removeSci_clicked()
             default:                    // should never be reached
                                         break;
         }
-
     }
     else
     {
@@ -465,18 +454,11 @@ void MainWindow::on_treeWidget_sci_itemSelectionChanged()
 void MainWindow::on_Button_removeComp_clicked()
 {
     ui->Button_removeComp->setEnabled(false);
-    QModelIndexList selectedList = ui->treeWidget_comp->selectionModel()->selectedRows();
-
     if(!ui->treeWidget_comp->currentItem()->parent())
     {
         qDebug() << QString("valdir tölvu, parent");
-        int index;
-        for(int i = 0; i < selectedList.count(); i++)
-        {
-            index = selectedList.at(i).row();
-        }
 
-        QString temp = ui->treeWidget_comp->model()->data(ui->treeWidget_comp->model()->index(index, 3)).toString();
+        QString temp = ui->treeWidget_comp->currentItem()->text(3);
         int id = temp.toInt();
         // The Id of the computer in row 'index' of table
 
