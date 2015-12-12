@@ -48,7 +48,6 @@ void MainWindow::searchSciMenu(string search)
 {
    People p1;
    string searching = ui->comboBox_searchSci->currentText().toStdString();
-   bool found;
    if(searching == "Name")
    {
       p1 = core.searchNam(search);
@@ -386,8 +385,6 @@ void MainWindow::on_Button_removeSci_clicked()
     ui->Button_removeSci->setEnabled(false);
     if(!ui->treeWidget_sci->currentItem()->parent())
     {
-        qDebug() << QString("valdir vísindamann, parent");
-
         QString temp = ui->treeWidget_sci->currentItem()->text(3);
         int id = temp.toInt();
 
@@ -413,16 +410,13 @@ void MainWindow::on_Button_removeSci_clicked()
     }
     else
     {
-        qDebug() << QString("valdir tölvu, child");
         QString comIdQ = ui->treeWidget_sci->currentItem()->text(3);
         QString sciIdQ = ui->treeWidget_sci->currentItem()->parent()->text(3);
         QString comNameQ =  ui->treeWidget_sci->currentItem()->text(0);
         QString sciNameQ =  ui->treeWidget_sci->currentItem()->parent()->text(0);
 
-        int sciId = sciIdQ.toInt();
-        int comId = comIdQ.toInt();
-
-        //core.removeConnection(sciId, comId);
+        int sciId = sciIdQ.toUInt();
+        int comId = comIdQ.toUInt();
 
         QMessageBox msgBoxRmCon;
         msgBoxRmCon.setText("Removal of a connection");
@@ -430,9 +424,19 @@ void MainWindow::on_Button_removeSci_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+        switch(ret)
+        {
+            case QMessageBox::Yes:
+                                 core.removeConnection(sciId,comId);
+                                  break;
+            default:
+                    //nothing done
+                                break;
+
+        }
 
     }
-
+    setTreeSci();
 
 }
 
@@ -456,7 +460,7 @@ void MainWindow::on_Button_removeComp_clicked()
     ui->Button_removeComp->setEnabled(false);
     if(!ui->treeWidget_comp->currentItem()->parent())
     {
-        qDebug() << QString("valdir tölvu, parent");
+        //qDebug() << QString("valdir tölvu, parent");
 
         QString temp = ui->treeWidget_comp->currentItem()->text(3);
         int id = temp.toInt();
@@ -483,18 +487,15 @@ void MainWindow::on_Button_removeComp_clicked()
     }
     else
     {
-        qDebug() << QString("valdir vísindamann, child");
+       // qDebug() << QString("valdir vísindamann, child");
 
         QString sciNameQ = ui->treeWidget_comp->currentItem()->text(0);
         QString sciIdQ = ui->treeWidget_comp->currentItem()->text(3);
         QString comNameQ = ui->treeWidget_comp->currentItem()->parent()->text(0);
         QString comIdQ = ui->treeWidget_comp->currentItem()->parent()->text(3);
 
-        qDebug() << sciNameQ;
-        qDebug() << comNameQ;
-
-        //int sciId;
-        //int comId;
+        int sciId = sciIdQ.toUInt();
+        int comId = comIdQ.toUInt();
 
         QMessageBox msgBoxRmCon;
         msgBoxRmCon.setText("Removal of a connection");
@@ -502,7 +503,18 @@ void MainWindow::on_Button_removeComp_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+        switch(ret)
+        {
+            case QMessageBox::Yes:
+                                 core.removeConnection(sciId,comId);
+                                  break;
+            default:
+                    //nothing done
+                                break;
+
+        }
     }
+    setTreeComp();
 }
 
 void MainWindow::on_treeWidget_comp_itemSelectionChanged()

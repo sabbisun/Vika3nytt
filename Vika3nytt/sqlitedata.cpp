@@ -407,6 +407,7 @@ void SQLiteData::executeQuery(const string query)
     QString Q = QString::fromStdString(query);
     QSqlQuery queryname(db);
     queryname.exec(Q);
+    db.close();
 }
 
 vector<int> SQLiteData::getRelationsToComp(const int i)
@@ -477,7 +478,7 @@ void SQLiteData::deleteConnectionWithComp(const int idComp)
 
 void SQLiteData::deleteConnectionWithIndiAndComp(const int idSci, const int idComp)
 {
-    string Query = updateRel + " " + setDel + " " + findCompId + intToString(idComp) + "AND scientist_id = " +intToString(idSci);
+    string Query = updateRel + " " + setDel + " " + findCompId + intToString(idComp) + " AND scientist_id = " +intToString(idSci);
     executeQuery(Query);
 }
 
