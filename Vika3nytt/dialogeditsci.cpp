@@ -139,14 +139,15 @@ void DialogEditSci::on_Button_confirm_clicked()
     if(ui->checkBox_alive->isChecked())
     {
         dyear = QString::number(0);
+        ui->lineEdit_yearBirth->setEnabled(false);
     }
-    else if(!ui->checkBox_alive->isChecked() && !dyear.isEmpty())
+    else if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
     {
-        dyear = ui->lineEdit_yearDeth->text();
+         ui->label_deathError->setText("enter death");
     }
     else //if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
-    {
-        ui->label_deathError->setText("enter death");
+    {  
+        dyear = ui->lineEdit_yearDeth->text();
     }
     int id = qId.toInt();
     core.updateIndiName(name.toStdString(), id);
