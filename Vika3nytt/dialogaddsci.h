@@ -36,6 +36,7 @@ private slots:
 private:
     Core core;
     Ui::DialogAddSci *ui;
+    void clearErrorLabels();
 };
 
 #endif // DIALOGADDSCI_H

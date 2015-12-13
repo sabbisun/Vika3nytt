@@ -27,6 +27,7 @@ private slots:
 private:
     Ui::DialogAddCom *ui;
     Core core;
+    void clearErrorLabel();
 };
 
 #endif // DIALOGADDCOM_H

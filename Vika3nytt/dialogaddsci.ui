@@ -44,6 +44,13 @@
      <item>
       <widget class="QLineEdit" name="lineEdit_addGivenName"/>
      </item>
+     <item>
+      <widget class="QLabel" name="label_errorSciName">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -57,6 +64,20 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_addSurname"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_errorSciSurname">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_addSciErrorSurname">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -96,6 +117,13 @@
        </property>
       </spacer>
      </item>
+     <item>
+      <widget class="QLabel" name="label_errorSciGender">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -109,6 +137,13 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_addBirthYear"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_errorSciBirth">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -132,6 +167,13 @@
       <widget class="QLineEdit" name="lineEdit_addDeathYear">
        <property name="enabled">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_errorSciDeath">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
