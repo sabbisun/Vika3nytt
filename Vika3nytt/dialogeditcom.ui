@@ -47,6 +47,13 @@
      <item>
       <widget class="QLineEdit" name="lineEdit_name"/>
      </item>
+     <item>
+      <widget class="QLabel" name="label_nameError">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -60,6 +67,13 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_type"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_typeError">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -85,6 +99,13 @@
         <widget class="QLineEdit" name="lineEdit_yearBuilt">
          <property name="enabled">
           <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_buildYearError">
+         <property name="text">
+          <string>TextLabel</string>
          </property>
         </widget>
        </item>

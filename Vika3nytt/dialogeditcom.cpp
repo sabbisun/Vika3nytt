@@ -24,11 +24,11 @@ void DialogEditCom::on_checkBox_built_clicked()
 {
     if(ui->checkBox_built->isChecked())
     {
-        ui->lineEdit_yearBuilt->setEnabled(true);
+        ui->lineEdit_yearBuilt->setEnabled(false);
     }
     else
     {
-        ui->lineEdit_yearBuilt->setEnabled(false);
+        ui->lineEdit_yearBuilt->setEnabled(true);
     }
 }
 
@@ -59,17 +59,21 @@ void DialogEditCom::setBuildYear(QString & q)
 
 void DialogEditCom::on_Button_confirm_clicked()
 {
+    bool isLegalEdit = true;
+
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
     {
-        //error
+        ui->label_typeError->setText("must enter name");
+        isLegalEdit = false;
     }
     QString type = ui->lineEdit_type->text();
     if(type.isEmpty())
     {
-        //error
+        ui->label_typeError->setText("must enter type");
+        isLegalEdit = false;
     }
-    QString yearBuilt;
+    QString yearBuilt = ui->lineEdit_yearBuilt->text();
     if(ui->checkBox_built->isChecked())
     {
         yearBuilt = QString::number(0);
@@ -80,21 +84,19 @@ void DialogEditCom::on_Button_confirm_clicked()
     }
     else if(!ui->checkBox_built->isChecked() && yearBuilt.isEmpty())
     {
-        //error
+        ui->label_buildYearError->setText("enter build year");
+        isLegalEdit = false;
     }
 
-    /*bool checked = ui->checkBox_built->isChecked();
-    if((name == "") || (type == "") || ((checked) && (yearBuilt == "")))
+    if(isLegalEdit)
     {
-        qDebug() << QString("not enough info");
-    }*/
-
-    int id = qsId.toInt();
-    core.updateCompName(name.toStdString(), id);
-    core.updateCompType(type.toStdString(), id);
-    core.updateCompBYear(yearBuilt.toInt(), id);
-    qsId = "";
-    this->close();
+        int id = qsId.toInt();
+        core.updateCompName(name.toStdString(), id);
+        core.updateCompType(type.toStdString(), id);
+        core.updateCompBYear(yearBuilt.toInt(), id);
+        qsId = "";
+        this->close();
+    }
 }
 
 void DialogEditCom::on_Button_cancel_clicked()
