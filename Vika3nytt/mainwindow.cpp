@@ -157,7 +157,7 @@ void MainWindow::addTreeRootSci(Individual scientist)
     QString name, gender, age;
 
     int id = scientist.getId();
-    Machines connected = core.getConnectedComp(id);
+    Machines connected;// = core.getConnectedComp(id);
     name = QString::fromStdString(scientist.getSurname() + ", " + scientist.getName());
     if(scientist.getGender() == 'm')
     {
@@ -222,7 +222,7 @@ void MainWindow::addTreeRootComp(Computer computer)
     QString name, type, built;
 
     int id = computer.getId();
-    People connected = core.getConnectedSci(id);
+    People connected;// = core.getConnectedSci(id);
 
     name = QString::fromStdString(computer.getName());
     type = QString::fromStdString(computer.getType());
