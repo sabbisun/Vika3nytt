@@ -28,7 +28,8 @@ void DialogAddCom::on_checkBox_created_clicked()
 void DialogAddCom::on_confirmAddButton_clicked()
 {
     char gender;
-    bool found = true;
+    bool error = false;
+    bool found = false;
     QString name = ui ->lineEdit_addComName->text();
     string nafn = name.toStdString();
     QString qType = ui->lineEdit_addType->text();
@@ -37,17 +38,36 @@ void DialogAddCom::on_confirmAddButton_clicked()
     int live = creationYear.toInt();
 
     Computer c1(live, nafn,type);
-    if(name.isEmpty()||qType.isEmpty())
+    if(name.isEmpty())
     {
-       //found = false;
-        // Error
-       //return;
+        ui->label_errorNameComp->setText("Name cannot be empty!");
+       error = true;
     }
-    core.addComputer(c1,found);
-    this->close();
+    if(isdigit(live) || creationYear.isEmpty())
+    {
+        ui->label_errorCompYear->setText("That is not a possible creation year!");
+        error = true;
+    }
+    if(qType.isEmpty())
+    {
+        ui->label_errorTypeComp->setText("Type cannot be empty!");
+    }
+    if(!error)
+    {
+        core.addComputer(c1,found);
+        if(found)
+        {
+            ui->label_errorNameComp->setText("This computer is already in the database!");
+            ui->label_errorCompYear->setText("This computer is already in the database!");
+            ui->label_errorTypeComp->setText("This computer is already in the database!");
+        }
+        else
+        {
+            this->close();
+        }
+
+    }
 }
-
-
 void DialogAddCom::on_pushButton_cancelAdd_pressed()
 {
     this->close();

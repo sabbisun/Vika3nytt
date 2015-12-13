@@ -49,6 +49,13 @@
      <item>
       <widget class="QLineEdit" name="lineEdit_addComName"/>
      </item>
+     <item>
+      <widget class="QLabel" name="label_errorNameComp">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -62,6 +69,13 @@
      </item>
      <item>
       <widget class="QLineEdit" name="lineEdit_addType"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_errorTypeComp">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -85,6 +99,13 @@
       <widget class="QLineEdit" name="lineEdit_creationYear">
        <property name="enabled">
         <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_errorCompYear">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>

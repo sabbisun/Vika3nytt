@@ -153,11 +153,8 @@ void DialogEditSci::on_Button_confirm_clicked()
          ui->label_deathError->setText("enter death");
     }
     else //if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
-<<<<<<< HEAD
     {  
         dyear = ui->lineEdit_yearDeth->text();
-=======
-    {
         ui->label_deathError->setText("must enter death or check alive");
         isLegalEdit = false;
     }
@@ -172,7 +169,6 @@ void DialogEditSci::on_Button_confirm_clicked()
         core.updateIndiDYear(dyear.toUInt(), id);
         qId = ""; //global...
         this->close();
->>>>>>> 9fffee619a3533fe208ca06b5b556a34e7a9ad36
     }
 }
 

@@ -33,13 +33,16 @@ public:
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_addName_2;
     QLineEdit *lineEdit_addComName;
+    QLabel *label_errorNameComp;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_addName;
     QLineEdit *lineEdit_addType;
+    QLabel *label_errorTypeComp;
     QCheckBox *checkBox_created;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_creationYear;
     QLineEdit *lineEdit_creationYear;
+    QLabel *label_errorCompYear;
     QHBoxLayout *horizontalLayout_12;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *confirmAddButton;
@@ -80,6 +83,11 @@ public:
 
         horizontalLayout_11->addWidget(lineEdit_addComName);
 
+        label_errorNameComp = new QLabel(DialogAddCom);
+        label_errorNameComp->setObjectName(QStringLiteral("label_errorNameComp"));
+
+        horizontalLayout_11->addWidget(label_errorNameComp);
+
 
         verticalLayout_2->addLayout(horizontalLayout_11);
 
@@ -94,6 +102,11 @@ public:
         lineEdit_addType->setObjectName(QStringLiteral("lineEdit_addType"));
 
         horizontalLayout_7->addWidget(lineEdit_addType);
+
+        label_errorTypeComp = new QLabel(DialogAddCom);
+        label_errorTypeComp->setObjectName(QStringLiteral("label_errorTypeComp"));
+
+        horizontalLayout_7->addWidget(label_errorTypeComp);
 
 
         verticalLayout_2->addLayout(horizontalLayout_7);
@@ -115,6 +128,11 @@ public:
         lineEdit_creationYear->setEnabled(false);
 
         horizontalLayout_8->addWidget(lineEdit_creationYear);
+
+        label_errorCompYear = new QLabel(DialogAddCom);
+        label_errorCompYear->setObjectName(QStringLiteral("label_errorCompYear"));
+
+        horizontalLayout_8->addWidget(label_errorCompYear);
 
 
         verticalLayout_2->addLayout(horizontalLayout_8);
@@ -155,9 +173,12 @@ public:
         DialogAddCom->setWindowTitle(QApplication::translate("DialogAddCom", "Add Computer", 0));
         label_addCom->setText(QApplication::translate("DialogAddCom", "<html><head/><body><p><span style=\" font-size:12pt;\">Add computer</span></p></body></html>", 0));
         label_addName_2->setText(QApplication::translate("DialogAddCom", "Name:                 ", 0));
+        label_errorNameComp->setText(QString());
         label_addName->setText(QApplication::translate("DialogAddCom", "Type:                  ", 0));
+        label_errorTypeComp->setText(QString());
         checkBox_created->setText(QApplication::translate("DialogAddCom", "Created?", 0));
         label_creationYear->setText(QApplication::translate("DialogAddCom", "Year of creation:  ", 0));
+        label_errorCompYear->setText(QString());
         confirmAddButton->setText(QApplication::translate("DialogAddCom", "Confirm", 0));
         pushButton_cancelAdd->setText(QApplication::translate("DialogAddCom", "Cancel", 0));
     } // retranslateUi
