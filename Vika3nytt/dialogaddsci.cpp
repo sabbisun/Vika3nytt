@@ -14,9 +14,6 @@ DialogAddSci::~DialogAddSci()
 }
 
 
-
-
-
 bool DialogAddSci::on_checkBox_male_clicked(bool checked)
 {
     ui->checkBox_female->setChecked(false);
@@ -87,7 +84,6 @@ void DialogAddSci::on_checkBox_alive_clicked()
     }
 
 }
-
 void DialogAddSci::on_pushButton_cancelAdd_clicked()
 {
     this->close();

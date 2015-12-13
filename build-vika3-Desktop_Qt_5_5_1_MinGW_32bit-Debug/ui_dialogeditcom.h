@@ -33,14 +33,17 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_name;
     QLineEdit *lineEdit_name;
+    QLabel *label_nameError;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_type;
     QLineEdit *lineEdit_type;
+    QLabel *label_typeError;
     QVBoxLayout *verticalLayout;
     QCheckBox *checkBox_built;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_buildYear;
     QLineEdit *lineEdit_yearBuilt;
+    QLabel *label_buildYearError;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *Button_confirm;
@@ -77,6 +80,11 @@ public:
 
         horizontalLayout_4->addWidget(lineEdit_name);
 
+        label_nameError = new QLabel(DialogEditCom);
+        label_nameError->setObjectName(QStringLiteral("label_nameError"));
+
+        horizontalLayout_4->addWidget(label_nameError);
+
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
@@ -91,6 +99,11 @@ public:
         lineEdit_type->setObjectName(QStringLiteral("lineEdit_type"));
 
         horizontalLayout_3->addWidget(lineEdit_type);
+
+        label_typeError = new QLabel(DialogEditCom);
+        label_typeError->setObjectName(QStringLiteral("label_typeError"));
+
+        horizontalLayout_3->addWidget(label_typeError);
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
@@ -114,6 +127,11 @@ public:
         lineEdit_yearBuilt->setEnabled(false);
 
         horizontalLayout_5->addWidget(lineEdit_yearBuilt);
+
+        label_buildYearError = new QLabel(DialogEditCom);
+        label_buildYearError->setObjectName(QStringLiteral("label_buildYearError"));
+
+        horizontalLayout_5->addWidget(label_buildYearError);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -155,9 +173,12 @@ public:
         DialogEditCom->setWindowTitle(QApplication::translate("DialogEditCom", "Dialog", 0));
         label_Dialogname->setText(QApplication::translate("DialogEditCom", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Edit Computer</span></p></body></html>", 0));
         label_name->setText(QApplication::translate("DialogEditCom", "Name:                ", 0));
+        label_nameError->setText(QApplication::translate("DialogEditCom", "TextLabel", 0));
         label_type->setText(QApplication::translate("DialogEditCom", "Type:                 ", 0));
+        label_typeError->setText(QApplication::translate("DialogEditCom", "TextLabel", 0));
         checkBox_built->setText(QApplication::translate("DialogEditCom", "Built", 0));
         label_buildYear->setText(QApplication::translate("DialogEditCom", "Year of creation: ", 0));
+        label_buildYearError->setText(QApplication::translate("DialogEditCom", "TextLabel", 0));
         Button_confirm->setText(QApplication::translate("DialogEditCom", "Confirm", 0));
         Button_cancel->setText(QApplication::translate("DialogEditCom", "Cancel", 0));
     } // retranslateUi

@@ -48,7 +48,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
 }
 
 
-void DialogAddCom::on_pushButton_cancelAdd_clicked()
+void DialogAddCom::on_pushButton_cancelAdd_pressed()
 {
     this->close();
 }

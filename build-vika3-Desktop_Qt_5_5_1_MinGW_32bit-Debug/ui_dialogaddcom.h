@@ -112,6 +112,7 @@ public:
 
         lineEdit_creationYear = new QLineEdit(DialogAddCom);
         lineEdit_creationYear->setObjectName(QStringLiteral("lineEdit_creationYear"));
+        lineEdit_creationYear->setEnabled(false);
 
         horizontalLayout_8->addWidget(lineEdit_creationYear);
 
@@ -151,7 +152,7 @@ public:
 
     void retranslateUi(QDialog *DialogAddCom)
     {
-        DialogAddCom->setWindowTitle(QApplication::translate("DialogAddCom", "Dialog", 0));
+        DialogAddCom->setWindowTitle(QApplication::translate("DialogAddCom", "Add Computer", 0));
         label_addCom->setText(QApplication::translate("DialogAddCom", "<html><head/><body><p><span style=\" font-size:12pt;\">Add computer</span></p></body></html>", 0));
         label_addName_2->setText(QApplication::translate("DialogAddCom", "Name:                 ", 0));
         label_addName->setText(QApplication::translate("DialogAddCom", "Type:                  ", 0));

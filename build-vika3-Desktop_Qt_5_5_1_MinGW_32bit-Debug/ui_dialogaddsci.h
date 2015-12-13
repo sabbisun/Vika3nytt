@@ -194,7 +194,7 @@ public:
 
     void retranslateUi(QDialog *DialogAddSci)
     {
-        DialogAddSci->setWindowTitle(QApplication::translate("DialogAddSci", "Dialog", 0));
+        DialogAddSci->setWindowTitle(QApplication::translate("DialogAddSci", "Add scientist", 0));
         label_addSci->setText(QApplication::translate("DialogAddSci", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Add scientist</span></p></body></html>", 0));
         label_addGivenName->setText(QApplication::translate("DialogAddSci", "Given name:   ", 0));
         label_addSurname->setText(QApplication::translate("DialogAddSci", "Surname:       ", 0));

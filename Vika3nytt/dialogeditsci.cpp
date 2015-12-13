@@ -33,7 +33,7 @@ void DialogEditSci::setSurname(QString &q)
 void DialogEditSci::setGender(QString &q)
 {
     std::string gen = q.toStdString();
-    if(gen == "m" || gen == "M")
+    if(gen == "Male")
     {
         ui->checkBox_male->setChecked(true);
     }
@@ -107,16 +107,21 @@ void DialogEditSci::on_Button_cancel_clicked()
 
 void DialogEditSci::on_Button_confirm_clicked()
 {
+    bool isLegalEdit = true;
+
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
     {
         ui->label_nameError->setText("name cannot be empty");
+        isLegalEdit = false;
     }
     QString surname = ui->lineEdit_surname->text();
     if(surname.isEmpty())
     {
         ui->label_surnameError->setText("surname cannot be empty");
+        isLegalEdit = false;
     }
+
     QString gender;
     if(ui->checkBox_female->isChecked())
     {
@@ -128,14 +133,16 @@ void DialogEditSci::on_Button_confirm_clicked()
     }
     else if (!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
     {
-        //error: must choose gender
+        // Wont happen because either is always checked
     }
+
     QString byear = ui->lineEdit_yearBirth->text();
     if(byear.isEmpty())
     {
-        ui->label_birthError->setText("enter birth");
+        ui->label_birthError->setText("must enter birth");
+        isLegalEdit = false;
     }
-    QString dyear;
+    QString dyear = ui->lineEdit_yearDeth->text();
     if(ui->checkBox_alive->isChecked())
     {
         dyear = QString::number(0);
@@ -146,17 +153,27 @@ void DialogEditSci::on_Button_confirm_clicked()
          ui->label_deathError->setText("enter death");
     }
     else //if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
+<<<<<<< HEAD
     {  
         dyear = ui->lineEdit_yearDeth->text();
+=======
+    {
+        ui->label_deathError->setText("must enter death or check alive");
+        isLegalEdit = false;
     }
-    int id = qId.toInt();
-    core.updateIndiName(name.toStdString(), id);
-    core.updateIndiSurname(surname.toStdString(), id);
-    core.updateIndiGender(QString(gender).toStdString()[0], id);
-    core.updateIndiBYear(byear.toUInt(), id);
-    core.updateIndiDYear(dyear.toUInt(), id);
-    qId = ""; //global...
-    this->close();
+
+    if(isLegalEdit)
+    {
+        int id = qId.toInt();
+        core.updateIndiName(name.toStdString(), id);
+        core.updateIndiSurname(surname.toStdString(), id);
+        core.updateIndiGender(QString(gender).toStdString()[0], id);
+        core.updateIndiBYear(byear.toUInt(), id);
+        core.updateIndiDYear(dyear.toUInt(), id);
+        qId = ""; //global...
+        this->close();
+>>>>>>> 9fffee619a3533fe208ca06b5b556a34e7a9ad36
+    }
 }
 
 

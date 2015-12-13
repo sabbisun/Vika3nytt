@@ -21,6 +21,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QToolBar>
@@ -43,6 +44,7 @@ public:
     QLabel *label_searchSci;
     QComboBox *comboBox_searchSci;
     QLineEdit *lineEdit_searchSci;
+    QSpacerItem *horizontalSpacer;
     QTreeWidget *treeWidget_sci;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *Button_addSci;
@@ -56,6 +58,7 @@ public:
     QLabel *label_searchComp;
     QComboBox *comboBox_searchComp;
     QLineEdit *lineEdit_searchComp;
+    QSpacerItem *horizontalSpacer_2;
     QTreeWidget *treeWidget_comp;
     QHBoxLayout *horizontalLayout;
     QPushButton *Button_addComp;
@@ -101,14 +104,18 @@ public:
 
         horizontalLayout_3->addWidget(comboBox_searchSci);
 
-
-        verticalLayout_4->addLayout(horizontalLayout_3);
-
         lineEdit_searchSci = new QLineEdit(tab_sci);
         lineEdit_searchSci->setObjectName(QStringLiteral("lineEdit_searchSci"));
         lineEdit_searchSci->setEnabled(false);
 
-        verticalLayout_4->addWidget(lineEdit_searchSci);
+        horizontalLayout_3->addWidget(lineEdit_searchSci);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_3);
 
         treeWidget_sci = new QTreeWidget(tab_sci);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
@@ -175,13 +182,22 @@ public:
 
         horizontalLayout_2->addWidget(comboBox_searchComp);
 
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
         lineEdit_searchComp = new QLineEdit(tab_comp);
         lineEdit_searchComp->setObjectName(QStringLiteral("lineEdit_searchComp"));
+        QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(lineEdit_searchComp->sizePolicy().hasHeightForWidth());
+        lineEdit_searchComp->setSizePolicy(sizePolicy);
 
-        verticalLayout->addWidget(lineEdit_searchComp);
+        horizontalLayout_2->addWidget(lineEdit_searchComp);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
 
         treeWidget_comp = new QTreeWidget(tab_comp);
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
@@ -232,7 +248,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 658, 26));
+        menuBar->setGeometry(QRect(0, 0, 658, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

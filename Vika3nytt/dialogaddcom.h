@@ -22,11 +22,7 @@ private slots:
 
     void on_confirmAddButton_clicked();
 
-    void on_lineEdit_addCreationYear_cursorPositionChanged(int arg1, int arg2);
-
-    void on_lineEdit_addType_cursorPositionChanged(int arg1, int arg2);
-
-    void on_pushButton_cancelAdd_clicked();
+    void on_pushButton_cancelAdd_pressed();
 
 private:
     Ui::DialogAddCom *ui;

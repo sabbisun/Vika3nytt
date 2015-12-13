@@ -215,6 +215,7 @@ void MainWindow::addTreeChildSci(QTreeWidgetItem *parent, Computer computer)
     treeItem->setText(3, idNumber);
 
     parent->addChild(treeItem);
+
 }
 
 void MainWindow::addTreeRootComp(Computer computer)
@@ -321,6 +322,7 @@ void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
 void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
 {
     ui->lineEdit_searchSci->setEnabled(true);
+    setTreeSci();
 }
 
 void MainWindow::on_lineEdit_searchComp_textChanged(const QString &arg1)
@@ -332,6 +334,7 @@ void MainWindow::on_lineEdit_searchComp_textChanged(const QString &arg1)
 void MainWindow::on_comboBox_searchComp_currentIndexChanged(const QString &arg1)
 {
     ui->lineEdit_searchComp->setEnabled(true);
+    setTreeComp();
 }
 
 void MainWindow::on_Button_addSci_clicked()
