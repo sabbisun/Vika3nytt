@@ -151,10 +151,24 @@ void DialogEditSci::on_Button_confirm_clicked()
     else if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
     {
          ui->label_deathError->setText("enter death");
+         isLegalEdit = false;
+    }
+    else if(!ui->checkBox_alive->isChecked() && !dyear.isEmpty())
+    {
+        dyear = ui->lineEdit_yearDeth->text();
+        if(dyear.toInt() < byear.toInt())
+        {
+            ui->label_deathError->setText("cannot die before being born");
+            isLegalEdit = false;
+        }
+        else
+        {
+            dyear = ui->lineEdit_yearDeth->text();
+            ui->lineEdit_yearBirth->setEnabled(false);
+        }
     }
     else //if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
-    {  
-        dyear = ui->lineEdit_yearDeth->text();
+    {
         ui->label_deathError->setText("must enter death or check alive");
         isLegalEdit = false;
     }
