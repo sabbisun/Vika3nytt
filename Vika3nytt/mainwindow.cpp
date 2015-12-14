@@ -376,6 +376,7 @@ void MainWindow::on_Button_editSci_clicked()
             }
         }
         DialogEditSci editor;
+        QString whole = "Editing scientist: " + surname + ", " +name;
         editor.setModal(true);
         editor.setId(id);
         editor.setName(name);
@@ -384,6 +385,7 @@ void MainWindow::on_Button_editSci_clicked()
         editor.setByear(bYear);
         editor.setDyear(dYear);
         editor.setDesc(desc);
+        editor.setWindowTitle(whole);
         editor.exec();
     }
     setTreeSci();
@@ -465,12 +467,14 @@ void MainWindow::on_Button_editComp_clicked()
         string desc = c1.getAbout();
         QString d = QString::fromStdString(desc);
         DialogEditCom editor;
+        QString whole = "Editing computer: " + name;
         editor.setModal(true);
         editor.setId(id);
         editor.setName(name);
         editor.setType(type);
         editor.setBuildYear(buildYear);
         editor.setAbout(d);
+        editor.setWindowTitle(whole);
         editor.exec();
     }
     setTreeComp();
@@ -534,12 +538,14 @@ void MainWindow::on_Button_addSciConnection_clicked()
 {
     DialogAddSciConnection addSciConn;
     addSciConn.setModal(true);
-    int idcomp = addSciConn.exec();
-
     QString temp = ui->treeWidget_sci->currentItem()->text(3);
+    int idsci = temp.toUInt();
+    Individual p1 = core.getData().getSingleIndi(idsci);
+    QString title = "Adding connection for scientist: " + QString::fromStdString(p1.getSurname()) + ", " + QString::fromStdString(p1.getName());
+    addSciConn.setWindowTitle(title);
+    int idcomp = addSciConn.exec();
     if(idcomp != -1)
     {
-        int idsci = temp.toUInt();
         core.addConnection(idsci, idcomp);
     }
     setTreeSci();
@@ -551,12 +557,15 @@ void MainWindow::on_Button_addCompConnection_clicked()
 {
     DialogAddCompConnection addCompConn;
     addCompConn.setModal(true);
-    int idsci = addCompConn.exec();
     QString temp = ui->treeWidget_comp->currentItem()->text(3);
-    //qDebug() << QString::number(idsci);
+    int idcomp = temp.toInt();
+    Computer c1 = core.getData().getSingleComp(idcomp);
+    QString title = "Adding connection for computer: " + QString::fromStdString(c1.getName());
+    addCompConn.setWindowTitle(title);
+    int idsci = addCompConn.exec();
+
     if(idsci != -1)
     {
-        int idcomp = temp.toInt();
         core.addConnection(idsci, idcomp);
     }
     setTreeComp();
@@ -631,14 +640,15 @@ void MainWindow::on_Button_aboutSci_clicked()
     QString temp = ui->treeWidget_sci->currentItem()->text(3);
     int id = temp.toUInt();
     Individual i1 = core.getData().getSingleIndi(id);
-    string name = "Information on scientist: " + i1.getSurname()+ ", " + i1.getName();
+    string name = "Information on scientist: <b>" + i1.getSurname()+ ", " + i1.getName()+"</b>";
     string about = i1.getAbout();
     if(about.empty())
     {
-        about = "Nothing on this scientist!";
+        about = "No information on this scientist!";
     }
     msgBox.setText(QString::fromStdString(name));
     msgBox.setInformativeText(QString::fromStdString(about));
+    msgBox.setWindowTitle(QString::fromStdString("Information"));
     msgBox.setStandardButtons(QMessageBox::Close);
     msgBox.exec();
 }
@@ -653,9 +663,10 @@ void MainWindow::on_Button_aboutcomp_clicked()
     string about = c1.getAbout();
     if(about.empty())
     {
-        about = "Nothing on this computer!";
+        about = "No information on this computer!";
     }
     msgBox.setText(QString::fromStdString(name));
+    msgBox.setWindowTitle(QString::fromStdString("Information"));
     msgBox.setInformativeText(QString::fromStdString(about));
     msgBox.setStandardButtons(QMessageBox::Close);
     msgBox.exec();

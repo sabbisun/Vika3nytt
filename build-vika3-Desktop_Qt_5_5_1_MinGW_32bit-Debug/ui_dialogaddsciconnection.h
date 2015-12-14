@@ -64,13 +64,6 @@ public:
 
         horizontalLayout_2->addLayout(horizontalLayout);
 
-        comboBox_AddSciCon->raise();
-        label->raise();
-        comboBox_AddSciCon->raise();
-        comboBox_AddSciCon->raise();
-        label->raise();
-        button_confirmSciCon->raise();
-        button_cancelConSci->raise();
 
         retranslateUi(DialogAddSciConnection);
 
@@ -79,7 +72,7 @@ public:
 
     void retranslateUi(QDialog *DialogAddSciConnection)
     {
-        DialogAddSciConnection->setWindowTitle(QApplication::translate("DialogAddSciConnection", "Dialog", 0));
+        DialogAddSciConnection->setWindowTitle(QString());
         label->setText(QApplication::translate("DialogAddSciConnection", "Select a computer to connect to", 0));
         button_confirmSciCon->setText(QApplication::translate("DialogAddSciConnection", "Confirm", 0));
         button_cancelConSci->setText(QApplication::translate("DialogAddSciConnection", "Cancel", 0));

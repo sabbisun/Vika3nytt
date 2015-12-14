@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
@@ -43,13 +43,6 @@
     </layout>
    </item>
   </layout>
-  <zorder>comboBox_AddSciCon</zorder>
-  <zorder>label</zorder>
-  <zorder>comboBox_AddSciCon</zorder>
-  <zorder>comboBox_AddSciCon</zorder>
-  <zorder>label</zorder>
-  <zorder>button_confirmSciCon</zorder>
-  <zorder>button_cancelConSci</zorder>
  </widget>
  <resources/>
  <connections/>
