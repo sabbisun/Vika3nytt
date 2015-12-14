@@ -11,15 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :
     setTreeSci();
     createDropSearchForComp();
     setTreeComp();
-    setColumns();
-    /*   //eða:
-    ui->treeWidget_sci->setColumnWidth(0, 200);
-    ui->treeWidget_sci->setColumnWidth(1, 150);
-    ui->treeWidget_sci->setColumnWidth(2, 100);
-
-    ui->treeWidget_comp->setColumnWidth(0, 200);
-    ui->treeWidget_comp->setColumnWidth(1, 150);
-    ui->treeWidget_comp->setColumnWidth(2, 100);*/
 
     ui->Button_removeSci->setEnabled(false);
     ui->Button_removeComp->setEnabled(false);
@@ -99,7 +90,7 @@ void MainWindow::setTreeSci()
     {
         addTreeRootSci(scientists.getIndi(i));
     }
-     ui->treeWidget_sci->sortByColumn(0,Qt::AscendingOrder);
+     ui->treeWidget_sci->sortByColumn(0, Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeSci(People & scientists)
@@ -140,18 +131,6 @@ void MainWindow::setTreeComp(Machines & computers)
     for(int i = 0; i < computers.getSize(); i++)
     {
         addTreeRootComp(computers.getComputer(i));
-    }
-}
-
-void MainWindow::setColumns()
-{
-    int col = 3;
-    int max = 200;
-    for(int i = 0; i < col; i++)
-    {
-        ui->treeWidget_sci->setColumnWidth(i, max);
-        ui->treeWidget_comp->setColumnWidth(i, max);
-        max = max - 50;
     }
 }
 
@@ -308,14 +287,7 @@ void MainWindow::setColumnWidth()
         ui->treeWidget_comp->setColumnWidth(i, max);
         max = max - 50;
     }
-    /*     //eða: ?
-    ui->treeWidget_sci->setColumnWidth(0, 200);
-    ui->treeWidget_sci->setColumnWidth(1, 150);
-    ui->treeWidget_sci->setColumnWidth(2, 100);
-
-    ui->treeWidget_comp->setColumnWidth(0, 200);
-    ui->treeWidget_comp->setColumnWidth(1, 150);
-    ui->treeWidget_comp->setColumnWidth(2, 100);*/
+    ui->treeWidget_sci->setColumnWidth(0, 250);
 }
 
 void MainWindow::createDropSearchForSci()
@@ -344,7 +316,6 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
     ui->Button_removeSci->setEnabled(false);
     ui->Button_editSci->setEnabled(false);
     ui->Button_addSciConnection->setEnabled(false);
-
 }
 
 void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
@@ -450,7 +421,7 @@ void MainWindow::on_Button_removeSci_clicked()
         switch(ret)
         {
             case QMessageBox::Yes:
-                                 core.removeConnection(sciId,comId);
+                                 core.removeConnection(sciId, comId);
                                   break;
             default:
                     //nothing done
@@ -529,7 +500,7 @@ void MainWindow::on_Button_removeComp_clicked()
         switch(ret)
         {
             case QMessageBox::Yes:
-                                 core.removeConnection(sciId,comId);
+                                 core.removeConnection(sciId, comId);
                                   break;
             default:
                     //nothing done
@@ -589,7 +560,7 @@ void MainWindow::on_Button_addSciConnection_clicked()
     if(idcomp != -1)
     {
         int idsci = temp.toUInt();
-        core.addConnection(idsci,idcomp);
+        core.addConnection(idsci, idcomp);
     }
     setTreeSci();
     setTreeComp();
@@ -606,7 +577,7 @@ void MainWindow::on_Button_addCompConnection_clicked()
     if(idsci != -1)
     {
         int idcomp = temp.toInt();
-        core.addConnection(idsci,idcomp);
+        core.addConnection(idsci, idcomp);
     }
     setTreeComp();
     setTreeSci();
@@ -644,4 +615,11 @@ void MainWindow::on_comboBox_searchComp_currentIndexChanged(const QString &arg1)
     {
          ui->lineEdit_searchComp->setEnabled(true);
     }
+}
+void MainWindow::setAltRowColor()
+{
+    ui->treeWidget_sci->setAlternatingRowColors(true);
+    ui->treeWidget_sci->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
+    ui->treeWidget_comp->setAlternatingRowColors(true);
+    ui->treeWidget_comp->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
 }

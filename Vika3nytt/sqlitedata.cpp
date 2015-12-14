@@ -557,7 +557,7 @@ bool SQLiteData::searchForId(const int id, const string tablename)
      else
      {
          db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-         db.setDatabaseName("ScientistsComputers.sqlite");
+         db.setDatabaseName(connectionName);
 
          db.open();
      }

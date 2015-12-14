@@ -30,7 +30,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_sci">
        <attribute name="title">
@@ -233,7 +233,9 @@
               <property name="font">
                <font>
                 <family>Arial</family>
+                <weight>50</weight>
                 <italic>true</italic>
+                <bold>false</bold>
                </font>
               </property>
              </widget>
@@ -290,10 +292,7 @@
              <widget class="QPushButton" name="Button_addComp">
               <property name="font">
                <font>
-                <family>Arial</family>
-                <pointsize>8</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <italic>true</italic>
                </font>
               </property>
               <property name="text">

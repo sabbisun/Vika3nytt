@@ -226,10 +226,7 @@ public:
 
         comboBox_searchComp = new QComboBox(tab_comp);
         comboBox_searchComp->setObjectName(QStringLiteral("comboBox_searchComp"));
-        QFont font7;
-        font7.setFamily(QStringLiteral("Arial"));
-        font7.setItalic(true);
-        comboBox_searchComp->setFont(font7);
+        comboBox_searchComp->setFont(font2);
 
         horizontalLayout_2->addWidget(comboBox_searchComp);
 
@@ -240,10 +237,10 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(lineEdit_searchComp->sizePolicy().hasHeightForWidth());
         lineEdit_searchComp->setSizePolicy(sizePolicy);
-        QFont font8;
-        font8.setBold(false);
-        font8.setWeight(50);
-        lineEdit_searchComp->setFont(font8);
+        QFont font7;
+        font7.setBold(false);
+        font7.setWeight(50);
+        lineEdit_searchComp->setFont(font7);
 
         horizontalLayout_2->addWidget(lineEdit_searchComp);
 
@@ -269,7 +266,9 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         Button_addComp = new QPushButton(tab_comp);
         Button_addComp->setObjectName(QStringLiteral("Button_addComp"));
-        Button_addComp->setFont(font5);
+        QFont font8;
+        font8.setItalic(true);
+        Button_addComp->setFont(font8);
 
         horizontalLayout->addWidget(Button_addComp);
 
@@ -317,7 +316,7 @@ public:
         QObject::connect(comboBox_searchSci, SIGNAL(currentIndexChanged(QString)), lineEdit_searchSci, SLOT(clear()));
         QObject::connect(comboBox_searchComp, SIGNAL(currentIndexChanged(QString)), lineEdit_searchComp, SLOT(clear()));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
         Button_addSci->setDefault(true);
 
 
