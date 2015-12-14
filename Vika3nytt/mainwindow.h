@@ -77,6 +77,7 @@ private:
     void setTreeSci(People& scientists);
     void setTreeComp();
     void setTreeComp(Machines& computers);
+    void setColumns();
     void addTreeRootSci(Individual scientist);
     void addTreeChildSci(QTreeWidgetItem *parent, Computer computer);
     void addTreeRootComp(Computer computer);

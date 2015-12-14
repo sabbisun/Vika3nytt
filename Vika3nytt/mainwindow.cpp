@@ -10,15 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setTreeSci();
     createDropSearchForComp();
     setTreeComp();
-
-    int col = 3;
-    int max = 200;
-    for(int i = 0; i < col; i++)
-    {
-        ui->treeWidget_sci->setColumnWidth(i, max);
-        ui->treeWidget_comp->setColumnWidth(i, max);
-        max = max - 50;
-    }
+    setColumns();
     /*   //eða:
     ui->treeWidget_sci->setColumnWidth(0, 200);
     ui->treeWidget_sci->setColumnWidth(1, 150);
@@ -144,6 +136,18 @@ void MainWindow::setTreeComp(Machines & computers)
     for(int i = 0; i < computers.getSize(); i++)
     {
         addTreeRootComp(computers.getComputer(i));
+    }
+}
+
+void MainWindow::setColumns()
+{
+    int col = 3;
+    int max = 200;
+    for(int i = 0; i < col; i++)
+    {
+        ui->treeWidget_sci->setColumnWidth(i, max);
+        ui->treeWidget_comp->setColumnWidth(i, max);
+        max = max - 50;
     }
 }
 
