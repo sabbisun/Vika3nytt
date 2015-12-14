@@ -6,6 +6,13 @@ DialogAddSci::DialogAddSci(QWidget *parent) :
     ui(new Ui::DialogAddSci)
 {
     ui->setupUi(this);
+
+    QFont f( "Arial", 10, QFont::Bold);
+    ui->label_errorSciName->setFont(f);
+    ui->label_errorSciSurname->setFont(f);
+    ui->label_errorSciGender->setFont(f);
+    ui->label_errorSciBirth->setFont(f);
+    ui->label_errorSciDeath->setFont(f);
 }
 
 DialogAddSci::~DialogAddSci()
@@ -112,10 +119,10 @@ void DialogAddSci::on_confirmAddButton_clicked()
         core.addIndividual(i1,found);
         if(found)
         {
-             ui->label_errorSciName->setText("Scientist is already in the database");
-             ui->label_errorSciSurname->setText("Scientist is already in the database");
-             ui->label_errorSciBirth->setText("Scientist is already in the database");
-             ui->label_errorSciDeath->setText("Scientist is already in the database");
+             ui->label_errorSciName->setText("<font color=\"Red\">Scientist is already in the database");
+             ui->label_errorSciSurname->setText("<font color=\"Red\">Scientist is already in the database");
+             ui->label_errorSciBirth->setText("<font color=\"Red\">Scientist is already in the database");
+             ui->label_errorSciDeath->setText("<font color=\"Red\">Scientist is already in the database");
 
         }
         else

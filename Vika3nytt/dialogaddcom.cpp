@@ -6,6 +6,11 @@ DialogAddCom::DialogAddCom(QWidget *parent) :
     ui(new Ui::DialogAddCom)
 {
     ui->setupUi(this);
+
+    QFont f( "Arial", 10, QFont::Bold);
+    ui->label_errorNameComp->setFont(f);
+    ui->label_errorTypeComp->setFont(f);
+    ui->label_errorCompYear->setFont(f);
 }
 
 DialogAddCom::~DialogAddCom()
@@ -43,7 +48,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
 
     if(name.isEmpty())
     {
-        ui->label_errorNameComp->setText("Name cannot be empty!");
+        ui->label_errorNameComp->setText("<font color=\"Red\">Name cannot be empty!");
         error = true;
     }
 
@@ -53,13 +58,13 @@ void DialogAddCom::on_confirmAddButton_clicked()
     }
     else if(live == 0 || creationYear.isEmpty())
     {
-        ui->label_errorCompYear->setText("That is not a possible creation year!");
+        ui->label_errorCompYear->setText("<font color=\"Red\">That is not a possible creation year!");
         error = true;
     }
 
     if(qType.isEmpty())
     {
-        ui->label_errorTypeComp->setText("Type cannot be empty!");
+        ui->label_errorTypeComp->setText("<font color=\"Red\">Type cannot be empty!");
         error = true;
     }
 
@@ -69,9 +74,9 @@ void DialogAddCom::on_confirmAddButton_clicked()
         core.addComputer(c1,found);
         if(found)
         {
-            ui->label_errorNameComp->setText("This computer is already in the database!");
-            ui->label_errorCompYear->setText("This computer is already in the database!");
-            ui->label_errorTypeComp->setText("This computer is already in the database!");
+            ui->label_errorNameComp->setText("<font color=\"Red\">This computer is already in the database!");
+            ui->label_errorCompYear->setText("<font color=\"Red\">This computer is already in the database!");
+            ui->label_errorTypeComp->setText("<font color=\"Red\">This computer is already in the database!");
         }
         else
         {
