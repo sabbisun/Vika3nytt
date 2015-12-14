@@ -1,10 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "dialogaddsci.h"
-#include "dialogaddcom.h"
-#include "dialogeditsci.h"
-#include "dialogaddcompconnection.h"
-#include "dialogaddsciconnection.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)

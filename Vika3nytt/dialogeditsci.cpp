@@ -114,6 +114,7 @@ void DialogEditSci::on_Button_cancel_clicked()
 void DialogEditSci::on_Button_confirm_clicked()
 {
     bool isLegalEdit = true;
+    clearErrorLabels();
 
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
@@ -179,6 +180,14 @@ void DialogEditSci::on_Button_confirm_clicked()
         qId = "";
         this->close();
     }
+}
+
+void DialogEditSci::clearErrorLabels()
+{
+    ui->label_nameError->setText("");
+    ui->label_surnameError->setText("");
+    ui->label_deathError->setText("");
+    ui->label_birthError->setText("");
 }
 
 
