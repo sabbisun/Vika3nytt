@@ -8,6 +8,12 @@ DialogEditSci::DialogEditSci(QWidget *parent) :
     ui(new Ui::DialogEditSci)
 {
     ui->setupUi(this);
+
+    QFont f( "Arial", 10, QFont::Bold);
+    ui->label_nameError->setFont(f);
+    ui->label_surnameError->setFont(f);
+    ui->label_birthError->setFont(f);
+    ui->label_deathError->setFont(f);
 }
 
 DialogEditSci::~DialogEditSci()
@@ -112,13 +118,13 @@ void DialogEditSci::on_Button_confirm_clicked()
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
     {
-        ui->label_nameError->setText("name cannot be empty");
+        ui->label_nameError->setText("<font color=\"Red\">Please enter a name.");
         isLegalEdit = false;
     }
     QString surname = ui->lineEdit_surname->text();
     if(surname.isEmpty())
     {
-        ui->label_surnameError->setText("surname cannot be empty");
+        ui->label_surnameError->setText("<font color=\"Red\">Please enter a surname.");
         isLegalEdit = false;
     }
 
@@ -131,15 +137,11 @@ void DialogEditSci::on_Button_confirm_clicked()
     {
         gender = "m";
     }
-    else if (!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
-    {
-        // Wont happen because either is always checked
-    }
 
     QString byear = ui->lineEdit_yearBirth->text();
     if(byear.isEmpty())
     {
-        ui->label_birthError->setText("must enter birth");
+        ui->label_birthError->setText("<font color=\"Red\">Please enter a birth year.");
         isLegalEdit = false;
     }
     QString dyear = ui->lineEdit_yearDeth->text();
@@ -150,7 +152,7 @@ void DialogEditSci::on_Button_confirm_clicked()
     }
     else if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
     {
-         ui->label_deathError->setText("enter death");
+         ui->label_deathError->setText("<font color=\"Red\">Please enter a death year.");
          isLegalEdit = false;
     }
     else if(!ui->checkBox_alive->isChecked() && !dyear.isEmpty())
@@ -158,7 +160,7 @@ void DialogEditSci::on_Button_confirm_clicked()
         dyear = ui->lineEdit_yearDeth->text();
         if(dyear.toInt() < byear.toInt())
         {
-            ui->label_deathError->setText("cannot die before being born");
+            ui->label_deathError->setText("<font color=\"Red\">Cannot die before being born.");
             isLegalEdit = false;
         }
         else
@@ -166,11 +168,6 @@ void DialogEditSci::on_Button_confirm_clicked()
             dyear = ui->lineEdit_yearDeth->text();
             ui->lineEdit_yearBirth->setEnabled(false);
         }
-    }
-    else //if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
-    {
-        ui->label_deathError->setText("must enter death or check alive");
-        isLegalEdit = false;
     }
 
     if(isLegalEdit)
@@ -181,7 +178,7 @@ void DialogEditSci::on_Button_confirm_clicked()
         core.updateIndiGender(QString(gender).toStdString()[0], id);
         core.updateIndiBYear(byear.toUInt(), id);
         core.updateIndiDYear(dyear.toUInt(), id);
-        qId = ""; //global...
+        qId = "";
         this->close();
     }
 }

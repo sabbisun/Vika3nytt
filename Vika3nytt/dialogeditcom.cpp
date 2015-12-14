@@ -8,6 +8,11 @@ DialogEditCom::DialogEditCom(QWidget *parent) :
     ui(new Ui::DialogEditCom)
 {
     ui->setupUi(this);
+
+    QFont f( "Arial", 10, QFont::Bold);
+    ui->label_nameError->setFont(f);
+    ui->label_typeError->setFont(f);
+    ui->label_buildYearError->setFont(f);
 }
 
 DialogEditCom::~DialogEditCom()
@@ -24,11 +29,11 @@ void DialogEditCom::on_checkBox_built_clicked()
 {
     if(ui->checkBox_built->isChecked())
     {
-        ui->lineEdit_yearBuilt->setEnabled(false);
+        ui->lineEdit_yearBuilt->setEnabled(true);
     }
     else
     {
-        ui->lineEdit_yearBuilt->setEnabled(true);
+        ui->lineEdit_yearBuilt->setEnabled(false);
     }
 }
 
@@ -64,13 +69,13 @@ void DialogEditCom::on_Button_confirm_clicked()
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
     {
-        ui->label_typeError->setText("must enter name");
+        ui->label_typeError->setText("<font color=\"Red\">Please enter a name.");
         isLegalEdit = false;
     }
     QString type = ui->lineEdit_type->text();
     if(type.isEmpty())
     {
-        ui->label_typeError->setText("must enter type");
+        ui->label_typeError->setText("<font color=\"Red\">Please enter a type.");
         isLegalEdit = false;
     }
     QString yearBuilt = ui->lineEdit_yearBuilt->text();
@@ -84,7 +89,7 @@ void DialogEditCom::on_Button_confirm_clicked()
     }
     else if(!ui->checkBox_built->isChecked() && yearBuilt.isEmpty())
     {
-        ui->label_buildYearError->setText("enter build year");
+        ui->label_buildYearError->setText("<font color=\"Red\">Please enter a year of creation.");
         isLegalEdit = false;
     }
 

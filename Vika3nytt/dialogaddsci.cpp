@@ -74,17 +74,17 @@ void DialogAddSci::on_confirmAddButton_clicked()
         ui->label_errorSciSurname->setText("Surname cannot be empty");
         error = true;
     }
-    if(on_checkBox_male_clicked(false) && on_checkBox_female_clicked(false))
+    if(!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
     {
         ui->label_errorSciGender->setText("Scientist must have a gender!");
         error = true;
     }
-    if(birthYear.isEmpty() || !isdigit(live))
+    if(birthYear.isEmpty()||live == 0)
     {
         ui->label_errorSciBirth->setText("Invalid birth year!");
         error = true;
     }
-    if(deathYear.isEmpty() || !isdigit(live) || dead < live)
+    if(deathYear.isEmpty()||!(ui->checkBox_alive->isChecked())||live>dead||dead == 0)
     {
         ui->label_errorSciDeath->setText("Invalid death year!");
         error = true;

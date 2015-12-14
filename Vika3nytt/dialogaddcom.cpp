@@ -44,7 +44,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
         ui->label_errorNameComp->setText("Name cannot be empty!");
        error = true;
     }
-    if(isdigit(live) || creationYear.isEmpty())
+    if(live == 0 || creationYear.isEmpty())
     {
         ui->label_errorCompYear->setText("That is not a possible creation year!");
         error = true;
