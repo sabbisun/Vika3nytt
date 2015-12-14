@@ -193,7 +193,6 @@ void SQLiteData::updateCompBYear(const int year, const int id)
 void SQLiteData::updateCompAbout(const string desc, const int id)
 {
     string Query = updateComp + " " + setAbout + desc + "' " + findId + intToString(id);
-    qDebug() << QString::fromStdString(Query);
     executeQuery(Query);
 }
 
