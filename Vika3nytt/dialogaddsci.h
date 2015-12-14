@@ -2,8 +2,8 @@
 #define DIALOGADDSCI_H
 
 #include <QDialog>
-#include <core.h>
-#include<people.h>
+#include "core.h"
+#include "people.h"
 
 namespace Ui {
 class DialogAddSci;
