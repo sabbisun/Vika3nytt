@@ -260,7 +260,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -268,7 +268,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Database application for Scientists and Computers", 0));
         label_searchSci->setText(QApplication::translate("MainWindow", "Search by:", 0));
         Button_addSci->setText(QApplication::translate("MainWindow", "Add Scientist", 0));
         Button_editSci->setText(QApplication::translate("MainWindow", "Edit Scientist", 0));
