@@ -83,6 +83,7 @@ private:
     void addTreeChildComp(QTreeWidgetItem *parent, Individual scientist);
 
     void disableButtons();
+    void setColumnWidth();
 };
 
 #endif // MAINWINDOW_H

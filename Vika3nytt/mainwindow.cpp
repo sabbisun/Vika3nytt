@@ -11,31 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
     createDropSearchForComp();
     setTreeComp();
 
-    int col = 3;
-    int max = 200;
-    for(int i = 0; i < col; i++)
-    {
-        ui->treeWidget_sci->setColumnWidth(i, max);
-        ui->treeWidget_comp->setColumnWidth(i, max);
-        max = max - 50;
-    }
-    /*   //eða:
-    ui->treeWidget_sci->setColumnWidth(0, 200);
-    ui->treeWidget_sci->setColumnWidth(1, 150);
-    ui->treeWidget_sci->setColumnWidth(2, 100);
+    setColumnWidth();
 
-    ui->treeWidget_comp->setColumnWidth(0, 200);
-    ui->treeWidget_comp->setColumnWidth(1, 150);
-    ui->treeWidget_comp->setColumnWidth(2, 100);*/
-
-    ui->Button_removeSci->setEnabled(false);
-    ui->Button_removeComp->setEnabled(false);
-    ui->Button_editSci->setEnabled(false);
-    ui->Button_editComp->setEnabled(false);
-    ui->Button_addSciConnection->setEnabled(false);
-    ui->Button_addCompConnection->setEnabled(false);
-
-
+    disableButtons();
 }
 
 MainWindow::~MainWindow()
@@ -291,6 +269,26 @@ void MainWindow::disableButtons()
     ui->Button_editComp->setEnabled(false);
     ui->Button_addSciConnection->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
+}
+
+void MainWindow::setColumnWidth()
+{
+    int col = 3;
+    int max = 200;
+    for(int i = 0; i < col; i++)
+    {
+        ui->treeWidget_sci->setColumnWidth(i, max);
+        ui->treeWidget_comp->setColumnWidth(i, max);
+        max = max - 50;
+    }
+    /*     //eða: ?
+    ui->treeWidget_sci->setColumnWidth(0, 200);
+    ui->treeWidget_sci->setColumnWidth(1, 150);
+    ui->treeWidget_sci->setColumnWidth(2, 100);
+
+    ui->treeWidget_comp->setColumnWidth(0, 200);
+    ui->treeWidget_comp->setColumnWidth(1, 150);
+    ui->treeWidget_comp->setColumnWidth(2, 100);*/
 }
 
 void MainWindow::createDropSearchForSci()
