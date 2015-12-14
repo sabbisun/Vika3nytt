@@ -1,5 +1,6 @@
 #ifndef DIALOGADDSCICONNECTION_H
 #define DIALOGADDSCICONNECTION_H
+
 #include <QDialog>
 #include "core.h"
 
@@ -17,13 +18,13 @@ public:
 
 private slots:
     void on_button_confirmSciCon_clicked();
-
     void on_button_cancelConSci_clicked();
 
 private:
     Ui::DialogAddSciConnection *ui;
-    void createComboBox();
     Core core;
+
+    void createComboBox();
 };
 
 #endif // DIALOGADDSCICONNECTION_H
