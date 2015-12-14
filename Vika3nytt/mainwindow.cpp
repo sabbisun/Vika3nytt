@@ -82,8 +82,8 @@ void MainWindow::searchCompMenu(const string search)
 void MainWindow::setTreeSci()
 {
     ui->treeWidget_sci->clear();
-    ui->treeWidget_sci->setColumnCount(4);
-    ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Age" << "Id");
+    ui->treeWidget_sci->setColumnCount(5);
+    ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Birth year" << "Id" << "Death year");
     ui->treeWidget_sci->setColumnHidden(3, true);
     People scientists = core.sortSciAlpabetBack();
 
@@ -97,8 +97,8 @@ void MainWindow::setTreeSci()
 void MainWindow::setTreeSci(People & scientists)
 {
     ui->treeWidget_sci->clear();
-    ui->treeWidget_sci->setColumnCount(4);
-    ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Age" << "Id");
+    ui->treeWidget_sci->setColumnCount(5);
+    ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Birth year" << "Id" << "Death year");
     ui->treeWidget_sci->setColumnHidden(3, true);
 
     for(int i = 0; i < scientists.getSize(); i++)
@@ -137,7 +137,7 @@ void MainWindow::setTreeComp(Machines & computers)
 
 void MainWindow::addTreeRootSci(Individual scientist)
 {
-    QString name, gender, age;
+    QString name, gender, bYear, dYear;
 
     int id = scientist.getId();
     Machines connected = core.getConnectedComp(id);
@@ -151,21 +151,24 @@ void MainWindow::addTreeRootSci(Individual scientist)
         gender = QString::fromStdString("Female");
     }
 
+    bYear = QString::number(scientist.getBirth());
+
     if(scientist.getDeath() == 0)
     {
-        age = QString::number(scientist.getBirth()) + " - Today";
+        dYear = "Alive";
     }
     else
     {
-    age = QString::number(scientist.getBirth()) + " - " + QString::number(scientist.getDeath());
+        dYear = QString::number(scientist.getDeath());
     }
 
     QString idNumber = QString::number(id);
     QTreeWidgetItem *treeItem = new QTreeWidgetItem(ui->treeWidget_sci);
     treeItem->setText(0, name);
     treeItem->setText(1, gender);
-    treeItem->setText(2, age);
+    treeItem->setText(2, bYear);
     treeItem->setText(3, idNumber);
+    treeItem->setText(4, dYear);
 
     for(int i = 0; i < connected.getSize(); i++)
     {
@@ -251,7 +254,7 @@ void MainWindow::addTreeChildComp(QTreeWidgetItem *parent, Individual scientist)
 
     if(scientist.getDeath() == 0)
     {
-        age = QString::number(scientist.getBirth()) + " - Today";
+        age = QString::number(scientist.getBirth()) + " - Alive";
     }
     else
     {
@@ -290,6 +293,7 @@ void MainWindow::setColumnWidth()
         max = max - 50;
     }
     ui->treeWidget_sci->setColumnWidth(0, 250);
+    ui->treeWidget_comp->setColumnWidth(0, 250);
 }
 
 void MainWindow::createDropSearchForSci()
