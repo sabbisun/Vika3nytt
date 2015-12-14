@@ -16,6 +16,7 @@ class DialogEditCom : public QDialog
 public:
     explicit DialogEditCom(QWidget *parent = 0);
     ~DialogEditCom();
+
     void setId(QString& q);
     void setName(QString& q);
     void setType(QString& q);

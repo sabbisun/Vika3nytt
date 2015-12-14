@@ -39,13 +39,13 @@ QT_MOC_LITERAL(6, 84, 34), // "on_lineEdit_searchComp_textCh..."
 QT_MOC_LITERAL(7, 119, 24), // "on_Button_addSci_clicked"
 QT_MOC_LITERAL(8, 144, 25), // "on_Button_editSci_clicked"
 QT_MOC_LITERAL(9, 170, 27), // "on_Button_removeSci_clicked"
-QT_MOC_LITERAL(10, 198, 38), // "on_treeWidget_sci_itemSelecti..."
-QT_MOC_LITERAL(11, 237, 28), // "on_Button_removeComp_clicked"
-QT_MOC_LITERAL(12, 266, 39), // "on_treeWidget_comp_itemSelect..."
-QT_MOC_LITERAL(13, 306, 26), // "on_Button_editComp_clicked"
-QT_MOC_LITERAL(14, 333, 34), // "on_Button_addSciConnection_cl..."
-QT_MOC_LITERAL(15, 368, 35), // "on_Button_addCompConnection_c..."
-QT_MOC_LITERAL(16, 404, 25), // "on_Button_addComp_clicked"
+QT_MOC_LITERAL(10, 198, 25), // "on_Button_addComp_clicked"
+QT_MOC_LITERAL(11, 224, 26), // "on_Button_editComp_clicked"
+QT_MOC_LITERAL(12, 251, 28), // "on_Button_removeComp_clicked"
+QT_MOC_LITERAL(13, 280, 38), // "on_treeWidget_sci_itemSelecti..."
+QT_MOC_LITERAL(14, 319, 39), // "on_treeWidget_comp_itemSelect..."
+QT_MOC_LITERAL(15, 359, 34), // "on_Button_addSciConnection_cl..."
+QT_MOC_LITERAL(16, 394, 35), // "on_Button_addCompConnection_c..."
 QT_MOC_LITERAL(17, 430, 41), // "on_comboBox_searchSci_current..."
 QT_MOC_LITERAL(18, 472, 42), // "on_comboBox_searchComp_curren..."
 QT_MOC_LITERAL(19, 515, 26), // "on_Button_aboutSci_clicked"
@@ -58,13 +58,13 @@ QT_MOC_LITERAL(20, 542, 27) // "on_Button_aboutcomp_clicked"
     "on_Button_addSci_clicked\0"
     "on_Button_editSci_clicked\0"
     "on_Button_removeSci_clicked\0"
-    "on_treeWidget_sci_itemSelectionChanged\0"
-    "on_Button_removeComp_clicked\0"
-    "on_treeWidget_comp_itemSelectionChanged\0"
+    "on_Button_addComp_clicked\0"
     "on_Button_editComp_clicked\0"
+    "on_Button_removeComp_clicked\0"
+    "on_treeWidget_sci_itemSelectionChanged\0"
+    "on_treeWidget_comp_itemSelectionChanged\0"
     "on_Button_addSciConnection_clicked\0"
     "on_Button_addCompConnection_clicked\0"
-    "on_Button_addComp_clicked\0"
     "on_comboBox_searchSci_currentIndexChanged\0"
     "on_comboBox_searchComp_currentIndexChanged\0"
     "on_Button_aboutSci_clicked\0"
@@ -138,13 +138,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->on_Button_addSci_clicked(); break;
         case 4: _t->on_Button_editSci_clicked(); break;
         case 5: _t->on_Button_removeSci_clicked(); break;
-        case 6: _t->on_treeWidget_sci_itemSelectionChanged(); break;
-        case 7: _t->on_Button_removeComp_clicked(); break;
-        case 8: _t->on_treeWidget_comp_itemSelectionChanged(); break;
-        case 9: _t->on_Button_editComp_clicked(); break;
-        case 10: _t->on_Button_addSciConnection_clicked(); break;
-        case 11: _t->on_Button_addCompConnection_clicked(); break;
-        case 12: _t->on_Button_addComp_clicked(); break;
+        case 6: _t->on_Button_addComp_clicked(); break;
+        case 7: _t->on_Button_editComp_clicked(); break;
+        case 8: _t->on_Button_removeComp_clicked(); break;
+        case 9: _t->on_treeWidget_sci_itemSelectionChanged(); break;
+        case 10: _t->on_treeWidget_comp_itemSelectionChanged(); break;
+        case 11: _t->on_Button_addSciConnection_clicked(); break;
+        case 12: _t->on_Button_addCompConnection_clicked(); break;
         case 13: _t->on_comboBox_searchSci_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 14: _t->on_comboBox_searchComp_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 15: _t->on_Button_aboutSci_clicked(); break;
