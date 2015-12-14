@@ -535,7 +535,7 @@ int SQLiteData::getDatabaseSize(const string temp)
      else
      {
          db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-         db.setDatabaseName("/Users/thordis/Vika3nytt/build-vika3-Desktop_Qt_5_5_1_MinGW_32bit-Debug/ScientistsComputers.sqlite");
+         db.setDatabaseName("ScientistsComputers.sqlite");
 
          db.open();
      }

@@ -32,7 +32,6 @@ void DialogAddCom::on_checkBox_created_clicked()
 
 void DialogAddCom::on_confirmAddButton_clicked()
 {
-    char gender;
     bool error = false;
     bool found = false;
     clearErrorLabels();

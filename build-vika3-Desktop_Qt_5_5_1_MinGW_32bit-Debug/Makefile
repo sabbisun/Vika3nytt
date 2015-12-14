@@ -51,7 +51,6 @@ OBJECTS_DIR   = ./
 SOURCES       = ../Vika3nytt/main.cpp \
 		../Vika3nytt/mainwindow.cpp \
 		../Vika3nytt/core.cpp \
-		../Vika3nytt/ui.cpp \
 		../Vika3nytt/individual.cpp \
 		../Vika3nytt/people.cpp \
 		../Vika3nytt/sqlitedata.cpp \
@@ -72,7 +71,6 @@ SOURCES       = ../Vika3nytt/main.cpp \
 OBJECTS       = main.o \
 		mainwindow.o \
 		core.o \
-		ui.o \
 		individual.o \
 		people.o \
 		sqlitedata.o \
@@ -236,7 +234,6 @@ DIST          = ../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		../Vika3nytt/vika3.pro ../Vika3nytt/mainwindow.h \
 		../Vika3nytt/core.h \
 		../Vika3nytt/globalconstants.h \
-		../Vika3nytt/ui.h \
 		../Vika3nytt/individual.h \
 		../Vika3nytt/people.h \
 		../Vika3nytt/sqlitedata.h \
@@ -250,7 +247,6 @@ DIST          = ../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		../Vika3nytt/dialogaddcompconnection.h ../Vika3nytt/main.cpp \
 		../Vika3nytt/mainwindow.cpp \
 		../Vika3nytt/core.cpp \
-		../Vika3nytt/ui.cpp \
 		../Vika3nytt/individual.cpp \
 		../Vika3nytt/people.cpp \
 		../Vika3nytt/sqlitedata.cpp \
@@ -627,8 +623,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Vika3nytt/mainwindow.h ../Vika3nytt/core.h ../Vika3nytt/globalconstants.h ../Vika3nytt/ui.h ../Vika3nytt/individual.h ../Vika3nytt/people.h ../Vika3nytt/sqlitedata.h ../Vika3nytt/computer.h ../Vika3nytt/machines.h ../Vika3nytt/dialogaddsci.h ../Vika3nytt/dialogeditsci.h ../Vika3nytt/dialogeditcom.h ../Vika3nytt/dialogaddcom.h ../Vika3nytt/dialogaddsciconnection.h ../Vika3nytt/dialogaddcompconnection.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Vika3nytt/main.cpp ../Vika3nytt/mainwindow.cpp ../Vika3nytt/core.cpp ../Vika3nytt/ui.cpp ../Vika3nytt/individual.cpp ../Vika3nytt/people.cpp ../Vika3nytt/sqlitedata.cpp ../Vika3nytt/computer.cpp ../Vika3nytt/machines.cpp ../Vika3nytt/dialogaddsci.cpp ../Vika3nytt/dialogeditsci.cpp ../Vika3nytt/dialogeditcom.cpp ../Vika3nytt/dialogaddcom.cpp ../Vika3nytt/dialogaddsciconnection.cpp ../Vika3nytt/dialogaddcompconnection.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Vika3nytt/mainwindow.h ../Vika3nytt/core.h ../Vika3nytt/globalconstants.h ../Vika3nytt/individual.h ../Vika3nytt/people.h ../Vika3nytt/sqlitedata.h ../Vika3nytt/computer.h ../Vika3nytt/machines.h ../Vika3nytt/dialogaddsci.h ../Vika3nytt/dialogeditsci.h ../Vika3nytt/dialogeditcom.h ../Vika3nytt/dialogaddcom.h ../Vika3nytt/dialogaddsciconnection.h ../Vika3nytt/dialogaddcompconnection.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Vika3nytt/main.cpp ../Vika3nytt/mainwindow.cpp ../Vika3nytt/core.cpp ../Vika3nytt/individual.cpp ../Vika3nytt/people.cpp ../Vika3nytt/sqlitedata.cpp ../Vika3nytt/computer.cpp ../Vika3nytt/machines.cpp ../Vika3nytt/dialogaddsci.cpp ../Vika3nytt/dialogeditsci.cpp ../Vika3nytt/dialogeditcom.cpp ../Vika3nytt/dialogaddcom.cpp ../Vika3nytt/dialogaddsciconnection.cpp ../Vika3nytt/dialogaddcompconnection.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Vika3nytt/mainwindow.ui ../Vika3nytt/dialogaddsci.ui ../Vika3nytt/dialogeditsci.ui ../Vika3nytt/dialogeditcom.ui ../Vika3nytt/dialogaddcom.ui ../Vika3nytt/dialogaddsciconnection.ui ../Vika3nytt/dialogaddcompconnection.ui $(DISTDIR)/
 
 
@@ -1028,32 +1024,6 @@ core.o: ../Vika3nytt/core.cpp ../Vika3nytt/core.h \
 		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o core.o ../Vika3nytt/core.cpp
-
-ui.o: ../Vika3nytt/ui.cpp ../Vika3nytt/ui.h \
-		../Vika3nytt/core.h \
-		../Vika3nytt/people.h \
-		../Vika3nytt/individual.h \
-		../Vika3nytt/machines.h \
-		../Vika3nytt/computer.h \
-		../Vika3nytt/sqlitedata.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/QtSql \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsql.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriver.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqldriverplugin.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlerror.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlfield.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlindex.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrecord.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlresult.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlquerymodel.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaldelegate.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqlrelationaltablemodel.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qsqltablemodel.h \
-		../../Qt/5.5/clang_64/lib/QtSql.framework/Headers/qtsqlversion.h \
-		../Vika3nytt/globalconstants.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ui.o ../Vika3nytt/ui.cpp
 
 individual.o: ../Vika3nytt/individual.cpp ../Vika3nytt/individual.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o individual.o ../Vika3nytt/individual.cpp
