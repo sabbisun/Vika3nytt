@@ -81,6 +81,8 @@ private:
     void addTreeChildSci(QTreeWidgetItem *parent, Computer computer);
     void addTreeRootComp(Computer computer);
     void addTreeChildComp(QTreeWidgetItem *parent, Individual scientist);
+
+    void disableButtons();
 };
 
 #endif // MAINWINDOW_H

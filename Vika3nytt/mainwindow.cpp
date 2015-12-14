@@ -30,8 +30,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->Button_removeSci->setEnabled(false);
     ui->Button_removeComp->setEnabled(false);
+    ui->Button_editSci->setEnabled(false);
     ui->Button_editComp->setEnabled(false);
+    ui->Button_addSciConnection->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
+
 
 }
 
@@ -279,6 +282,17 @@ void MainWindow::addTreeChildComp(QTreeWidgetItem *parent, Individual scientist)
 
     parent->addChild(treeItem);
 }
+
+void MainWindow::disableButtons()
+{
+    ui->Button_removeSci->setEnabled(false);
+    ui->Button_removeComp->setEnabled(false);
+    ui->Button_editSci->setEnabled(false);
+    ui->Button_editComp->setEnabled(false);
+    ui->Button_addSciConnection->setEnabled(false);
+    ui->Button_addCompConnection->setEnabled(false);
+}
+
 void MainWindow::createDropSearchForSci()
 {
     ui->comboBox_searchSci->clear();
@@ -375,7 +389,7 @@ void MainWindow::on_Button_editSci_clicked()
         editor.exec();
     }
     setTreeSci();
-    ui->Button_editSci->setEnabled(true);
+    disableButtons();
 }
 
 void MainWindow::on_Button_removeSci_clicked()
@@ -435,7 +449,7 @@ void MainWindow::on_Button_removeSci_clicked()
 
     }
     setTreeSci();
-
+    disableButtons();
 }
 
 void MainWindow::on_treeWidget_sci_itemSelectionChanged()
@@ -513,6 +527,7 @@ void MainWindow::on_Button_removeComp_clicked()
         }
     }
     setTreeComp();
+    disableButtons();
 }
 
 void MainWindow::on_treeWidget_comp_itemSelectionChanged()
@@ -550,7 +565,7 @@ void MainWindow::on_Button_editComp_clicked()
         editor.exec();
     }
     setTreeComp();
-    ui->Button_editComp->setEnabled(true);
+    disableButtons();
 }
 
 void MainWindow::on_Button_addSciConnection_clicked()
@@ -567,6 +582,7 @@ void MainWindow::on_Button_addSciConnection_clicked()
     }
     setTreeSci();
     setTreeComp();
+    disableButtons();
 }
 
 void MainWindow::on_Button_addCompConnection_clicked()
@@ -583,6 +599,7 @@ void MainWindow::on_Button_addCompConnection_clicked()
     }
     setTreeComp();
     setTreeSci();
+    disableButtons();
 }
 
 void MainWindow::on_Button_addComp_clicked()
