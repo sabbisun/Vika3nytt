@@ -23,7 +23,6 @@ private slots:
 private:
     Ui::DialogAddCompConnection *ui;
     Core core;
-
     void createComboBox();
 };
 

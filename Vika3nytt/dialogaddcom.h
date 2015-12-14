@@ -25,7 +25,6 @@ private slots:
 private:
     Ui::DialogAddCom *ui;
     Core core;
-
     void clearErrorLabels();
     // Clears all error messages in window
 };
