@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -54,6 +55,9 @@ public:
     QLabel *label_deathYear;
     QLineEdit *lineEdit_addDeathYear;
     QLabel *label_errorSciDeath;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *label_descriptionSci;
+    QPlainTextEdit *lineEdit_descriptionSci;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *confirmAddButton;
@@ -197,6 +201,26 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_5);
 
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        label_descriptionSci = new QLabel(DialogAddSci);
+        label_descriptionSci->setObjectName(QStringLiteral("label_descriptionSci"));
+
+        horizontalLayout_7->addWidget(label_descriptionSci);
+
+        lineEdit_descriptionSci = new QPlainTextEdit(DialogAddSci);
+        lineEdit_descriptionSci->setObjectName(QStringLiteral("lineEdit_descriptionSci"));
+        QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(lineEdit_descriptionSci->sizePolicy().hasHeightForWidth());
+        lineEdit_descriptionSci->setSizePolicy(sizePolicy);
+
+        horizontalLayout_7->addWidget(lineEdit_descriptionSci);
+
+
+        verticalLayout->addLayout(horizontalLayout_7);
+
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
         horizontalSpacer_2 = new QSpacerItem(128, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -222,6 +246,8 @@ public:
 
         checkBox_alive->raise();
         label_addSci->raise();
+        lineEdit_descriptionSci->raise();
+        label_descriptionSci->raise();
 
         retranslateUi(DialogAddSci);
 
@@ -246,6 +272,7 @@ public:
         checkBox_alive->setText(QApplication::translate("DialogAddSci", "Alive", 0));
         label_deathYear->setText(QApplication::translate("DialogAddSci", "Year of death: ", 0));
         label_errorSciDeath->setText(QString());
+        label_descriptionSci->setText(QApplication::translate("DialogAddSci", "Description", 0));
         confirmAddButton->setText(QApplication::translate("DialogAddSci", "Confirm", 0));
         pushButton_cancelAdd->setText(QApplication::translate("DialogAddSci", "Cancel", 0));
     } // retranslateUi

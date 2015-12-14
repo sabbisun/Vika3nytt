@@ -116,6 +116,12 @@ void  SQLiteData::updateIndiGender(const char gender, const int id)
     executeQuery(Query);
 }
 
+void SQLiteData::updateIndiDesc(const string desc, const int id)
+{
+    string Query = updateSci + " " + setAbout + desc + "'" + " " + findId + intToString(id);
+    executeQuery(Query);
+}
+
 Machines SQLiteData::sortCompAlphaFront()
 {
     string Query = selectAllComp + " " + orderByName;
@@ -200,7 +206,7 @@ void  SQLiteData::deleteIndi(const int id)
 void SQLiteData::addNewIndi(const Individual i1, bool& found)
 {
     db = getDatabase();
-    string Query1 = createNewSci + i1.getSurname() + "','" + i1.getName() + "','" + i1.getGender() + "'," + intToString(i1.getBirth()) + "," + intToString(i1.getDeath()) + ")";
+    string Query1 = createNewSci + i1.getSurname() + "','" + i1.getName() + "','" + i1.getGender() + "'," + intToString(i1.getBirth()) + "," + intToString(i1.getDeath()) + ",'" + i1.getAbout()+"')";
     string Query2 = selectSci;
     People p1 = doQuerySci(Query2);
     People p2 = sortIndiAlphaFront();
@@ -314,7 +320,8 @@ People SQLiteData::doQuerySci(const string que)
         string gender = queryname.value("gender").toString().toStdString();
         int byear  = queryname.value("byear").toUInt();
         int dyear  = queryname.value("dyear").toUInt();
-        Individual i1(id, surname, name, gender, byear, dyear);
+        string about = queryname.value("about").toString().toStdString();
+        Individual i1(id, surname, name, gender, byear, dyear,about);
         p1.addIndi(i1);
     }
     db.close();
@@ -336,7 +343,8 @@ People SQLiteData::doQuerySciOrOther(const string que1, const string que2, bool&
         string gender = queryname.value("gender").toString().toStdString();
         int byear  = queryname.value("byear").toUInt();
         int dyear  = queryname.value("dyear").toUInt();
-        Individual i1(id, surname, name, gender, byear, dyear);
+        string about = queryname.value("about").toString().toStdString();
+        Individual i1(id, surname, name, gender, byear, dyear,about);
         p1.addIndi(i1);
     }
     if(p1.getSize() != 0)
@@ -355,7 +363,8 @@ People SQLiteData::doQuerySciOrOther(const string que1, const string que2, bool&
             string gender = queryname.value("gender").toString().toStdString();
             int byear  = queryname.value("byear").toUInt();
             int dyear  = queryname.value("dyear").toUInt();
-            Individual i1(id, surname, name, gender, byear, dyear);
+            string about = queryname.value("about").toString().toStdString();
+            Individual i1(id, surname, name, gender, byear, dyear,about);
             p1.addIndi(i1);
         }
     }

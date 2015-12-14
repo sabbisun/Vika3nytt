@@ -176,7 +176,7 @@ public:
         label_nameError->setText(QString());
         label_type->setText(QApplication::translate("DialogEditCom", "Type:                 ", 0));
         label_typeError->setText(QString());
-        checkBox_built->setText(QApplication::translate("DialogEditCom", "Built", 0));
+        checkBox_built->setText(QApplication::translate("DialogEditCom", "Not built", 0));
         label_buildYear->setText(QApplication::translate("DialogEditCom", "Year of creation: ", 0));
         label_buildYearError->setText(QString());
         Button_confirm->setText(QApplication::translate("DialogEditCom", "Confirm", 0));

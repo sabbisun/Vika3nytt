@@ -199,6 +199,16 @@
               </property>
              </widget>
             </item>
+            <item>
+             <widget class="QPushButton" name="Button_aboutSci">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>About Scientist</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
          </layout>

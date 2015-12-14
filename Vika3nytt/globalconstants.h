@@ -15,7 +15,7 @@ const string selectAllSci = "SELECT * FROM Scientist as s WHERE s.deleted = 0";
 const string selectAllComp = "SELECT * FROM Computer as s WHERE s.deleted = 0";
 const string selectCount = "SELECT COUNT(*) AS COUNT FROM ";
 
-const string createNewSci = "INSERT INTO Scientist(surname,name,gender,byear,dyear) VALUES ('";
+const string createNewSci = "INSERT INTO Scientist(surname,name,gender,byear,dyear,about) VALUES ('";
 const string createNewComp = "INSERT INTO Computer(name,byear,type) VALUES ('";
 const string createNewRelation = "INSERT INTO Relation(scientist_id, computer_id) VALUES(";
 
@@ -50,6 +50,7 @@ const string setGender = "SET gender = '";
 const string setName = "SET name = '";
 const string setSurname = "SET surname = '";
 const string setType = "SET type = '";
+const string setAbout ="SET about = '";
 const string setDel = "SET deleted = 1";
 const string setDel0 = "SET deleted = 0";
 

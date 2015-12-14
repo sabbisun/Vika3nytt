@@ -68,6 +68,11 @@ void DialogEditSci::setDyear(QString &q)
     }
 }
 
+void DialogEditSci::setDesc(QString &q)
+{
+    ui->lineEdit_editSciDesc->setPlainText(q);
+}
+
 void DialogEditSci::on_checkBox_alive_clicked()
 {
     if(ui->checkBox_alive->isChecked())
@@ -167,7 +172,7 @@ void DialogEditSci::on_Button_confirm_clicked()
             dyear = ui->lineEdit_yearDeth->text();
         }
     }
-
+    string desc = ui->lineEdit_editSciDesc->document()->toPlainText().toStdString();
     if(isLegalEdit)
     {
         int id = qId.toInt();
@@ -176,6 +181,7 @@ void DialogEditSci::on_Button_confirm_clicked()
         core.updateIndiGender(QString(gender).toStdString()[0], id);
         core.updateIndiBYear(byear.toUInt(), id);
         core.updateIndiDYear(dyear.toUInt(), id);
+        core.updateIndiDesc(desc,id);
         qId = "";
         this->close();
     }

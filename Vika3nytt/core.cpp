@@ -272,6 +272,11 @@ void Core::updateIndiGender(const char gender, const int id)
     newdata.updateIndiGender(gender, id);
 }
 
+void Core::updateIndiDesc(const string desc, const int id)
+{
+    newdata.updateIndiDesc(desc,id);
+}
+
 void Core::updateCompName(const string name, const int id)
 {
     newdata.updateCompName(name, id);

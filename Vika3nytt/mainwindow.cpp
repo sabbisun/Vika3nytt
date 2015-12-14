@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Button_removeComp->setEnabled(false);
     ui->Button_editComp->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
+    ui->Button_aboutSci->setEnabled(false);
 
     setColumnWidth();
 
@@ -275,6 +276,7 @@ void MainWindow::disableButtons()
     ui->Button_editComp->setEnabled(false);
     ui->Button_addSciConnection->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
+    ui->Button_aboutSci->setEnabled(false);
 }
 
 void MainWindow::setColumnWidth()
@@ -310,12 +312,7 @@ void MainWindow::createDropSearchForComp()
 }
 void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
-    ui->Button_removeComp->setEnabled(false);
-    ui->Button_editComp->setEnabled(false);
-    ui->Button_addCompConnection->setEnabled(false);
-    ui->Button_removeSci->setEnabled(false);
-    ui->Button_editSci->setEnabled(false);
-    ui->Button_addSciConnection->setEnabled(false);
+    disableButtons();
 }
 
 void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
@@ -347,7 +344,7 @@ void MainWindow::on_Button_editSci_clicked()
         QString gender = ui->treeWidget_sci->currentItem()->text(1);
 
         int trueID = id.toInt(); //leita að gaur með þetta id og fá nöfnin og árin
-        QString name, surname, bYear, dYear;
+        QString name, surname, bYear, dYear,desc;
 
         People temp = core.sortSciAlpabetFront();
         for(int i = 0; i < temp.getSize(); i++)
@@ -358,6 +355,7 @@ void MainWindow::on_Button_editSci_clicked()
                 surname = QString::fromStdString(temp.getIndi(i).getSurname());
                 bYear = QString::number(temp.getIndi(i).getBirth());
                 dYear = QString::number(temp.getIndi(i).getDeath());
+                desc = QString::fromStdString(temp.getIndi(i).getAbout());
             }
         }
         DialogEditSci editor;
@@ -368,6 +366,7 @@ void MainWindow::on_Button_editSci_clicked()
         editor.setGender(gender);
         editor.setByear(bYear);
         editor.setDyear(dYear);
+        editor.setDesc(desc);
         editor.exec();
     }
     setTreeSci();
@@ -441,6 +440,7 @@ void MainWindow::on_treeWidget_sci_itemSelectionChanged()
     {
         ui->Button_editSci->setEnabled(true);
         ui->Button_addSciConnection->setEnabled(true);
+        ui->Button_aboutSci->setEnabled(true);
     }
     else
     {
@@ -622,4 +622,22 @@ void MainWindow::setAltRowColor()
     ui->treeWidget_sci->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
     ui->treeWidget_comp->setAlternatingRowColors(true);
     ui->treeWidget_comp->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
+}
+
+void MainWindow::on_Button_aboutSci_clicked()
+{
+    QMessageBox msgBox;
+    QString temp = ui->treeWidget_sci->currentItem()->text(3);
+    int id = temp.toUInt();
+    Individual i1 = core.getData().getSingleIndi(id);
+    string name = "Information on scientist: " + i1.getSurname()+ ", " + i1.getName();
+    string about = i1.getAbout();
+    if(about.empty())
+    {
+        about = "Nothing on this scientist!";
+    }
+    msgBox.setText(QString::fromStdString(name));
+    msgBox.setInformativeText(QString::fromStdString(about));
+    msgBox.setStandardButtons(QMessageBox::Close);
+    msgBox.exec();
 }

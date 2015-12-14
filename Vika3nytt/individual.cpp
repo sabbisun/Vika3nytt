@@ -5,16 +5,17 @@ Individual::Individual()
 
 }
 
-Individual::Individual(const string surnam, const string nam, const char gend, const int bir, const int dea)
+Individual::Individual(const string surnam, const string nam, const char gend, const int bir, const int dea,const string abou)
 {
     name = nam;
     surname = surnam;
     gender = gend;
     birth = bir;
     death = dea;
+    about = abou;
 }
 
-Individual::Individual(const int i, const string surnam, const string nam, const string gend, const int bir, const int dea)
+Individual::Individual(const int i, const string surnam, const string nam, const string gend, const int bir, const int dea,const string abou)
 {
     id = i;
     name = nam;
@@ -22,6 +23,7 @@ Individual::Individual(const int i, const string surnam, const string nam, const
     gender = gend[0];
     birth = bir;
     death = dea;
+    about = abou;
 }
 
 void Individual::setName(string str)
@@ -77,6 +79,11 @@ int Individual::getBirth() const
 int Individual::getDeath() const
 {
     return death;
+}
+
+string Individual::getAbout() const
+{
+    return about;
 }
 
 bool operator == (const Individual& indi, const Individual& indi2)

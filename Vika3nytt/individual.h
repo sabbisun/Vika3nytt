@@ -9,8 +9,8 @@ class Individual
 {
 public:
     Individual();
-    Individual(const string surnam, const string nam, const char gend, const int bir, const int dea);
-    Individual(const int i, const string surnam, const string nam, const string gend, const int bir, const int dea);
+    Individual(const string surnam, const string nam, const char gend, const int bir, const int dea,const string abou);
+    Individual(const int i, const string surnam, const string nam, const string gend, const int bir, const int dea,const string abou);
     // Constructors with and without id -
 
     void setName(string str);
@@ -26,6 +26,7 @@ public:
     char getGender() const;
     int getBirth() const;
     int getDeath() const;
+    string getAbout() const;
     // These are the get functions, they are used to get the values of the private variables
 
     friend bool operator == (const Individual& indi, const Individual& indi2);
@@ -33,6 +34,7 @@ public:
 
 private:
     string name, surname;
+    string about;
     char gender;
     // f/F or m/M
     int birth, death;

@@ -180,6 +180,27 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_descriptionSci">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="lineEdit_descriptionSci">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
       <spacer name="horizontalSpacer_2">
@@ -227,6 +248,8 @@
   <zorder>checkBox_alive</zorder>
   <zorder>label_addSci</zorder>
   <zorder></zorder>
+  <zorder>lineEdit_descriptionSci</zorder>
+  <zorder>label_descriptionSci</zorder>
  </widget>
  <resources/>
  <connections/>

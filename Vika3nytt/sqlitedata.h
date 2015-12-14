@@ -50,6 +50,7 @@ public:
     void updateIndiBYear(const int year, const int id);
     void updateIndiDYear(const int year, const int id);
     void updateIndiGender(const char gender, const int id);
+    void updateIndiDesc(const string desc,const int id);
     // Changes information about a scientist
 
     void updateCompName(const string name, const int id);

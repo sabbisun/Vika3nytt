@@ -22,6 +22,7 @@ public:
     void setGender(QString& q);
     void setByear(QString& q);
     void setDyear(QString& q);
+    void setDesc(QString& q);
 
 private slots:
     void on_checkBox_alive_clicked();

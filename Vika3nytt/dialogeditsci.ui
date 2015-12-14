@@ -176,6 +176,33 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_editSciDesc">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="lineEdit_editSciDesc">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>108</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
       <spacer name="horizontalSpacer_3">
@@ -220,6 +247,13 @@
     </layout>
    </item>
   </layout>
+  <zorder>label_Dialogname</zorder>
+  <zorder>checkBox_alive</zorder>
+  <zorder>Button_cancel</zorder>
+  <zorder>Button_confirm</zorder>
+  <zorder>horizontalSpacer_3</zorder>
+  <zorder>horizontalSpacer_2</zorder>
+  <zorder>lineEdit_editSciDesc</zorder>
  </widget>
  <resources/>
  <connections/>

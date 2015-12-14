@@ -58,6 +58,7 @@ void DialogAddSci::on_confirmAddButton_clicked()
     int live = birthYear.toInt();
     QString deathYear = ui->lineEdit_addDeathYear->text();
     int dead = deathYear.toInt();
+    string about = ui->lineEdit_descriptionSci->document()->toPlainText().toStdString();
 
     if(ui->checkBox_male->isChecked())
     {
@@ -108,7 +109,7 @@ void DialogAddSci::on_confirmAddButton_clicked()
     }
     if(!error)
     {
-        Individual i1(nafn, nafn2, gender, live, dead);
+        Individual i1(nafn, nafn2, gender, live, dead,about);
         core.addIndividual(i1,found);
         if(found)
         {

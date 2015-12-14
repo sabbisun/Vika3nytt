@@ -22,17 +22,16 @@ void DialogAddCom::on_checkBox_created_clicked()
 {
     if(ui->checkBox_created->isChecked())
     {
-        ui->lineEdit_creationYear->setEnabled(true);
+        ui->lineEdit_creationYear->setEnabled(false);
     }
     else
     {
-       ui->lineEdit_creationYear->setEnabled(false);
+       ui->lineEdit_creationYear->setEnabled(true);
     }
 }
 
 void DialogAddCom::on_confirmAddButton_clicked()
 {
-    char gender;
     bool error = false;
     bool found = false;
     clearErrorLabels();
@@ -49,7 +48,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
         error = true;
     }
 
-    if(!ui->checkBox_created->isChecked())
+    if(ui->checkBox_created->isChecked())
     {
         live = 0;
     }

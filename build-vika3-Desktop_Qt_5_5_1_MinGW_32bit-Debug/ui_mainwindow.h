@@ -50,6 +50,7 @@ public:
     QPushButton *Button_editSci;
     QPushButton *Button_removeSci;
     QPushButton *Button_addSciConnection;
+    QPushButton *Button_aboutSci;
     QWidget *tab_comp;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
@@ -195,6 +196,12 @@ public:
 
         horizontalLayout_4->addWidget(Button_addSciConnection);
 
+        Button_aboutSci = new QPushButton(tab_sci);
+        Button_aboutSci->setObjectName(QStringLiteral("Button_aboutSci"));
+        Button_aboutSci->setEnabled(false);
+
+        horizontalLayout_4->addWidget(Button_aboutSci);
+
 
         verticalLayout_4->addLayout(horizontalLayout_4);
 
@@ -331,6 +338,7 @@ public:
         Button_editSci->setText(QApplication::translate("MainWindow", "Edit Scientist", 0));
         Button_removeSci->setText(QApplication::translate("MainWindow", "Remove", 0));
         Button_addSciConnection->setText(QApplication::translate("MainWindow", "Add Connection", 0));
+        Button_aboutSci->setText(QApplication::translate("MainWindow", "About Scientist", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_sci), QApplication::translate("MainWindow", "Scientists", 0));
         label_searchComp->setText(QApplication::translate("MainWindow", "Search by:", 0));
         Button_addComp->setText(QApplication::translate("MainWindow", "Add Computer", 0));
