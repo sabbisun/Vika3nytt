@@ -29,11 +29,11 @@ void DialogEditCom::on_checkBox_built_clicked()
 {
     if(ui->checkBox_built->isChecked())
     {
-        ui->lineEdit_yearBuilt->setEnabled(true);
+        ui->lineEdit_yearBuilt->setEnabled(false);
     }
     else
     {
-        ui->lineEdit_yearBuilt->setEnabled(false);
+        ui->lineEdit_yearBuilt->setEnabled(true);
     }
 }
 
@@ -53,12 +53,12 @@ void DialogEditCom::setBuildYear(QString & q)
     if(built)
     {
         ui->lineEdit_yearBuilt->setText(q);
-        ui->checkBox_built->setChecked(true);
+        ui->checkBox_built->setChecked(false);
         ui->lineEdit_yearBuilt->setEnabled(true);
     }
     else
     {
-        ui->checkBox_built->setChecked(false);
+        ui->checkBox_built->setChecked(true);
     }
 }
 
@@ -80,18 +80,13 @@ void DialogEditCom::on_Button_confirm_clicked()
         isLegalEdit = false;
     }
     QString yearBuilt = ui->lineEdit_yearBuilt->text();
-    if(!ui->checkBox_built->isChecked())
+    if(ui->checkBox_built->isChecked())
     {
         yearBuilt = QString::number(0);
     }
-    else if(ui->checkBox_built->isChecked() && !yearBuilt.isEmpty() && yearBuilt.toInt() != 0)
+    else if(!ui->checkBox_built->isChecked() && !yearBuilt.isEmpty() && yearBuilt.toInt() != 0)
     {
         yearBuilt = ui->lineEdit_yearBuilt->text();
-    }
-    else if(!ui->checkBox_built->isChecked() && yearBuilt.isEmpty())
-    {
-        ui->label_buildYearError->setText("<font color=\"Red\">Please enter a year of creation.");
-        isLegalEdit = false;
     }
     else
     {

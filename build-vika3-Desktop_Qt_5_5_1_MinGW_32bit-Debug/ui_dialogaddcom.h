@@ -176,7 +176,7 @@ public:
         label_errorNameComp->setText(QString());
         label_addName->setText(QApplication::translate("DialogAddCom", "Type:                  ", 0));
         label_errorTypeComp->setText(QString());
-        checkBox_created->setText(QApplication::translate("DialogAddCom", "Created?", 0));
+        checkBox_created->setText(QApplication::translate("DialogAddCom", "Not Built", 0));
         label_creationYear->setText(QApplication::translate("DialogAddCom", "Year of creation:  ", 0));
         label_errorCompYear->setText(QString());
         confirmAddButton->setText(QApplication::translate("DialogAddCom", "Confirm", 0));

@@ -82,7 +82,7 @@
      <item>
       <widget class="QCheckBox" name="checkBox_built">
        <property name="text">
-        <string>Built</string>
+        <string>Not built</string>
        </property>
       </widget>
      </item>
