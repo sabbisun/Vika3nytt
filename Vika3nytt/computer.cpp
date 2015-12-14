@@ -5,19 +5,21 @@ Computer::Computer()
 
 }
 
-Computer::Computer(int idd, int yearr, string namee, string typee)
+Computer::Computer(int idd, int yearr, string namee, string typee,string abou)
 {
     id = idd;
     year = yearr;
     name = namee;
     type = typee;
+    about = abou;
 }
 
-Computer::Computer(int yearr, string namee, string typee)
+Computer::Computer(int yearr, string namee, string typee, string abou)
 {
     year = yearr;
     name = namee;
     type = typee;
+    about = abou;
 }
 
 void Computer::setYear(int i)
@@ -53,6 +55,11 @@ string Computer::getName() const
 string Computer::getType() const
 {
     return type;
+}
+
+string Computer::getAbout() const
+{
+    return about;
 }
 
 bool operator == (const Computer& c1, const Computer& c2)

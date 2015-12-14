@@ -62,6 +62,11 @@ void DialogEditCom::setBuildYear(QString & q)
     }
 }
 
+void DialogEditCom::setAbout(QString &q)
+{
+    ui->textEdit_descComp->setPlainText(q);
+}
+
 void DialogEditCom::on_Button_confirm_clicked()
 {
     bool isLegalEdit = true;
@@ -93,13 +98,14 @@ void DialogEditCom::on_Button_confirm_clicked()
         ui->label_buildYearError->setText("<font color=\"Red\">Please enter a year of creation.");
         isLegalEdit = false;
     }
-
+    string desc = ui->textEdit_descComp->document()->toPlainText().toStdString();
     if(isLegalEdit)
     {
         int id = qsId.toInt();
         core.updateCompName(name.toStdString(), id);
         core.updateCompType(type.toStdString(), id);
         core.updateCompBYear(yearBuilt.toInt(), id);
+        core.updateCompAbout(desc,id);
         qsId = "";
         this->close();
     }

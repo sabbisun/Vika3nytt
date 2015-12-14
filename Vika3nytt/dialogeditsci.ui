@@ -194,8 +194,14 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>108</height>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>371</width>
+         <height>16777215</height>
         </size>
        </property>
       </widget>

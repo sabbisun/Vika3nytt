@@ -21,6 +21,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -44,6 +45,10 @@ public:
     QLabel *label_buildYear;
     QLineEdit *lineEdit_yearBuilt;
     QLabel *label_buildYearError;
+    QLabel *label_errorCompYear;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_editCompDesc;
+    QTextEdit *textEdit_descComp;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *Button_confirm;
@@ -54,11 +59,12 @@ public:
     {
         if (DialogEditCom->objectName().isEmpty())
             DialogEditCom->setObjectName(QStringLiteral("DialogEditCom"));
-        DialogEditCom->resize(500, 250);
+        DialogEditCom->resize(460, 319);
         verticalLayout_2 = new QVBoxLayout(DialogEditCom);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label_Dialogname = new QLabel(DialogEditCom);
         label_Dialogname->setObjectName(QStringLiteral("label_Dialogname"));
+        label_Dialogname->setMaximumSize(QSize(16777215, 100));
         QFont font;
         font.setFamily(QStringLiteral("Arial"));
         label_Dialogname->setFont(font);
@@ -139,6 +145,28 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
+        label_errorCompYear = new QLabel(DialogEditCom);
+        label_errorCompYear->setObjectName(QStringLiteral("label_errorCompYear"));
+
+        verticalLayout_2->addWidget(label_errorCompYear);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        label_editCompDesc = new QLabel(DialogEditCom);
+        label_editCompDesc->setObjectName(QStringLiteral("label_editCompDesc"));
+
+        horizontalLayout->addWidget(label_editCompDesc);
+
+        textEdit_descComp = new QTextEdit(DialogEditCom);
+        textEdit_descComp->setObjectName(QStringLiteral("textEdit_descComp"));
+        textEdit_descComp->setMaximumSize(QSize(650, 100));
+        textEdit_descComp->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        horizontalLayout->addWidget(textEdit_descComp);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
+
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -162,6 +190,9 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_6);
 
+        label_Dialogname->raise();
+        label_errorCompYear->raise();
+        label_editCompDesc->raise();
 
         retranslateUi(DialogEditCom);
 
@@ -179,6 +210,8 @@ public:
         checkBox_built->setText(QApplication::translate("DialogEditCom", "Not built", 0));
         label_buildYear->setText(QApplication::translate("DialogEditCom", "Year of creation: ", 0));
         label_buildYearError->setText(QString());
+        label_errorCompYear->setText(QString());
+        label_editCompDesc->setText(QApplication::translate("DialogEditCom", "Description", 0));
         Button_confirm->setText(QApplication::translate("DialogEditCom", "Confirm", 0));
         Button_cancel->setText(QApplication::translate("DialogEditCom", "Cancel", 0));
     } // retranslateUi

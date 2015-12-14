@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Add Computer</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label_addCom">
      <property name="font">
@@ -87,7 +87,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_8">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label_creationYear">
        <property name="text">
@@ -108,6 +108,20 @@
         <string/>
        </property>
       </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="textEdit_addComp"/>
      </item>
     </layout>
    </item>
@@ -158,6 +172,10 @@
   </layout>
   <zorder>checkBox_created</zorder>
   <zorder>label_addCom</zorder>
+  <zorder>lineEdit_addComName</zorder>
+  <zorder>label_addName_2</zorder>
+  <zorder>lineEdit_creationYear</zorder>
+  <zorder>label_creationYear</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -42,6 +42,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
     QString qType = ui->lineEdit_addType->text();
     string type = qType.toStdString();
     QString creationYear = ui->lineEdit_creationYear->text();
+    string about = ui->textEdit_addComp->document()->toPlainText().toStdString();
     int live = creationYear.toInt();
 
     if(name.isEmpty())
@@ -68,7 +69,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
 
     if(!error)
     {
-        Computer c1(live, nafn, type);
+        Computer c1(live, nafn, type,about);
         core.addComputer(c1, found);
         if(found)
         {

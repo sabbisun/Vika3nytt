@@ -211,7 +211,8 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(lineEdit_editSciDesc->sizePolicy().hasHeightForWidth());
         lineEdit_editSciDesc->setSizePolicy(sizePolicy);
-        lineEdit_editSciDesc->setMinimumSize(QSize(0, 108));
+        lineEdit_editSciDesc->setMinimumSize(QSize(100, 100));
+        lineEdit_editSciDesc->setMaximumSize(QSize(371, 16777215));
 
         horizontalLayout_4->addWidget(lineEdit_editSciDesc);
 

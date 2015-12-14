@@ -190,6 +190,13 @@ void SQLiteData::updateCompBYear(const int year, const int id)
     executeQuery(Query);
 }
 
+void SQLiteData::updateCompAbout(const string desc, const int id)
+{
+    string Query = updateComp + " " + setAbout + desc + "' " + findId + intToString(id);
+    qDebug() << QString::fromStdString(Query);
+    executeQuery(Query);
+}
+
 void SQLiteData::deleteComp(const int id)
 {
     string Query = updateComp + " " + setDel + " " + findId + intToString(id);
@@ -247,7 +254,7 @@ void SQLiteData::addNewIndi(const Individual i1, bool& found)
 void SQLiteData::addNewComp(const Computer c1, bool& found)
 {
     db = getDatabase();
-    string Query1 = createNewComp + c1.getName() + "'," + intToString(c1.getYear()) + ",'" + c1.getType() + "')";
+    string Query1 = createNewComp + c1.getName() + "'," + intToString(c1.getYear()) + ",'" + c1.getType() + "','" + c1.getAbout() + "')";
     string Query2 = selectComp;
     Machines p1 = doQueryComp(Query2);
     Machines p2 = sortCompAlphaFront();
@@ -298,7 +305,8 @@ Machines SQLiteData::doQueryComp(const string que)
         string name = queryname.value("name").toString().toStdString();
         string type = queryname.value("type").toString().toStdString();
         int byear  = queryname.value("byear").toUInt();
-        Computer c1(id, byear, name, type);
+        string about = queryname.value("about").toString().toStdString();
+        Computer c1(id, byear, name, type,about);
         p1.addMach(c1);
     }
     db.close();
@@ -385,7 +393,8 @@ Machines SQLiteData::doQueryCompOrOther(const string que1, const string que2, bo
         string name = queryname.value("name").toString().toStdString();
         string type = queryname.value("type").toString().toStdString();
         int byear  = queryname.value("byear").toUInt();
-        Computer c1(id, byear, name, type);
+        string about = queryname.value("about").toString().toStdString();
+        Computer c1(id, byear, name, type,about);
         p1.addMach(c1);
     }
     if(p1.getSize() != 0)
@@ -402,7 +411,8 @@ Machines SQLiteData::doQueryCompOrOther(const string que1, const string que2, bo
             string name = queryname.value("name").toString().toStdString();
             string type = queryname.value("type").toString().toStdString();
             int byear  = queryname.value("byear").toUInt();
-            Computer c1(id, byear, name, type);
+            string about = queryname.value("about").toString().toStdString();
+            Computer c1(id, byear, name, type,about);
             p1.addMach(c1);
         }
     }

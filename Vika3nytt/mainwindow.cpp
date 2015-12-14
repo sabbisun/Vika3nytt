@@ -277,6 +277,7 @@ void MainWindow::disableButtons()
     ui->Button_addSciConnection->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
     ui->Button_aboutSci->setEnabled(false);
+    ui->Button_aboutcomp->setEnabled(false);
 }
 
 void MainWindow::setColumnWidth()
@@ -454,6 +455,7 @@ void MainWindow::on_treeWidget_sci_itemSelectionChanged()
     {
         ui->Button_editSci->setEnabled(false);
         ui->Button_addSciConnection->setEnabled(false);
+        ui->Button_aboutSci->setEnabled(false);
     }
 }
 
@@ -517,11 +519,13 @@ void MainWindow::on_treeWidget_comp_itemSelectionChanged()
     {
         ui->Button_editComp->setEnabled(true);
         ui->Button_addCompConnection->setEnabled(true);
+        ui->Button_aboutcomp->setEnabled(true);
     }
     else
     {
         ui->Button_editComp->setEnabled(false);
         ui->Button_addCompConnection->setEnabled(false);
+        ui->Button_aboutcomp->setEnabled(false);
     }
 }
 
@@ -536,12 +540,17 @@ void MainWindow::on_Button_editComp_clicked()
         QString name = ui->treeWidget_comp->currentItem()->text(0);
         QString type = ui->treeWidget_comp->currentItem()->text(1);
         QString buildYear = ui->treeWidget_comp->currentItem()->text(2);
+        int i = id.toUInt();
+        Computer c1 = core.getData().getSingleComp(i);
+        string desc = c1.getAbout();
+        QString d = QString::fromStdString(desc);
         DialogEditCom editor;
         editor.setModal(true);
         editor.setId(id);
         editor.setName(name);
         editor.setType(type);
         editor.setBuildYear(buildYear);
+        editor.setAbout(d);
         editor.exec();
     }
     setTreeComp();
@@ -622,6 +631,24 @@ void MainWindow::on_Button_aboutSci_clicked()
     if(about.empty())
     {
         about = "Nothing on this scientist!";
+    }
+    msgBox.setText(QString::fromStdString(name));
+    msgBox.setInformativeText(QString::fromStdString(about));
+    msgBox.setStandardButtons(QMessageBox::Close);
+    msgBox.exec();
+}
+
+void MainWindow::on_Button_aboutcomp_clicked()
+{
+    QMessageBox msgBox;
+    QString temp = ui->treeWidget_comp->currentItem()->text(3);
+    int id = temp.toUInt();
+    Computer c1 = core.getData().getSingleComp(id);
+    string name = "Information on computer: " +  c1.getName();
+    string about = c1.getAbout();
+    if(about.empty())
+    {
+        about = "Nothing on this computer!";
     }
     msgBox.setText(QString::fromStdString(name));
     msgBox.setInformativeText(QString::fromStdString(about));

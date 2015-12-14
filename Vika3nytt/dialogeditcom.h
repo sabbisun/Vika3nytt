@@ -20,6 +20,7 @@ public:
     void setName(QString& q);
     void setType(QString& q);
     void setBuildYear(QString& q);
+    void setAbout(QString& q);
 
 private slots:
     void on_checkBox_built_clicked();

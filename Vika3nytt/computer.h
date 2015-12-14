@@ -9,8 +9,8 @@ class Computer
 {
 public:
     Computer();
-    Computer(int idd, int yearr, string namee, string typee);
-    Computer(int yearr, string namee, string typee);
+    Computer(int idd, int yearr, string namee, string type,string abou);
+    Computer(int yearr, string namee, string typee,string abou);
     // The constructors, with and without id
 
     void setYear(int i);
@@ -22,6 +22,7 @@ public:
     int getYear() const;
     string getName() const;
     string getType() const;
+    string getAbout() const;
     // These are the getline functions, they are used to get the values of the private variables
 
     friend bool operator == (const Computer& c1, const Computer& c2);
@@ -32,6 +33,7 @@ private:
     int year;
     string name;
     string type;
+    string about;
 };
 
 #endif // COMPUTER_H
