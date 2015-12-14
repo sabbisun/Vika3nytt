@@ -25,22 +25,14 @@ void Core::addComputer(const Computer& com, bool& notfound)
     newdata.addNewComp(com, notfound);
 }
 
-void Core::removeIndividual(const int id, bool& removed)
+void Core::removeIndividual(const int id)
 {
-    removed = newdata.searchForId(id, "scientist");
-    if(removed == true)
-    {
-        newdata.deleteIndi(id);
-    }
+    newdata.deleteIndi(id);
 }
 
-void Core::removeComputer(const int id, bool& removed)
+void Core::removeComputer(const int id)
 {
-    removed = newdata.searchForId(id, "computer");
-    if(removed == true)
-    {
-        newdata.deleteComp(id);
-    }
+    newdata.deleteComp(id);
 }
 
 People Core::sortSciAlpabetFront()

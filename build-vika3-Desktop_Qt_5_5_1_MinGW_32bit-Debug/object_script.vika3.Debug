@@ -2,7 +2,6 @@ INPUT(
 ./debug\main.o
 ./debug\mainwindow.o
 ./debug\core.o
-./debug\ui.o
 ./debug\individual.o
 ./debug\people.o
 ./debug\sqlitedata.o

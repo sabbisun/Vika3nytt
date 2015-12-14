@@ -64,8 +64,6 @@ public:
     void deleteConnectionWithIndiAndComp(const int idSci, const int idComp);
     // Deletes a connection between a scientist and a computer
 
-    bool searchForId(const int id, const string tablename);
-    // Checks if a specified id can be found in the specified table
     int getDatabaseSize(const string temp);
     // Returns the size of specified database
 

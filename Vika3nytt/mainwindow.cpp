@@ -63,20 +63,20 @@ void MainWindow::searchCompMenu(const string search)
    string searching = ui->comboBox_searchComp->currentText().toStdString();
    if(searching == "Name")
    {
-      c1 = core.searchComName(search);
-      setTreeComp(c1);
+        c1 = core.searchComName(search);
+        setTreeComp(c1);
    }
-    if(searching == "Year of creation")
-    {
+   if(searching == "Year of creation")
+   {
        int year = atoi(search.c_str());
        c1 = core.searchComYear(year);
        setTreeComp(c1);
-    }
-    if(searching=="Type")
-    {
+   }
+   if(searching=="Type")
+   {
         c1 = core.searchComType(search);
         setTreeComp(c1);
-    }
+   }
 }
 
 void MainWindow::setTreeSci()
@@ -310,15 +310,31 @@ void MainWindow::createDropSearchForComp()
     ui->comboBox_searchComp->addItem("Type");
     ui->comboBox_searchComp->addItem("Year of creation");
 }
+
 void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
+    (void)index;
     disableButtons();
+
 }
 
 void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
 {
     string search = arg1.toStdString();
     searchSciMenu(search);
+}
+void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
+{
+    (void)arg1;
+    if(ui->comboBox_searchSci->currentText().toStdString() == "")
+    {
+        ui->lineEdit_searchSci->setDisabled(true);
+    }
+    else
+    {
+         ui->lineEdit_searchSci->setEnabled(true);
+    }
+    setTreeSci();
 }
 
 void MainWindow::on_lineEdit_searchComp_textChanged(const QString &arg1)
@@ -342,9 +358,9 @@ void MainWindow::on_Button_editSci_clicked()
     {
         QString id = ui->treeWidget_sci->currentItem()->text(3);
         QString gender = ui->treeWidget_sci->currentItem()->text(1);
-
         int trueID = id.toInt(); //leita að gaur með þetta id og fá nöfnin og árin
         QString name, surname, bYear, dYear,desc;
+        // Now a search begins for the scientist with this id
 
         People temp = core.sortSciAlpabetFront();
         for(int i = 0; i < temp.getSize(); i++)
@@ -380,25 +396,21 @@ void MainWindow::on_Button_removeSci_clicked()
     {
         QString temp = ui->treeWidget_sci->currentItem()->text(3);
         int id = temp.toInt();
+        // The Id from row 3 of the currently selected scientist in table
 
-        //messagebox
         QMessageBox msgBox;
         msgBox.setText("Removal of a scientist");
         msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
-        //msgBox.setDefaultButton(QMessageBox::Cancel);  //maybe
         int read = msgBox.exec();
-
-        bool removed;   //taka seinna
+        // Messagebox asks if user wants to remove or not
 
         switch (read) {
-            case QMessageBox::Yes:      core.removeIndividual(id, removed);
-                                        setTreeSci();
-                                        break;
-            case QMessageBox::Cancel:   // Cancel was clicked
-                                        break;
-            default:                    // should never be reached
-                                        break;
+            case QMessageBox::Yes:  core.removeIndividual(id);
+                                    setTreeSci();
+                                    break;
+            default:                // Close without changes made
+                                    break;
         }
     }
     else
@@ -419,15 +431,11 @@ void MainWindow::on_Button_removeSci_clicked()
         int ret = msgBoxRmCon.exec();
         switch(ret)
         {
-            case QMessageBox::Yes:
-                                 core.removeConnection(sciId, comId);
-                                  break;
-            default:
-                    //nothing done
-                                break;
-
+            case QMessageBox::Yes:  core.removeConnection(sciId, comId);
+                                    break;
+            default:                // Close without changes made
+                                    break;
         }
-
     }
     setTreeSci();
     disableButtons();
@@ -454,35 +462,27 @@ void MainWindow::on_Button_removeComp_clicked()
     ui->Button_removeComp->setEnabled(false);
     if(!ui->treeWidget_comp->currentItem()->parent())
     {
-        //qDebug() << QString("valdir tölvu, parent");
-
         QString temp = ui->treeWidget_comp->currentItem()->text(3);
         int id = temp.toInt();
-        // The Id of the computer in row 'index' of table
+        // The Id from row 3 of the currently selected computer in table
 
         QMessageBox msgBox;
         msgBox.setText("Removal of a scomputer");
-        msgBox.setInformativeText("Are you sure you want to remove the selected computer");
+        msgBox.setInformativeText("Are you sure you want to remove the selected computer?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBox.exec();
         // Messagebox asks if user wants to remove or not
 
-        bool removed;
-
         switch (ret) {
-            case QMessageBox::Yes:      core.removeComputer(id, removed);
-                                        setTreeComp();
-                                        break;
-            case QMessageBox::Cancel:   // Cancel was clicked
-                                        break;
-            default:                    // should never be reached
-                                        break;
+            case QMessageBox::Yes:  core.removeComputer(id);
+                                    setTreeComp();
+                                    break;
+            default:                // Close without changes made
+                                    break;
         }
     }
     else
     {
-       // qDebug() << QString("valdir vísindamann, child");
-
         QString sciNameQ = ui->treeWidget_comp->currentItem()->text(0);
         QString sciIdQ = ui->treeWidget_comp->currentItem()->text(3);
         QString comNameQ = ui->treeWidget_comp->currentItem()->parent()->text(0);
@@ -497,15 +497,13 @@ void MainWindow::on_Button_removeComp_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+
         switch(ret)
         {
-            case QMessageBox::Yes:
-                                 core.removeConnection(sciId, comId);
-                                  break;
-            default:
-                    //nothing done
-                                break;
-
+            case QMessageBox::Yes:  core.removeConnection(sciId, comId);
+                                    break;
+            default:                // Close without changes made
+                                    break;
         }
     }
     setTreeComp();
@@ -555,7 +553,7 @@ void MainWindow::on_Button_addSciConnection_clicked()
     DialogAddSciConnection addSciConn;
     addSciConn.setModal(true);
     int idcomp = addSciConn.exec();
-    //þetta er id-ið af manneskjunni í röð ind
+
     QString temp = ui->treeWidget_sci->currentItem()->text(3);
     if(idcomp != -1)
     {
@@ -593,20 +591,9 @@ void MainWindow::on_Button_addComp_clicked()
     disableButtons();
 }
 
-void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
-{
-    if(ui->comboBox_searchSci->currentText().toStdString() == "")
-    {
-        ui->lineEdit_searchSci->setDisabled(true);
-    }
-    else
-    {
-         ui->lineEdit_searchSci->setEnabled(true);
-    }
-}
-
 void MainWindow::on_comboBox_searchComp_currentIndexChanged(const QString &arg1)
 {
+    (void)arg1;
     if(ui->comboBox_searchComp->currentText().toStdString() == "")
     {
         ui->lineEdit_searchComp->setDisabled(true);

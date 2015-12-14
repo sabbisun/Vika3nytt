@@ -530,28 +530,6 @@ int SQLiteData::getDatabaseSize(const string temp)
     return size;
 }
 
-bool SQLiteData::searchForId(const int id, const string tablename)
-{
-    string que = "SELECT * FROM " + tablename + " AS s " + findId + intToString(id);
-    int var;
-
-    db = getDatabase();
-    QString Q = QString::fromStdString(que);
-    QSqlQuery queryname(db);
-    queryname.exec(Q);
-
-    while(queryname.next())
-    {
-        var = queryname.value("id").toUInt();
-    }
-    db.close();
-
-    if(var == id)
-    {
-        return true;
-    }
-    return false;
-}
  QSqlDatabase SQLiteData::getDatabase()
 {
 
@@ -566,8 +544,7 @@ bool SQLiteData::searchForId(const int id, const string tablename)
      else
      {
          db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-         db.setDatabaseName(connectionName);
-
+         db.setDatabaseName("ScientistsComputers.sqlite");
          db.open();
      }
 

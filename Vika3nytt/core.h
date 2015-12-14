@@ -27,8 +27,8 @@ public:
     void addConnection(const int idSci, const int idComp);
     // Add to database Scientists, Computers, Connections
 
-    void removeIndividual(const int i, bool& removed);
-    void removeComputer(const int id, bool& removed);
+    void removeIndividual(const int i);
+    void removeComputer(const int id);
     void removeConnection(const int idSci, const int idComp);
     // Removes from database Scientists, Computers, Connections
 
