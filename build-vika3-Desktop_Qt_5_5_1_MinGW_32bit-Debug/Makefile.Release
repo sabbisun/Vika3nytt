@@ -442,7 +442,6 @@ release/moc_mainwindow.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow 
 		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
 		../Vika3nytt/dialogeditsci.h \
 		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
 		../Vika3nytt/dialogaddsciconnection.h \
 		../Vika3nytt/mainwindow.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/SÊvar”li/Documents/RU/T-113-VLN1-Vika_3/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\mainwindow.h -o release\moc_mainwindow.cpp
@@ -1831,10 +1830,9 @@ release/moc_dialogaddcompconnection.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../Vika3nytt/People.h \
-		../Vika3nytt/individual.h \
 		../Vika3nytt/core.h \
 		../Vika3nytt/people.h \
+		../Vika3nytt/individual.h \
 		../Vika3nytt/machines.h \
 		../Vika3nytt/computer.h \
 		../Vika3nytt/sqlitedata.h \
@@ -2299,7 +2297,6 @@ release/main.o: ../Vika3nytt/main.cpp C:/Qt/5.5/mingw492_32/include/QtWidgets/QA
 		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
 		../Vika3nytt/dialogeditsci.h \
 		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
 		../Vika3nytt/dialogaddsciconnection.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Vika3nytt\main.cpp
 
@@ -2572,7 +2569,6 @@ release/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
 		../Vika3nytt/dialogeditsci.h \
 		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
 		../Vika3nytt/dialogaddsciconnection.h \
 		ui_mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
@@ -2602,9 +2598,6 @@ release/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qpen.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QMenuBar \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmenu.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
@@ -4937,10 +4930,9 @@ release/dialogaddcompconnection.o: ../Vika3nytt/dialogaddcompconnection.cpp ../V
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../Vika3nytt/People.h \
-		../Vika3nytt/individual.h \
 		../Vika3nytt/core.h \
 		../Vika3nytt/people.h \
+		../Vika3nytt/individual.h \
 		../Vika3nytt/machines.h \
 		../Vika3nytt/computer.h \
 		../Vika3nytt/sqlitedata.h \

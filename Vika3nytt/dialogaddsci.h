@@ -28,7 +28,6 @@ private slots:
 private:
     Core core;
     Ui::DialogAddSci *ui;
-
     void clearErrorLabels();
     // Clears all error messages in window
 };

@@ -77,13 +77,21 @@ private:
     void setTreeSci(People& scientists);
     void setTreeComp();
     void setTreeComp(Machines& computers);
+    // Sets upp the treeWidgets
+
     void addTreeRootSci(Individual scientist);
     void addTreeChildSci(QTreeWidgetItem *parent, Computer computer);
     void addTreeRootComp(Computer computer);
     void addTreeChildComp(QTreeWidgetItem *parent, Individual scientist);
+    // Creates and adds root items and child items to treeWidget
+
+    void setAltRowColor();
+    // Unused function to set alternate background colors for rows
 
     void disableButtons();
+
     void setColumnWidth();
+    // Sets the column width of both treeWidgets
 };
 
 #endif // MAINWINDOW_H

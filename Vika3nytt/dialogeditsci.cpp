@@ -8,7 +8,6 @@ DialogEditSci::DialogEditSci(QWidget *parent) :
     ui(new Ui::DialogEditSci)
 {
     ui->setupUi(this);
-
     QFont f( "Arial", 10, QFont::Bold);
     ui->label_nameError->setFont(f);
     ui->label_surnameError->setFont(f);

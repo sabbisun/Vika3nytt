@@ -2,7 +2,7 @@
 #include "ui_dialogaddsciconnection.h"
 
 DialogAddSciConnection::DialogAddSciConnection(QWidget *parent) :
-    QDialog(parent,Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint ),
+    QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint ),
     ui(new Ui::DialogAddSciConnection)
 {
     ui->setupUi(this);

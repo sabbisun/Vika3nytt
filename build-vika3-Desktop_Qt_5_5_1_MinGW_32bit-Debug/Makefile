@@ -698,7 +698,6 @@ moc_mainwindow.cpp: ../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMainW
 		../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../Vika3nytt/dialogeditsci.h \
 		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
 		../Vika3nytt/dialogaddsciconnection.h \
 		../Vika3nytt/mainwindow.h
 	/Users/thordis/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/thordis/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/thordis/Vika3nytt/Vika3nytt -I/Users/thordis/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/thordis/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/thordis/Qt/5.5/clang_64/lib/QtSql.framework/Headers -I/Users/thordis/Qt/5.5/clang_64/lib/QtCore.framework/Headers -I. -F/Users/thordis/Qt/5.5/clang_64/lib ../Vika3nytt/mainwindow.h -o moc_mainwindow.cpp
@@ -847,10 +846,9 @@ moc_dialogaddsciconnection.cpp: ../../Qt/5.5/clang_64/lib/QtWidgets.framework/He
 
 moc_dialogaddcompconnection.cpp: ../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		../Vika3nytt/People.h \
-		../Vika3nytt/individual.h \
 		../Vika3nytt/core.h \
 		../Vika3nytt/people.h \
+		../Vika3nytt/individual.h \
 		../Vika3nytt/machines.h \
 		../Vika3nytt/computer.h \
 		../Vika3nytt/sqlitedata.h \
@@ -958,7 +956,6 @@ main.o: ../Vika3nytt/main.cpp ../../Qt/5.5/clang_64/lib/QtWidgets.framework/Head
 		../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../Vika3nytt/dialogeditsci.h \
 		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
 		../Vika3nytt/dialogaddsciconnection.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Vika3nytt/main.cpp
 
@@ -1003,7 +1000,6 @@ mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		../../Qt/5.5/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../Vika3nytt/dialogeditsci.h \
 		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
 		../Vika3nytt/dialogaddsciconnection.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Vika3nytt/mainwindow.cpp
@@ -1247,10 +1243,9 @@ dialogaddsciconnection.o: ../Vika3nytt/dialogaddsciconnection.cpp ../Vika3nytt/d
 dialogaddcompconnection.o: ../Vika3nytt/dialogaddcompconnection.cpp ../Vika3nytt/dialogaddcompconnection.h \
 		../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		../../Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		../Vika3nytt/People.h \
-		../Vika3nytt/individual.h \
 		../Vika3nytt/core.h \
 		../Vika3nytt/people.h \
+		../Vika3nytt/individual.h \
 		../Vika3nytt/machines.h \
 		../Vika3nytt/computer.h \
 		../Vika3nytt/sqlitedata.h \
