@@ -350,9 +350,8 @@ void MainWindow::on_Button_addSci_clicked()
    addSciWindow.setModal(true);
    addSciWindow.exec();
    setTreeSci();
+   disableButtons();
 }
-
-
 
 void MainWindow::on_Button_editSci_clicked()
 {
@@ -602,9 +601,9 @@ void MainWindow::on_Button_addCompConnection_clicked()
 
 void MainWindow::on_Button_addComp_clicked()
 {
-       DialogAddCom addComWindow;
-       addComWindow.setModal(true);
-       addComWindow.exec();
-       setTreeComp();
-
+    DialogAddCom addComWindow;
+    addComWindow.setModal(true);
+    addComWindow.exec();
+    setTreeComp();
+    disableButtons();
 }
