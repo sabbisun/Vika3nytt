@@ -40,5 +40,6 @@ void DialogAddSciConnection::on_button_confirmSciCon_clicked()
 
 void DialogAddSciConnection::on_button_cancelConSci_clicked()
 {
-   this->close();
+    QDialog::done(-1);
+   //this->close();
 }

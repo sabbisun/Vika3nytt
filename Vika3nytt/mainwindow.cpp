@@ -560,9 +560,13 @@ void MainWindow::on_Button_addSciConnection_clicked()
     int idcomp = addSciConn.exec();
     //þetta er id-ið af manneskjunni í röð ind
     QString temp = ui->treeWidget_sci->currentItem()->text(3);
-    int idsci = temp.toUInt();
-    core.addConnection(idsci,idcomp);
+    if(idcomp != -1)
+    {
+        int idsci = temp.toUInt();
+        core.addConnection(idsci,idcomp);
+    }
     setTreeSci();
+    setTreeComp();
 }
 
 void MainWindow::on_Button_addCompConnection_clicked()
@@ -578,6 +582,7 @@ void MainWindow::on_Button_addCompConnection_clicked()
         core.addConnection(idsci,idcomp);
     }
     setTreeComp();
+    setTreeSci();
 }
 
 void MainWindow::on_Button_addComp_clicked()
