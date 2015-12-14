@@ -67,6 +67,8 @@ private slots:
 
     void on_Button_aboutSci_clicked();
 
+    void on_Button_aboutcomp_clicked();
+
 private:
     Ui::MainWindow *ui;
     Core core;

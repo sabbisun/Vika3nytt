@@ -30,7 +30,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_sci">
        <attribute name="title">
@@ -360,6 +360,13 @@
               </property>
               <property name="text">
                <string>Add Connection</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Button_aboutcomp">
+              <property name="text">
+               <string>About Computer</string>
               </property>
              </widget>
             </item>

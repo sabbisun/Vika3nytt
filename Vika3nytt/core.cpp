@@ -284,6 +284,11 @@ void Core::updateCompBYear(const int year, const int id)
     newdata.updateCompBYear(year, id);
 }
 
+void Core::updateCompAbout(const string desc, const int id)
+{
+    newdata.updateCompAbout(desc,id);
+}
+
 void Core::addConnection(const int idSci,const int idComp)
 {
     newdata.createConnection(idSci, idComp);

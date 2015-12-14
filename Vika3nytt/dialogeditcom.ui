@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>250</height>
+    <width>460</width>
+    <height>319</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,6 +16,12 @@
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="label_Dialogname">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
+     </property>
      <property name="font">
       <font>
        <family>Arial</family>
@@ -114,6 +120,37 @@
     </layout>
    </item>
    <item>
+    <widget class="QLabel" name="label_errorCompYear">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_editCompDesc">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit_descComp">
+       <property name="maximumSize">
+        <size>
+         <width>650</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::ActionsContextMenu</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
       <spacer name="horizontalSpacer_3">
@@ -158,6 +195,14 @@
     </layout>
    </item>
   </layout>
+  <zorder>label_Dialogname</zorder>
+  <zorder>label_errorCompYear</zorder>
+  <zorder>label</zorder>
+  <zorder>textEdit_descSci</zorder>
+  <zorder>textEdit_descSci</zorder>
+  <zorder>label_editCompDesc</zorder>
+  <zorder></zorder>
+  <zorder>horizontalSpacer_2</zorder>
  </widget>
  <resources/>
  <connections/>

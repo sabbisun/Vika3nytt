@@ -4012,6 +4012,9 @@ debug/dialogeditcom.o: ../Vika3nytt/dialogeditcom.cpp ../Vika3nytt/dialogeditcom
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QPushButton \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QSpacerItem \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QTextEdit \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qtextedit.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextdocument.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dialogeditcom.o ..\Vika3nytt\dialogeditcom.cpp
 
@@ -4299,6 +4302,15 @@ debug/dialogaddcom.o: ../Vika3nytt/dialogaddcom.cpp ../Vika3nytt/dialogaddcom.h 
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextformat.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qpen.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextoption.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QPlainTextEdit \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qplaintextedit.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qtextedit.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextdocument.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextlayout.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qglyphrun.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qrawfont.h \
+		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qfontdatabase.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QPushButton \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QSpacerItem \

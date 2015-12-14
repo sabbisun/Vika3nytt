@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -28,7 +29,7 @@ QT_BEGIN_NAMESPACE
 class Ui_DialogAddCom
 {
 public:
-    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout;
     QLabel *label_addCom;
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_addName_2;
@@ -39,10 +40,13 @@ public:
     QLineEdit *lineEdit_addType;
     QLabel *label_errorTypeComp;
     QCheckBox *checkBox_created;
-    QHBoxLayout *horizontalLayout_8;
+    QHBoxLayout *horizontalLayout;
     QLabel *label_creationYear;
     QLineEdit *lineEdit_creationYear;
     QLabel *label_errorCompYear;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label;
+    QPlainTextEdit *textEdit_addComp;
     QHBoxLayout *horizontalLayout_12;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *confirmAddButton;
@@ -54,8 +58,8 @@ public:
         if (DialogAddCom->objectName().isEmpty())
             DialogAddCom->setObjectName(QStringLiteral("DialogAddCom"));
         DialogAddCom->resize(500, 250);
-        verticalLayout_2 = new QVBoxLayout(DialogAddCom);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout = new QVBoxLayout(DialogAddCom);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_addCom = new QLabel(DialogAddCom);
         label_addCom->setObjectName(QStringLiteral("label_addCom"));
         QFont font;
@@ -69,7 +73,7 @@ public:
         label_addCom->setTextFormat(Qt::RichText);
         label_addCom->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_2->addWidget(label_addCom);
+        verticalLayout->addWidget(label_addCom);
 
         horizontalLayout_11 = new QHBoxLayout();
         horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
@@ -89,7 +93,7 @@ public:
         horizontalLayout_11->addWidget(label_errorNameComp);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_11);
+        verticalLayout->addLayout(horizontalLayout_11);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
@@ -109,33 +113,48 @@ public:
         horizontalLayout_7->addWidget(label_errorTypeComp);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_7);
+        verticalLayout->addLayout(horizontalLayout_7);
 
         checkBox_created = new QCheckBox(DialogAddCom);
         checkBox_created->setObjectName(QStringLiteral("checkBox_created"));
 
-        verticalLayout_2->addWidget(checkBox_created);
+        verticalLayout->addWidget(checkBox_created);
 
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label_creationYear = new QLabel(DialogAddCom);
         label_creationYear->setObjectName(QStringLiteral("label_creationYear"));
 
-        horizontalLayout_8->addWidget(label_creationYear);
+        horizontalLayout->addWidget(label_creationYear);
 
         lineEdit_creationYear = new QLineEdit(DialogAddCom);
         lineEdit_creationYear->setObjectName(QStringLiteral("lineEdit_creationYear"));
         lineEdit_creationYear->setEnabled(false);
 
-        horizontalLayout_8->addWidget(lineEdit_creationYear);
+        horizontalLayout->addWidget(lineEdit_creationYear);
 
         label_errorCompYear = new QLabel(DialogAddCom);
         label_errorCompYear->setObjectName(QStringLiteral("label_errorCompYear"));
 
-        horizontalLayout_8->addWidget(label_errorCompYear);
+        horizontalLayout->addWidget(label_errorCompYear);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_8);
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        label = new QLabel(DialogAddCom);
+        label->setObjectName(QStringLiteral("label"));
+
+        horizontalLayout_8->addWidget(label);
+
+        textEdit_addComp = new QPlainTextEdit(DialogAddCom);
+        textEdit_addComp->setObjectName(QStringLiteral("textEdit_addComp"));
+
+        horizontalLayout_8->addWidget(textEdit_addComp);
+
+
+        verticalLayout->addLayout(horizontalLayout_8);
 
         horizontalLayout_12 = new QHBoxLayout();
         horizontalLayout_12->setObjectName(QStringLiteral("horizontalLayout_12"));
@@ -158,10 +177,14 @@ public:
         horizontalLayout_12->addItem(horizontalSpacer_6);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_12);
+        verticalLayout->addLayout(horizontalLayout_12);
 
         checkBox_created->raise();
         label_addCom->raise();
+        lineEdit_addComName->raise();
+        label_addName_2->raise();
+        lineEdit_creationYear->raise();
+        label_creationYear->raise();
 
         retranslateUi(DialogAddCom);
 
@@ -179,6 +202,7 @@ public:
         checkBox_created->setText(QApplication::translate("DialogAddCom", "Not Built", 0));
         label_creationYear->setText(QApplication::translate("DialogAddCom", "Year of creation:  ", 0));
         label_errorCompYear->setText(QString());
+        label->setText(QApplication::translate("DialogAddCom", "Description", 0));
         confirmAddButton->setText(QApplication::translate("DialogAddCom", "Confirm", 0));
         pushButton_cancelAdd->setText(QApplication::translate("DialogAddCom", "Cancel", 0));
     } // retranslateUi

@@ -16,7 +16,7 @@ const string selectAllComp = "SELECT * FROM Computer as s WHERE s.deleted = 0";
 const string selectCount = "SELECT COUNT(*) AS COUNT FROM ";
 
 const string createNewSci = "INSERT INTO Scientist(surname,name,gender,byear,dyear,about) VALUES ('";
-const string createNewComp = "INSERT INTO Computer(name,byear,type) VALUES ('";
+const string createNewComp = "INSERT INTO Computer(name,byear,type,about) VALUES ('";
 const string createNewRelation = "INSERT INTO Relation(scientist_id, computer_id) VALUES(";
 
 const string updateSci = "UPDATE Scientist";

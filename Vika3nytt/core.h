@@ -74,6 +74,7 @@ public:
     void updateCompName(const string name, const int id);
     void updateCompType(const string type, const int id);
     void updateCompBYear(const int year, const int id);
+    void updateCompAbout(const string desc,const int id);
     // Changes values inside Computer table
 
     //void updateIndiAll(const string name, const string surname,const char gender,const int byear,const int dyear, const int id);

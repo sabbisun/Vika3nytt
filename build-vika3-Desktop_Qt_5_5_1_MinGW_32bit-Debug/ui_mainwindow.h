@@ -65,6 +65,7 @@ public:
     QPushButton *Button_editComp;
     QPushButton *Button_removeComp;
     QPushButton *Button_addCompConnection;
+    QPushButton *Button_aboutcomp;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -300,6 +301,11 @@ public:
 
         horizontalLayout->addWidget(Button_addCompConnection);
 
+        Button_aboutcomp = new QPushButton(tab_comp);
+        Button_aboutcomp->setObjectName(QStringLiteral("Button_aboutcomp"));
+
+        horizontalLayout->addWidget(Button_aboutcomp);
+
 
         verticalLayout->addLayout(horizontalLayout);
 
@@ -323,7 +329,7 @@ public:
         QObject::connect(comboBox_searchSci, SIGNAL(currentIndexChanged(QString)), lineEdit_searchSci, SLOT(clear()));
         QObject::connect(comboBox_searchComp, SIGNAL(currentIndexChanged(QString)), lineEdit_searchComp, SLOT(clear()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
         Button_addSci->setDefault(true);
 
 
@@ -345,6 +351,7 @@ public:
         Button_editComp->setText(QApplication::translate("MainWindow", "Edit Computer", 0));
         Button_removeComp->setText(QApplication::translate("MainWindow", "Remove", 0));
         Button_addCompConnection->setText(QApplication::translate("MainWindow", "Add Connection", 0));
+        Button_aboutcomp->setText(QApplication::translate("MainWindow", "About Computer", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_comp), QApplication::translate("MainWindow", "Computers", 0));
     } // retranslateUi
 

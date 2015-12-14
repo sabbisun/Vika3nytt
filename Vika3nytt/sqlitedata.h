@@ -56,6 +56,7 @@ public:
     void updateCompName(const string name, const int id);
     void updateCompType(const string type, const int id);
     void updateCompBYear(const int year, const int id);
+    void updateCompAbout(const string desc,const int id);
     // Changes information about a computer
 
     void createConnection(const int idSci, const int idComp);
