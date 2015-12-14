@@ -38,23 +38,34 @@ void DialogAddCom::on_confirmAddButton_clicked()
     QString creationYear = ui->lineEdit_creationYear->text();
     int live = creationYear.toInt();
 
-    Computer c1(live, nafn,type);
+    //Computer c1(live, nafn, type);
+
+
     if(name.isEmpty())
     {
         ui->label_errorNameComp->setText("Name cannot be empty!");
-       error = true;
+        error = true;
     }
-    if(live == 0 || creationYear.isEmpty())
+
+    if(!ui->checkBox_created->isChecked())
+    {
+        live = 0;
+    }
+    else if(live == 0 || creationYear.isEmpty())
     {
         ui->label_errorCompYear->setText("That is not a possible creation year!");
         error = true;
     }
+
     if(qType.isEmpty())
     {
         ui->label_errorTypeComp->setText("Type cannot be empty!");
+        error = true;
     }
+
     if(!error)
     {
+        Computer c1(live, nafn, type);
         core.addComputer(c1,found);
         if(found)
         {
@@ -66,7 +77,6 @@ void DialogAddCom::on_confirmAddButton_clicked()
         {
             this->close();
         }
-
     }
 }
 void DialogAddCom::on_pushButton_cancelAdd_pressed()
