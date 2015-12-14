@@ -11,6 +11,8 @@ DialogAddCom::DialogAddCom(QWidget *parent) :
     ui->label_errorNameComp->setFont(f);
     ui->label_errorTypeComp->setFont(f);
     ui->label_errorCompYear->setFont(f);
+
+    ui->lineEdit_creationYear->setEnabled(true);
 }
 
 DialogAddCom::~DialogAddCom()
