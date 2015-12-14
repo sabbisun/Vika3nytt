@@ -57,7 +57,7 @@ void DialogAddSci::on_confirmAddButton_clicked()
     QString birthYear = ui->lineEdit_addBirthYear->text();
     int live = birthYear.toInt();
     QString deathYear = ui->lineEdit_addDeathYear->text();
-    int dead= deathYear.toInt();
+    int dead = deathYear.toInt();
 
     if(ui->checkBox_male->isChecked())
     {
