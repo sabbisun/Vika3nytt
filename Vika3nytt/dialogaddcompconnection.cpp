@@ -41,5 +41,6 @@ void DialogAddCompConnection::on_button_confirmCompCon_clicked()
 
 void DialogAddCompConnection::on_button_cancelConComp_clicked()
 {
-    this->close();
+    QDialog::done(-1);
+    //this->close();
 }
