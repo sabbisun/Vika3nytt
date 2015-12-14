@@ -305,7 +305,7 @@ Machines SQLiteData::doQueryComp(const string que)
         string type = queryname.value("type").toString().toStdString();
         int byear  = queryname.value("byear").toUInt();
         string about = queryname.value("about").toString().toStdString();
-        Computer c1(id, byear, name, type,about);
+        Computer c1(id, byear, name, type, about);
         p1.addMach(c1);
     }
     db.close();
