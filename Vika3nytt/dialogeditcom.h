@@ -31,6 +31,7 @@ private slots:
 private:
     Ui::DialogEditCom *ui;
     Core core;
+    void clearErrorLabels();
 };
 
 #endif // DIALOGEDITCOM_H

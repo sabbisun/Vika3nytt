@@ -65,6 +65,7 @@ void DialogEditCom::setBuildYear(QString & q)
 void DialogEditCom::on_Button_confirm_clicked()
 {
     bool isLegalEdit = true;
+    clearErrorLabels();
 
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
@@ -112,4 +113,11 @@ void DialogEditCom::on_Button_confirm_clicked()
 void DialogEditCom::on_Button_cancel_clicked()
 {
     this->close();
+}
+
+void DialogEditCom::clearErrorLabels()
+{
+    ui->label_nameError->setText("");
+    ui->label_typeError->setText("");
+    ui->label_buildYearError->setText("");
 }
