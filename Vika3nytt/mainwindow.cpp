@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :
     setTreeSci();
     createDropSearchForComp();
     setTreeComp();
-<<<<<<< HEAD
     setColumns();
     /*   //eða:
     ui->treeWidget_sci->setColumnWidth(0, 200);
@@ -26,10 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Button_removeComp->setEnabled(false);
     ui->Button_editComp->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
-=======
 
     setColumnWidth();
->>>>>>> 48ec263229f9ea6aed589284056b5b1dee421170
 
     disableButtons();
 }
