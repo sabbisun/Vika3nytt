@@ -68,7 +68,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
     if(!error)
     {
         Computer c1(live, nafn, type);
-        core.addComputer(c1,found);
+        core.addComputer(c1, found);
         if(found)
         {
             ui->label_errorNameComp->setText("<font color=\"Red\">This computer is already in the database!");

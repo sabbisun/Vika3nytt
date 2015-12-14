@@ -90,7 +90,7 @@ void MainWindow::setTreeSci()
     {
         addTreeRootSci(scientists.getIndi(i));
     }
-     ui->treeWidget_sci->sortByColumn(0,Qt::AscendingOrder);
+     ui->treeWidget_sci->sortByColumn(0, Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeSci(People & scientists)
@@ -434,7 +434,7 @@ void MainWindow::on_Button_removeSci_clicked()
         switch(ret)
         {
             case QMessageBox::Yes:
-                                 core.removeConnection(sciId,comId);
+                                 core.removeConnection(sciId, comId);
                                   break;
             default:
                     //nothing done
@@ -513,7 +513,7 @@ void MainWindow::on_Button_removeComp_clicked()
         switch(ret)
         {
             case QMessageBox::Yes:
-                                 core.removeConnection(sciId,comId);
+                                 core.removeConnection(sciId, comId);
                                   break;
             default:
                     //nothing done
@@ -573,7 +573,7 @@ void MainWindow::on_Button_addSciConnection_clicked()
     if(idcomp != -1)
     {
         int idsci = temp.toUInt();
-        core.addConnection(idsci,idcomp);
+        core.addConnection(idsci, idcomp);
     }
     setTreeSci();
     setTreeComp();
@@ -590,7 +590,7 @@ void MainWindow::on_Button_addCompConnection_clicked()
     if(idsci != -1)
     {
         int idcomp = temp.toInt();
-        core.addConnection(idsci,idcomp);
+        core.addConnection(idsci, idcomp);
     }
     setTreeComp();
     setTreeSci();
