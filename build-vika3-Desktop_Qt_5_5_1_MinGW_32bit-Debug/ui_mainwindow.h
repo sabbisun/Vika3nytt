@@ -124,6 +124,7 @@ public:
         treeWidget_sci->setObjectName(QStringLiteral("treeWidget_sci"));
         treeWidget_sci->setAlternatingRowColors(true);
         treeWidget_sci->setSortingEnabled(true);
+        treeWidget_sci->setAnimated(false);
 
         verticalLayout_4->addWidget(treeWidget_sci);
 

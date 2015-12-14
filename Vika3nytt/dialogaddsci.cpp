@@ -84,7 +84,17 @@ void DialogAddSci::on_confirmAddButton_clicked()
         ui->label_errorSciBirth->setText("<font color=\"Red\">Invalid birth year!");
         error = true;
     }
-    if(deathYear.isEmpty()||!(ui->checkBox_alive->isChecked())||live>dead||dead == 0)
+    if((deathYear.isEmpty() && !ui->checkBox_alive->isChecked()))
+    {
+        ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
+        error = true;
+    }
+    if(dead > 0 && live > dead)
+    {
+         ui->label_errorSciDeath->setText("<font color=\"Red\">You cannot die before you die");
+         error = true;
+    }
+    if(dead == 0 && !ui->checkBox_alive->isChecked())
     {
         ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
         error = true;
