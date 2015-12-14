@@ -56,7 +56,7 @@ People SQLiteData::searchIndiByGender(const char gender)
 
 People SQLiteData::searchIndiByName(const string name)
 {
-    string Query = selectAllSci + " " + searchName + name + "%'" + " " + searchSurname + name + "%'" ;
+    string Query = selectAllSci + " " + searchName + name + "%'" + "OR s.deleted = 0 " + "AND s.surname LIKE '%" + name + "%'";
     People p1 = doQuerySci(Query);
     if(p1.getSize() == 0)
     {
