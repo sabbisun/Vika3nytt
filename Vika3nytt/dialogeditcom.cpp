@@ -70,7 +70,7 @@ void DialogEditCom::on_Button_confirm_clicked()
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
     {
-        ui->label_typeError->setText("<font color=\"Red\">Please enter a name.");
+        ui->label_nameError->setText("<font color=\"Red\">Please enter a name.");
         isLegalEdit = false;
     }
     QString type = ui->lineEdit_type->text();
