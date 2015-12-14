@@ -435,9 +435,15 @@ release/moc_mainwindow.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow 
 		C:/Qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
-		../Vika3nytt/dialogeditcom.h \
+		../Vika3nytt/dialogaddcom.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		../Vika3nytt/dialogaddsci.h \
+		../Vika3nytt/dialogeditcom.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../Vika3nytt/dialogeditsci.h \
+		../Vika3nytt/dialogaddcompconnection.h \
+		../Vika3nytt/People.h \
+		../Vika3nytt/dialogaddsciconnection.h \
 		../Vika3nytt/mainwindow.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Sigurdur/Desktop/Clone/Vika3nytt/Vika3nytt -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\Vika3nytt\mainwindow.h -o release\moc_mainwindow.cpp
 
@@ -2286,9 +2292,15 @@ release/main.o: ../Vika3nytt/main.cpp C:/Qt/5.5/mingw492_32/include/QtWidgets/QA
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QDebug \
-		../Vika3nytt/dialogeditcom.h \
+		../Vika3nytt/dialogaddcom.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QString
+		../Vika3nytt/dialogaddsci.h \
+		../Vika3nytt/dialogeditcom.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../Vika3nytt/dialogeditsci.h \
+		../Vika3nytt/dialogaddcompconnection.h \
+		../Vika3nytt/People.h \
+		../Vika3nytt/dialogaddsciconnection.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Vika3nytt\main.cpp
 
 release/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
@@ -2553,9 +2565,15 @@ release/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
 		C:/Qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
 		../Vika3nytt/globalconstants.h \
-		../Vika3nytt/dialogeditcom.h \
+		../Vika3nytt/dialogaddcom.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		../Vika3nytt/dialogaddsci.h \
+		../Vika3nytt/dialogeditcom.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../Vika3nytt/dialogeditsci.h \
+		../Vika3nytt/dialogaddcompconnection.h \
+		../Vika3nytt/People.h \
+		../Vika3nytt/dialogaddsciconnection.h \
 		ui_mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
@@ -2597,13 +2615,7 @@ release/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QToolBar \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtoolbar.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		../Vika3nytt/dialogaddsci.h \
-		../Vika3nytt/dialogaddcom.h \
-		../Vika3nytt/dialogeditsci.h \
-		../Vika3nytt/dialogaddcompconnection.h \
-		../Vika3nytt/People.h \
-		../Vika3nytt/dialogaddsciconnection.h
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Vika3nytt\mainwindow.cpp
 
 release/core.o: ../Vika3nytt/core.cpp ../Vika3nytt/core.h \

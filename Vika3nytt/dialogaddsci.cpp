@@ -6,6 +6,13 @@ DialogAddSci::DialogAddSci(QWidget *parent) :
     ui(new Ui::DialogAddSci)
 {
     ui->setupUi(this);
+
+    QFont f( "Arial", 10, QFont::Bold);
+    ui->label_errorSciName->setFont(f);
+    ui->label_errorSciSurname->setFont(f);
+    ui->label_errorSciGender->setFont(f);
+    ui->label_errorSciBirth->setFont(f);
+    ui->label_errorSciDeath->setFont(f);
 }
 
 DialogAddSci::~DialogAddSci()
@@ -54,16 +61,21 @@ void DialogAddSci::on_confirmAddButton_clicked()
     int live = birthYear.toInt();
     QString deathYear = ui->lineEdit_addDeathYear->text();
     int dead= deathYear.toInt();
-    if(on_checkBox_male_clicked(true))
+
+    if(ui->checkBox_male->isChecked())
     {
         gender ='m';
     }
-    else if(on_checkBox_female_clicked(true))
+    else if(ui->checkBox_female->isChecked())
     {
         gender = 'f';
     }
 
-    Individual i1(nafn, nafn2,gender,live,dead);
+    if(ui->checkBox_alive->isChecked())
+    {
+        dead = 0;
+    }
+
     if(name.isEmpty())
     {
         ui->label_errorSciName->setText("<font color=\"Red\">Name cannot be empty");
@@ -76,7 +88,9 @@ void DialogAddSci::on_confirmAddButton_clicked()
     }
     if(!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
     {
-        ui->label_errorSciGender->setText("Scientist must have a gender!");
+        qDebug() << QString("female") << !ui->checkBox_female->isChecked();
+        qDebug() << QString("male") << !ui->checkBox_male->isChecked();
+        ui->label_errorSciGender->setText("<font color=\"Red\">Scientist must have a gender!");
         error = true;
     }
     if(birthYear.isEmpty()||live == 0)
@@ -101,13 +115,14 @@ void DialogAddSci::on_confirmAddButton_clicked()
     }
     if(!error)
     {
+        Individual i1(nafn, nafn2, gender, live, dead);
         core.addIndividual(i1,found);
         if(found)
         {
-             ui->label_errorSciName->setText("Scientist is already in the database");
-             ui->label_errorSciSurname->setText("Scientist is already in the database");
-             ui->label_errorSciBirth->setText("Scientist is already in the database");
-             ui->label_errorSciDeath->setText("Scientist is already in the database");
+             ui->label_errorSciName->setText("<font color=\"Red\">Scientist is already in the database");
+             ui->label_errorSciSurname->setText("<font color=\"Red\">Scientist is already in the database");
+             ui->label_errorSciBirth->setText("<font color=\"Red\">Scientist is already in the database");
+             ui->label_errorSciDeath->setText("<font color=\"Red\">Scientist is already in the database");
 
         }
         else
@@ -115,49 +130,6 @@ void DialogAddSci::on_confirmAddButton_clicked()
              this->close();
         }
     }
-
-    /*
-    char gender;
-    bool error = false;
-    bool found = false;
-    QString name = ui ->lineEdit_addComName->text();
-    string nafn = name.toStdString();
-    QString qType = ui->lineEdit_addType->text();
-    string type = qType.toStdString();
-    QString creationYear = ui->lineEdit_creationYear->text();
-    int live = creationYear.toInt();
-
-    Computer c1(live, nafn,type);
-    if(name.isEmpty())
-    {
-        ui->label_errorNameComp->setText("Name cannot be empty!");
-       error = true;
-    }
-    if(isdigit(live) || creationYear.isEmpty())
-    {
-        ui->label_errorCompYear->setText("That is not a possible creation year!");
-        error = true;
-    }
-    if(qType.isEmpty())
-    {
-        ui->label_errorTypeComp->setText("Type cannot be empty!");
-    }
-    if(!error)
-    {
-        core.addComputer(c1,found);
-        if(found)
-        {
-            ui->label_errorNameComp->setText("This computer is already in the database!");
-            ui->label_errorCompYear->setText("This computer is already in the database!");
-            ui->label_errorTypeComp->setText("This computer is already in the database!");
-        }
-        else
-        {
-            this->close();
-        }
-
-    }
-    */
 }
 
 void DialogAddSci::on_checkBox_alive_clicked()

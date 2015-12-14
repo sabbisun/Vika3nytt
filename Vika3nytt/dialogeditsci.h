@@ -35,6 +35,7 @@ private slots:
 private:
     Ui::DialogEditSci *ui;
     Core core;
+    void clearErrorLabels();
 };
 
 #endif // DIALOGEDITSCI_H
