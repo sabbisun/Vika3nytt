@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>250</height>
+    <height>291</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -98,7 +98,7 @@
      <item>
       <widget class="QLineEdit" name="lineEdit_creationYear">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -172,10 +172,6 @@
   </layout>
   <zorder>checkBox_created</zorder>
   <zorder>label_addCom</zorder>
-  <zorder>lineEdit_addComName</zorder>
-  <zorder>label_addName_2</zorder>
-  <zorder>lineEdit_creationYear</zorder>
-  <zorder>label_creationYear</zorder>
  </widget>
  <resources/>
  <connections/>

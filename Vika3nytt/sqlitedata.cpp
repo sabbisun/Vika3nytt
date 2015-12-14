@@ -539,23 +539,21 @@ int SQLiteData::getDatabaseSize(const string temp)
     return size;
 }
 
- QSqlDatabase SQLiteData::getDatabase()
+QSqlDatabase SQLiteData::getDatabase()
 {
+    QString connectionName = "ScientistsComputers.sqlite";
 
-     QString connectionName = "ScientistsComputers.sqlite";
+    QSqlDatabase db;
 
-     QSqlDatabase db;
-
-     if(QSqlDatabase::contains(connectionName))
-     {
-         db = QSqlDatabase::database(connectionName);
-     }
-     else
-     {
-         db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-         db.setDatabaseName("ScientistsComputers.sqlite");
-         db.open();
-     }
-
-     return db;
+    if(QSqlDatabase::contains(connectionName))
+    {
+        db = QSqlDatabase::database(connectionName);
+    }
+    else
+    {
+        db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
+        db.setDatabaseName("/Users/thordis/Vika3nytt/build-vika3-Desktop_Qt_5_5_1_MinGW_32bit-Debug/ScientistsComputers.sqlite");
+        db.open();
+    }
+    return db;
 }

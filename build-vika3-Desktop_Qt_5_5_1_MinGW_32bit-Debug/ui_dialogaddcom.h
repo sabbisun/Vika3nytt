@@ -57,7 +57,7 @@ public:
     {
         if (DialogAddCom->objectName().isEmpty())
             DialogAddCom->setObjectName(QStringLiteral("DialogAddCom"));
-        DialogAddCom->resize(500, 250);
+        DialogAddCom->resize(500, 291);
         verticalLayout = new QVBoxLayout(DialogAddCom);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_addCom = new QLabel(DialogAddCom);
@@ -129,7 +129,7 @@ public:
 
         lineEdit_creationYear = new QLineEdit(DialogAddCom);
         lineEdit_creationYear->setObjectName(QStringLiteral("lineEdit_creationYear"));
-        lineEdit_creationYear->setEnabled(false);
+        lineEdit_creationYear->setEnabled(true);
 
         horizontalLayout->addWidget(lineEdit_creationYear);
 
@@ -181,10 +181,6 @@ public:
 
         checkBox_created->raise();
         label_addCom->raise();
-        lineEdit_addComName->raise();
-        label_addName_2->raise();
-        lineEdit_creationYear->raise();
-        label_creationYear->raise();
 
         retranslateUi(DialogAddCom);
 

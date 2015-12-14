@@ -538,8 +538,8 @@ void MainWindow::on_Button_editComp_clicked()
     ui->Button_editComp->setEnabled(false);
     if(!ui->treeWidget_comp->currentItem()->parent())
     {
-        qDebug() << ui->treeWidget_comp->currentItem()->text(3);
-        qDebug() << ui->treeWidget_comp->currentItem()->text(0);
+        //qDebug() << ui->treeWidget_comp->currentItem()->text(3);
+        //qDebug() << ui->treeWidget_comp->currentItem()->text(0);
         QString id = ui->treeWidget_comp->currentItem()->text(3);
         QString name = ui->treeWidget_comp->currentItem()->text(0);
         QString type = ui->treeWidget_comp->currentItem()->text(1);
@@ -584,7 +584,7 @@ void MainWindow::on_Button_addCompConnection_clicked()
     addCompConn.setModal(true);
     int idsci = addCompConn.exec();
     QString temp = ui->treeWidget_comp->currentItem()->text(3);
-    qDebug() << QString::number(idsci);
+    //qDebug() << QString::number(idsci);
     if(idsci != -1)
     {
         int idcomp = temp.toInt();
