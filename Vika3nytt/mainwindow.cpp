@@ -405,10 +405,8 @@ void MainWindow::on_Button_removeSci_clicked()
         int read = msgBox.exec();
         // Messagebox asks if user wants to remove or not
 
-        bool removed;   //taka seinna þegar ui er tekið og core hreinsað ---------------------
-
         switch (read) {
-            case QMessageBox::Yes:  core.removeIndividual(id, removed);
+            case QMessageBox::Yes:  core.removeIndividual(id);
                                     setTreeSci();
                                     break;
             default:                // Close without changes made
@@ -474,10 +472,8 @@ void MainWindow::on_Button_removeComp_clicked()
         int ret = msgBox.exec();
         // Messagebox asks if user wants to remove or not
 
-        bool removed;
-
         switch (ret) {
-            case QMessageBox::Yes:  core.removeComputer(id, removed);
+            case QMessageBox::Yes:  core.removeComputer(id);
                                     setTreeComp();
                                     break;
             default:                // Close without changes made
