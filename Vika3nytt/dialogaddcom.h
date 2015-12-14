@@ -2,8 +2,8 @@
 #define DIALOGADDCOM_H
 
 #include <QDialog>
-#include<core.h>
-#include<machines.h>
+#include "core.h"
+#include "machines.h"
 
 namespace Ui {
 class DialogAddCom;
