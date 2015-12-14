@@ -145,7 +145,6 @@ void MainWindow::setTreeComp(Machines & computers)
     ui->treeWidget_comp->setColumnCount(4);
     ui->treeWidget_comp->setHeaderLabels(QStringList() << "Name" << "Type" << "Built" << "Id");
     ui->treeWidget_comp->setColumnHidden(3, true);
-
     for(int i = 0; i < computers.getSize(); i++)
     {
         addTreeRootComp(computers.getComputer(i));
