@@ -35,16 +35,13 @@ void DialogAddCom::on_confirmAddButton_clicked()
     char gender;
     bool error = false;
     bool found = false;
-    clearErrorLabel();
+    clearErrorLabels();
     QString name = ui ->lineEdit_addComName->text();
     string nafn = name.toStdString();
     QString qType = ui->lineEdit_addType->text();
     string type = qType.toStdString();
     QString creationYear = ui->lineEdit_creationYear->text();
     int live = creationYear.toInt();
-
-    //Computer c1(live, nafn, type);
-
 
     if(name.isEmpty())
     {
@@ -84,12 +81,13 @@ void DialogAddCom::on_confirmAddButton_clicked()
         }
     }
 }
+
 void DialogAddCom::on_pushButton_cancelAdd_pressed()
 {
     this->close();
 }
 
-void DialogAddCom::clearErrorLabel()
+void DialogAddCom::clearErrorLabels()
 {
     ui->label_errorNameComp->setText("");
     ui->label_errorCompYear->setText("");

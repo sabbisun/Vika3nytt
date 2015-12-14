@@ -2,8 +2,8 @@
 #define DIALOGADDCOMPCONNECTION_H
 
 #include <QDialog>
-#include "People.h"
 #include "core.h"
+
 namespace Ui {
 class DialogAddCompConnection;
 }
@@ -18,13 +18,12 @@ public:
 
 private slots:
     void on_button_confirmCompCon_clicked();
-
     void on_button_cancelConComp_clicked();
 
 private:
     Ui::DialogAddCompConnection *ui;
-    void createComboBox();
     Core core;
+    void createComboBox();
 };
 
 #endif // DIALOGADDCOMPCONNECTION_H

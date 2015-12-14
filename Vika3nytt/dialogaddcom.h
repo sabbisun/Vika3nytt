@@ -19,15 +19,14 @@ public:
 
 private slots:
     void on_checkBox_created_clicked();
-
     void on_confirmAddButton_clicked();
-
     void on_pushButton_cancelAdd_pressed();
 
 private:
     Ui::DialogAddCom *ui;
     Core core;
-    void clearErrorLabel();
+    void clearErrorLabels();
+    // Clears all error messages in window
 };
 
 #endif // DIALOGADDCOM_H

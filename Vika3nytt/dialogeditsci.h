@@ -27,9 +27,7 @@ private slots:
     void on_checkBox_alive_clicked();
     void on_checkBox_female_clicked();
     void on_checkBox_male_clicked();
-
     void on_Button_cancel_clicked();
-
     void on_Button_confirm_clicked();
 
 private:

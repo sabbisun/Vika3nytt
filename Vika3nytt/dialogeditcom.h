@@ -23,9 +23,7 @@ public:
 
 private slots:
     void on_checkBox_built_clicked();
-
     void on_Button_confirm_clicked();
-
     void on_Button_cancel_clicked();
 
 private:

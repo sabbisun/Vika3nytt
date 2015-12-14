@@ -32,16 +32,16 @@ static const qt_meta_stringdata_DialogAddSci_t qt_meta_stringdata_DialogAddSci =
 QT_MOC_LITERAL(0, 0, 12), // "DialogAddSci"
 QT_MOC_LITERAL(1, 13, 24), // "on_checkBox_male_clicked"
 QT_MOC_LITERAL(2, 38, 0), // ""
-QT_MOC_LITERAL(3, 39, 7), // "checked"
-QT_MOC_LITERAL(4, 47, 26), // "on_checkBox_female_clicked"
-QT_MOC_LITERAL(5, 74, 25), // "on_checkBox_alive_clicked"
+QT_MOC_LITERAL(3, 39, 26), // "on_checkBox_female_clicked"
+QT_MOC_LITERAL(4, 66, 25), // "on_checkBox_alive_clicked"
+QT_MOC_LITERAL(5, 92, 7), // "checked"
 QT_MOC_LITERAL(6, 100, 27), // "on_confirmAddButton_clicked"
 QT_MOC_LITERAL(7, 128, 31) // "on_pushButton_cancelAdd_clicked"
 
     },
     "DialogAddSci\0on_checkBox_male_clicked\0"
-    "\0checked\0on_checkBox_female_clicked\0"
-    "on_checkBox_alive_clicked\0"
+    "\0on_checkBox_female_clicked\0"
+    "on_checkBox_alive_clicked\0checked\0"
     "on_confirmAddButton_clicked\0"
     "on_pushButton_cancelAdd_clicked"
 };
@@ -61,17 +61,17 @@ static const uint qt_meta_data_DialogAddSci[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   44,    2, 0x08 /* Private */,
-       4,    1,   47,    2, 0x08 /* Private */,
-       5,    1,   50,    2, 0x08 /* Private */,
-       6,    0,   53,    2, 0x08 /* Private */,
-       5,    0,   54,    2, 0x08 /* Private */,
-       7,    0,   55,    2, 0x08 /* Private */,
+       1,    0,   44,    2, 0x08 /* Private */,
+       3,    0,   45,    2, 0x08 /* Private */,
+       4,    1,   46,    2, 0x08 /* Private */,
+       6,    0,   49,    2, 0x08 /* Private */,
+       4,    0,   50,    2, 0x08 /* Private */,
+       7,    0,   51,    2, 0x08 /* Private */,
 
  // slots: parameters
-    QMetaType::Bool, QMetaType::Bool,    3,
-    QMetaType::Bool, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    5,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -85,10 +85,8 @@ void DialogAddSci::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         DialogAddSci *_t = static_cast<DialogAddSci *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: { bool _r = _t->on_checkBox_male_clicked((*reinterpret_cast< bool(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 1: { bool _r = _t->on_checkBox_female_clicked((*reinterpret_cast< bool(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+        case 0: _t->on_checkBox_male_clicked(); break;
+        case 1: _t->on_checkBox_female_clicked(); break;
         case 2: _t->on_checkBox_alive_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 3: _t->on_confirmAddButton_clicked(); break;
         case 4: _t->on_checkBox_alive_clicked(); break;

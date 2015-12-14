@@ -6,10 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     createDropSearchForSci();
     setTreeSci();
     createDropSearchForComp();
     setTreeComp();
+<<<<<<< HEAD
     setColumns();
     /*   //eða:
     ui->treeWidget_sci->setColumnWidth(0, 200);
@@ -24,7 +26,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Button_removeComp->setEnabled(false);
     ui->Button_editComp->setEnabled(false);
     ui->Button_addCompConnection->setEnabled(false);
+=======
 
+    setColumnWidth();
+>>>>>>> 48ec263229f9ea6aed589284056b5b1dee421170
+
+    disableButtons();
 }
 
 MainWindow::~MainWindow()
@@ -34,28 +41,28 @@ MainWindow::~MainWindow()
 
 void MainWindow::searchSciMenu(string search)
 {
-   People p1;
-   string searching = ui->comboBox_searchSci->currentText().toStdString();
-   if(searching == "Name")
-   {
-      p1 = core.searchNam(search);
-      setTreeSci(p1);
-   }
-   if(searching == "Gender")
-   {
-       char sea = search[0];
-       p1 = core.searchGend(sea);
-       setTreeSci(p1);
-   }
-   if(searching == "Year of birth")
+    People p1;
+    string searching = ui->comboBox_searchSci->currentText().toStdString();
+    if(searching == "Name")
     {
-       int year = atoi(search.c_str());
-       p1 = core.searchBir(year);
-       setTreeSci(p1);
+        p1 = core.searchNam(search);
+        setTreeSci(p1);
     }
-    if(searching=="Year of death")
+    if(searching == "Gender")
     {
-       int year = atoi(search.c_str());
+        char sea = search[0];
+        p1 = core.searchGend(sea);
+        setTreeSci(p1);
+    }
+    if(searching == "Year of birth")
+    {
+        int year = atoi(search.c_str());
+        p1 = core.searchBir(year);
+        setTreeSci(p1);
+    }
+    if(searching == "Year of death")
+    {
+        int year = atoi(search.c_str());
         p1 = core.searchDea(year);
         setTreeSci(p1);
     }
@@ -283,6 +290,37 @@ void MainWindow::addTreeChildComp(QTreeWidgetItem *parent, Individual scientist)
 
     parent->addChild(treeItem);
 }
+
+void MainWindow::disableButtons()
+{
+    ui->Button_removeSci->setEnabled(false);
+    ui->Button_removeComp->setEnabled(false);
+    ui->Button_editSci->setEnabled(false);
+    ui->Button_editComp->setEnabled(false);
+    ui->Button_addSciConnection->setEnabled(false);
+    ui->Button_addCompConnection->setEnabled(false);
+}
+
+void MainWindow::setColumnWidth()
+{
+    int col = 3;
+    int max = 200;
+    for(int i = 0; i < col; i++)
+    {
+        ui->treeWidget_sci->setColumnWidth(i, max);
+        ui->treeWidget_comp->setColumnWidth(i, max);
+        max = max - 50;
+    }
+    /*     //eða: ?
+    ui->treeWidget_sci->setColumnWidth(0, 200);
+    ui->treeWidget_sci->setColumnWidth(1, 150);
+    ui->treeWidget_sci->setColumnWidth(2, 100);
+
+    ui->treeWidget_comp->setColumnWidth(0, 200);
+    ui->treeWidget_comp->setColumnWidth(1, 150);
+    ui->treeWidget_comp->setColumnWidth(2, 100);*/
+}
+
 void MainWindow::createDropSearchForSci()
 {
     ui->comboBox_searchSci->clear();
@@ -342,9 +380,8 @@ void MainWindow::on_Button_addSci_clicked()
    addSciWindow.setModal(true);
    addSciWindow.exec();
    setTreeSci();
+   disableButtons();
 }
-
-
 
 void MainWindow::on_Button_editSci_clicked()
 {
@@ -379,7 +416,7 @@ void MainWindow::on_Button_editSci_clicked()
         editor.exec();
     }
     setTreeSci();
-    ui->Button_editSci->setEnabled(true);
+    disableButtons();
 }
 
 void MainWindow::on_Button_removeSci_clicked()
@@ -439,7 +476,7 @@ void MainWindow::on_Button_removeSci_clicked()
 
     }
     setTreeSci();
-
+    disableButtons();
 }
 
 void MainWindow::on_treeWidget_sci_itemSelectionChanged()
@@ -517,6 +554,7 @@ void MainWindow::on_Button_removeComp_clicked()
         }
     }
     setTreeComp();
+    disableButtons();
 }
 
 void MainWindow::on_treeWidget_comp_itemSelectionChanged()
@@ -554,7 +592,7 @@ void MainWindow::on_Button_editComp_clicked()
         editor.exec();
     }
     setTreeComp();
-    ui->Button_editComp->setEnabled(true);
+    disableButtons();
 }
 
 void MainWindow::on_Button_addSciConnection_clicked()
@@ -571,6 +609,7 @@ void MainWindow::on_Button_addSciConnection_clicked()
     }
     setTreeSci();
     setTreeComp();
+    disableButtons();
 }
 
 void MainWindow::on_Button_addCompConnection_clicked()
@@ -587,13 +626,14 @@ void MainWindow::on_Button_addCompConnection_clicked()
     }
     setTreeComp();
     setTreeSci();
+    disableButtons();
 }
 
 void MainWindow::on_Button_addComp_clicked()
 {
-       DialogAddCom addComWindow;
-       addComWindow.setModal(true);
-       addComWindow.exec();
-       setTreeComp();
-
+    DialogAddCom addComWindow;
+    addComWindow.setModal(true);
+    addComWindow.exec();
+    setTreeComp();
+    disableButtons();
 }
