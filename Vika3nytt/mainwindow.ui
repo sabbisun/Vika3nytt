@@ -30,7 +30,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_sci">
        <attribute name="title">
@@ -58,6 +58,9 @@
             </item>
             <item>
              <widget class="QComboBox" name="comboBox_searchSci">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="font">
                <font>
                 <family>Arial</family>
@@ -71,7 +74,7 @@
             <item>
              <widget class="QLineEdit" name="lineEdit_searchSci">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="font">
                <font>
@@ -376,5 +379,38 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>comboBox_searchSci</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>lineEdit_searchSci</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_searchComp</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>lineEdit_searchComp</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

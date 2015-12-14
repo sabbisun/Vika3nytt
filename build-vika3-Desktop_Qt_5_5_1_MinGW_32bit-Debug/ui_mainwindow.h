@@ -113,6 +113,7 @@ public:
 
         comboBox_searchSci = new QComboBox(tab_sci);
         comboBox_searchSci->setObjectName(QStringLiteral("comboBox_searchSci"));
+        comboBox_searchSci->setEnabled(true);
         QFont font2;
         font2.setFamily(QStringLiteral("Arial"));
         font2.setBold(false);
@@ -124,7 +125,7 @@ public:
 
         lineEdit_searchSci = new QLineEdit(tab_sci);
         lineEdit_searchSci->setObjectName(QStringLiteral("lineEdit_searchSci"));
-        lineEdit_searchSci->setEnabled(false);
+        lineEdit_searchSci->setEnabled(true);
         QFont font3;
         font3.setFamily(QStringLiteral("Arial"));
         font3.setPointSize(8);
@@ -313,8 +314,10 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(comboBox_searchSci, SIGNAL(currentIndexChanged(QString)), lineEdit_searchSci, SLOT(clear()));
+        QObject::connect(comboBox_searchComp, SIGNAL(currentIndexChanged(QString)), lineEdit_searchComp, SLOT(clear()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
         Button_addSci->setDefault(true);
 
 

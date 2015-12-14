@@ -38,11 +38,7 @@ private slots:
 
     void on_lineEdit_searchSci_textChanged(const QString &arg1);
 
-    void on_comboBox_searchSci_currentIndexChanged(const QString &arg1);
-
     void on_lineEdit_searchComp_textChanged(const QString &arg1);
-
-    void on_comboBox_searchComp_currentIndexChanged(const QString &arg1);
 
     void on_Button_addSci_clicked();
 
@@ -64,6 +60,10 @@ private slots:
 
 
     void on_Button_addComp_clicked();
+
+    void on_comboBox_searchSci_currentIndexChanged(const QString &arg1);
+
+    void on_comboBox_searchComp_currentIndexChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

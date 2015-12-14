@@ -38,26 +38,26 @@ MainWindow::~MainWindow()
 
 void MainWindow::searchSciMenu(string search)
 {
-    People p1;
     string searching = ui->comboBox_searchSci->currentText().toStdString();
+    People p1;
     if(searching == "Name")
     {
         p1 = core.searchNam(search);
         setTreeSci(p1);
     }
-    if(searching == "Gender")
+    else if(searching == "Gender")
     {
         char sea = search[0];
         p1 = core.searchGend(sea);
         setTreeSci(p1);
     }
-    if(searching == "Year of birth")
+    else if(searching == "Year of birth")
     {
         int year = atoi(search.c_str());
         p1 = core.searchBir(year);
         setTreeSci(p1);
     }
-    if(searching == "Year of death")
+    else if(searching == "Year of death")
     {
         int year = atoi(search.c_str());
         p1 = core.searchDea(year);
@@ -353,24 +353,11 @@ void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
     searchSciMenu(search);
 }
 
-void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
-{
-    ui->lineEdit_searchSci->setEnabled(true);
-    setTreeSci();
-}
-
 void MainWindow::on_lineEdit_searchComp_textChanged(const QString &arg1)
 {
     string search = arg1.toStdString();
     searchCompMenu(search);
 }
-
-void MainWindow::on_comboBox_searchComp_currentIndexChanged(const QString &arg1)
-{
-    ui->lineEdit_searchComp->setEnabled(true);
-    setTreeComp();
-}
-
 void MainWindow::on_Button_addSci_clicked()
 {
    DialogAddSci addSciWindow;
@@ -633,4 +620,28 @@ void MainWindow::on_Button_addComp_clicked()
     addComWindow.exec();
     setTreeComp();
     disableButtons();
+}
+
+void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
+{
+    if(ui->comboBox_searchSci->currentText().toStdString() == "")
+    {
+        ui->lineEdit_searchSci->setDisabled(true);
+    }
+    else
+    {
+         ui->lineEdit_searchSci->setEnabled(true);
+    }
+}
+
+void MainWindow::on_comboBox_searchComp_currentIndexChanged(const QString &arg1)
+{
+    if(ui->comboBox_searchComp->currentText().toStdString() == "")
+    {
+        ui->lineEdit_searchComp->setDisabled(true);
+    }
+    else
+    {
+         ui->lineEdit_searchComp->setEnabled(true);
+    }
 }
