@@ -50,7 +50,7 @@
      <item>
       <widget class="QLabel" name="label_nameError">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -71,7 +71,7 @@
      <item>
       <widget class="QLabel" name="label_typeError">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -105,7 +105,7 @@
        <item>
         <widget class="QLabel" name="label_buildYearError">
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>

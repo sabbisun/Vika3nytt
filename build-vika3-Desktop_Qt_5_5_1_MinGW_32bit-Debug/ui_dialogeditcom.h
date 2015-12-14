@@ -173,12 +173,12 @@ public:
         DialogEditCom->setWindowTitle(QApplication::translate("DialogEditCom", "Dialog", 0));
         label_Dialogname->setText(QApplication::translate("DialogEditCom", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Edit Computer</span></p></body></html>", 0));
         label_name->setText(QApplication::translate("DialogEditCom", "Name:                ", 0));
-        label_nameError->setText(QApplication::translate("DialogEditCom", "TextLabel", 0));
+        label_nameError->setText(QString());
         label_type->setText(QApplication::translate("DialogEditCom", "Type:                 ", 0));
-        label_typeError->setText(QApplication::translate("DialogEditCom", "TextLabel", 0));
+        label_typeError->setText(QString());
         checkBox_built->setText(QApplication::translate("DialogEditCom", "Built", 0));
         label_buildYear->setText(QApplication::translate("DialogEditCom", "Year of creation: ", 0));
-        label_buildYearError->setText(QApplication::translate("DialogEditCom", "TextLabel", 0));
+        label_buildYearError->setText(QString());
         Button_confirm->setText(QApplication::translate("DialogEditCom", "Confirm", 0));
         Button_cancel->setText(QApplication::translate("DialogEditCom", "Cancel", 0));
     } // retranslateUi
