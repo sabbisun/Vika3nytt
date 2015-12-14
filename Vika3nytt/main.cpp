@@ -1,16 +1,9 @@
-
 #include <QApplication>
 #include <QCoreApplication>
 #include <QtSql>
 #include <iostream>
-#include "ui.h"
-#include <QApplication>
 
-#include <QCoreApplication>
-#include <QtSql>
-#include <iostream>
 #include "ui.h"
-
 #include "mainwindow.h"
 
 using namespace std;
