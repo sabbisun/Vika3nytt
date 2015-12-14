@@ -1,7 +1,7 @@
 #include "dialogaddcompconnection.h"
 #include "ui_dialogaddcompconnection.h"
 DialogAddCompConnection::DialogAddCompConnection(QWidget *parent) :
-    QDialog(parent),
+    QDialog(parent,Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint ),
     ui(new Ui::DialogAddCompConnection)
 {
     ui->setupUi(this);
