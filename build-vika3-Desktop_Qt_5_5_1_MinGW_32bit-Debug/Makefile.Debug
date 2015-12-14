@@ -2598,9 +2598,6 @@ debug/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextformat.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qpen.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QMenuBar \
-		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qmenubar.h \
-		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qmenu.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/QPushButton \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
 		C:/Program\ Files\ (x86)/QQTT/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \

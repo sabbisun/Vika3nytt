@@ -10,8 +10,20 @@
     <height>568</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>8</pointsize>
+    <weight>75</weight>
+    <italic>false</italic>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Database application for Scientists and Computers</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -31,18 +43,43 @@
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
              <widget class="QLabel" name="label_searchSci">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Search by:</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_searchSci"/>
+             <widget class="QComboBox" name="comboBox_searchSci">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+             </widget>
             </item>
             <item>
              <widget class="QLineEdit" name="lineEdit_searchSci">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
               </property>
              </widget>
             </item>
@@ -83,8 +120,25 @@
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
              <widget class="QPushButton" name="Button_addSci">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Add Scientist</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>true</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
               </property>
              </widget>
             </item>
@@ -92,6 +146,14 @@
              <widget class="QPushButton" name="Button_editSci">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="text">
                <string>Edit Scientist</string>
@@ -103,6 +165,14 @@
               <property name="enabled">
                <bool>false</bool>
               </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Remove</string>
               </property>
@@ -112,6 +182,14 @@
              <widget class="QPushButton" name="Button_addSciConnection">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="text">
                <string>Add Connection</string>
@@ -135,13 +213,27 @@
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
              <widget class="QLabel" name="label_searchComp">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Search by:</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_searchComp"/>
+             <widget class="QComboBox" name="comboBox_searchComp">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <italic>true</italic>
+               </font>
+              </property>
+             </widget>
             </item>
             <item>
              <widget class="QLineEdit" name="lineEdit_searchComp">
@@ -150,6 +242,12 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
               </property>
              </widget>
             </item>
@@ -187,6 +285,14 @@
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
              <widget class="QPushButton" name="Button_addComp">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Add Computer</string>
               </property>
@@ -196,6 +302,14 @@
              <widget class="QPushButton" name="Button_editComp">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="text">
                <string>Edit Computer</string>
@@ -207,6 +321,14 @@
               <property name="enabled">
                <bool>false</bool>
               </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Remove</string>
               </property>
@@ -216,6 +338,13 @@
              <widget class="QPushButton" name="Button_addCompConnection">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="text">
                <string>Add Connection</string>
@@ -231,16 +360,6 @@
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>658</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="movable">
