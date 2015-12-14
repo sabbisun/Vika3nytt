@@ -66,12 +66,12 @@ void DialogAddSci::on_confirmAddButton_clicked()
     Individual i1(nafn, nafn2,gender,live,dead);
     if(name.isEmpty())
     {
-        ui->label_errorSciName->setText("Name cannot be empty");
+        ui->label_errorSciName->setText("<font color=\"Red\">Name cannot be empty");
         error = true;
     }
     if(surName.isEmpty())
     {
-        ui->label_errorSciSurname->setText("Surname cannot be empty");
+        ui->label_errorSciSurname->setText("<font color=\"Red\">Surname cannot be empty");
         error = true;
     }
     if(on_checkBox_male_clicked(false) && on_checkBox_female_clicked(false))
@@ -81,12 +81,12 @@ void DialogAddSci::on_confirmAddButton_clicked()
     }
     if(birthYear.isEmpty()||live == 0)
     {
-        ui->label_errorSciBirth->setText("Invalid birth year!");
+        ui->label_errorSciBirth->setText("<font color=\"Red\">Invalid birth year!");
         error = true;
     }
     if(deathYear.isEmpty()&&!(ui->checkBox_alive->isChecked())||live>dead||dead == 0)
     {
-        ui->label_errorSciDeath->setText("Invalid death year!");
+        ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
         error = true;
     }
     if(!error)

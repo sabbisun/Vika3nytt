@@ -139,7 +139,7 @@ void DialogEditSci::on_Button_confirm_clicked()
     }
 
     QString byear = ui->lineEdit_yearBirth->text();
-    if(byear.isEmpty())
+    if(byear.isEmpty() || (byear.toInt() == 0))
     {
         ui->label_birthError->setText("<font color=\"Red\">Please enter a birth year.");
         isLegalEdit = false;
@@ -148,7 +148,6 @@ void DialogEditSci::on_Button_confirm_clicked()
     if(ui->checkBox_alive->isChecked())
     {
         dyear = QString::number(0);
-        ui->lineEdit_yearBirth->setEnabled(false);
     }
     else if(!ui->checkBox_alive->isChecked() && dyear.isEmpty())
     {
@@ -160,13 +159,12 @@ void DialogEditSci::on_Button_confirm_clicked()
         dyear = ui->lineEdit_yearDeth->text();
         if(dyear.toInt() < byear.toInt())
         {
-            ui->label_deathError->setText("<font color=\"Red\">Cannot die before being born.");
+            ui->label_deathError->setText("<font color=\"Red\">Invalid deathyear.");
             isLegalEdit = false;
         }
         else
         {
             dyear = ui->lineEdit_yearDeth->text();
-            ui->lineEdit_yearBirth->setEnabled(false);
         }
     }
 
