@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     createDropSearchForSci();
     setTreeSci();
     createDropSearchForComp();
@@ -23,28 +24,28 @@ MainWindow::~MainWindow()
 
 void MainWindow::searchSciMenu(string search)
 {
-   People p1;
-   string searching = ui->comboBox_searchSci->currentText().toStdString();
-   if(searching == "Name")
-   {
-      p1 = core.searchNam(search);
-      setTreeSci(p1);
-   }
-   if(searching == "Gender")
-   {
-       char sea = search[0];
-       p1 = core.searchGend(sea);
-       setTreeSci(p1);
-   }
-   if(searching == "Year of birth")
+    People p1;
+    string searching = ui->comboBox_searchSci->currentText().toStdString();
+    if(searching == "Name")
     {
-       int year = atoi(search.c_str());
-       p1 = core.searchBir(year);
-       setTreeSci(p1);
+        p1 = core.searchNam(search);
+        setTreeSci(p1);
     }
-    if(searching=="Year of death")
+    if(searching == "Gender")
     {
-       int year = atoi(search.c_str());
+        char sea = search[0];
+        p1 = core.searchGend(sea);
+        setTreeSci(p1);
+    }
+    if(searching == "Year of birth")
+    {
+        int year = atoi(search.c_str());
+        p1 = core.searchBir(year);
+        setTreeSci(p1);
+    }
+    if(searching == "Year of death")
+    {
+        int year = atoi(search.c_str());
         p1 = core.searchDea(year);
         setTreeSci(p1);
     }

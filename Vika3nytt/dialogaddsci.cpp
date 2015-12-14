@@ -20,17 +20,14 @@ DialogAddSci::~DialogAddSci()
     delete ui;
 }
 
-
-bool DialogAddSci::on_checkBox_male_clicked(bool checked)
+void DialogAddSci::on_checkBox_male_clicked()
 {
     ui->checkBox_female->setChecked(false);
-    return checked;
 }
 
-bool DialogAddSci::on_checkBox_female_clicked(bool checked)
+void DialogAddSci::on_checkBox_female_clicked()
 {
     ui->checkBox_male->setChecked(false);
-    return checked;
 }
 
 void DialogAddSci::on_checkBox_alive_clicked(bool checked)
@@ -70,12 +67,10 @@ void DialogAddSci::on_confirmAddButton_clicked()
     {
         gender = 'f';
     }
-
     if(ui->checkBox_alive->isChecked())
     {
         dead = 0;
     }
-
     if(name.isEmpty())
     {
         ui->label_errorSciName->setText("<font color=\"Red\">Name cannot be empty");
@@ -88,8 +83,6 @@ void DialogAddSci::on_confirmAddButton_clicked()
     }
     if(!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
     {
-        qDebug() << QString("female") << !ui->checkBox_female->isChecked();
-        qDebug() << QString("male") << !ui->checkBox_male->isChecked();
         ui->label_errorSciGender->setText("<font color=\"Red\">Scientist must have a gender!");
         error = true;
     }
@@ -119,15 +112,14 @@ void DialogAddSci::on_confirmAddButton_clicked()
         core.addIndividual(i1,found);
         if(found)
         {
-             ui->label_errorSciName->setText("<font color=\"Red\">Scientist is already in the database");
-             ui->label_errorSciSurname->setText("<font color=\"Red\">Scientist is already in the database");
-             ui->label_errorSciBirth->setText("<font color=\"Red\">Scientist is already in the database");
-             ui->label_errorSciDeath->setText("<font color=\"Red\">Scientist is already in the database");
-
+            ui->label_errorSciName->setText("<font color=\"Red\">Scientist is already in the database");
+            ui->label_errorSciSurname->setText("<font color=\"Red\">Scientist is already in the database");
+            ui->label_errorSciBirth->setText("<font color=\"Red\">Scientist is already in the database");
+            ui->label_errorSciDeath->setText("<font color=\"Red\">Scientist is already in the database");
         }
         else
         {
-             this->close();
+            this->close();
         }
     }
 }
@@ -142,8 +134,8 @@ void DialogAddSci::on_checkBox_alive_clicked()
     {
          ui->lineEdit_addDeathYear->setEnabled(true);
     }
-
 }
+
 void DialogAddSci::on_pushButton_cancelAdd_clicked()
 {
     this->close();
