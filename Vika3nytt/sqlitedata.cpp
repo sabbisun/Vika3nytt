@@ -56,7 +56,7 @@ People SQLiteData::searchIndiByGender(const char gender)
 
 People SQLiteData::searchIndiByName(const string name)
 {
-    string Query = selectAllSci + " " + searchName + name + "%'" + " " + searchSurname + name + "%'" ;
+    string Query = selectAllSci + " " + searchName + name + "%'" + "OR s.deleted = 0 " + "AND s.surname LIKE '%" + name + "%'";
     People p1 = doQuerySci(Query);
     if(p1.getSize() == 0)
     {
@@ -557,7 +557,7 @@ bool SQLiteData::searchForId(const int id, const string tablename)
      else
      {
          db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-         db.setDatabaseName("/Users/thordis/Vika3nytt/build-vika3-Desktop_Qt_5_5_1_MinGW_32bit-Debug/ScientistsComputers.sqlite");
+         db.setDatabaseName("ScientistsComputers.sqlite");
 
          db.open();
      }

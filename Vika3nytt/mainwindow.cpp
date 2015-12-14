@@ -571,8 +571,12 @@ void MainWindow::on_Button_addCompConnection_clicked()
     addCompConn.setModal(true);
     int idsci = addCompConn.exec();
     QString temp = ui->treeWidget_comp->currentItem()->text(3);
-    int idcomp = temp.toInt();
-    core.addConnection(idsci,idcomp);
+    qDebug() << QString::number(idsci);
+    if(idsci != -1)
+    {
+        int idcomp = temp.toInt();
+        core.addConnection(idsci,idcomp);
+    }
     setTreeComp();
 }
 
