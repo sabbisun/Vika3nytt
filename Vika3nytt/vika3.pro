@@ -16,7 +16,6 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     core.cpp \
-    ui.cpp \
     individual.cpp \
     people.cpp \
     sqlitedata.cpp \
@@ -32,7 +31,6 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     core.h \
     globalconstants.h \
-    ui.h \
     individual.h \
     people.h \
     sqlitedata.h \
