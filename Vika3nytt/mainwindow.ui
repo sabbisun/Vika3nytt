@@ -41,7 +41,10 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout_5">
     <item>
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QTabWidget" name="tab_front">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="font">
        <font>
         <weight>50</weight>
@@ -51,6 +54,55 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
+      <widget class="QWidget" name="Frontpage">
+       <attribute name="title">
+        <string>Frontpage</string>
+       </attribute>
+       <widget class="QLabel" name="label_picture">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>30</y>
+          <width>631</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>631</width>
+          <height>421</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Button_startProgram">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>-10</y>
+          <width>621</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>AR DELANEY</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Press to open the database</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
       <widget class="QWidget" name="tab_sci">
        <attribute name="title">
         <string>Scientists</string>
@@ -127,6 +179,9 @@
               <family>Arial</family>
               <pointsize>8</pointsize>
              </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
             </property>
             <property name="alternatingRowColors">
              <bool>true</bool>

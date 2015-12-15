@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/head">
         <file>ouricon.png</file>
+        <file>matrix.gif</file>
+        <file>newfront.gif</file>
     </qresource>
 </RCC>

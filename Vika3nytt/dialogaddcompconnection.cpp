@@ -30,7 +30,7 @@ void DialogAddCompConnection::on_button_confirmCompCon_clicked()
     int id;
     for(int i = 0; i < p1.getSize(); i++)
     {
-        string label = p1.getIndi(i).getName() + " " + p1.getIndi(i).getSurname();
+        string label = p1.getIndi(i).getSurname()+", " + p1.getIndi(i).getName() ;
         if(name == label)
         {
             id = p1.getIndi(i).getId();

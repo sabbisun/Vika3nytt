@@ -1,12 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMovie>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    ui->tab_sci->setDisabled(true);
+    ui->tab_comp->setDisabled(true);
+    setFrontPagelook();
     createDropSearchForSci();
     setTreeSci();
     createDropSearchForComp();
@@ -308,6 +311,13 @@ void MainWindow::setColumnWidth()
     ui->treeWidget_sci->setColumnWidth(3, 100);
 }
 
+void MainWindow::setFrontPagelook()
+{
+    QMovie *movie = new QMovie(":/head/newfront.gif");
+    ui->label_picture->setMovie(movie);
+    movie->start();
+}
+
 void MainWindow::disableButtons()
 {
     ui->Button_removeSci->setEnabled(false);
@@ -425,8 +435,8 @@ void MainWindow::on_Button_removeSci_clicked()
         int comId = comIdQ.toUInt();
 
         QMessageBox msgBoxRmCon;
-        msgBoxRmCon.setText("Removal of a connection");
-        QString text = "Are you sure you want to disconnect: \nScientist: " + sciNameQ + "\nComputer: " + comNameQ;
+        msgBoxRmCon.setWindowTitle("Removal of a connection");
+        QString text = "Are you sure you want to disconnect: <b>Scientist: " + sciNameQ + " </b>Computer: <b>" + comNameQ+"</b>";
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
@@ -518,8 +528,8 @@ void MainWindow::on_Button_removeComp_clicked()
         int comId = comIdQ.toUInt();
 
         QMessageBox msgBoxRmCon;
-        msgBoxRmCon.setText("Removal of a connection");
-        QString text = "Are you sure you want to disconnect: \nScientist: " + sciNameQ + "\nComputer: " + comNameQ;
+        msgBoxRmCon.setWindowTitle("Removal of a connection");
+        QString text = "Are you sure you want to disconnect: <b>Scientist: " + sciNameQ + " </b>Computer: <b>" + comNameQ + "</b>";
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
@@ -561,19 +571,18 @@ void MainWindow::on_Button_addCompConnection_clicked()
     DialogAddCompConnection addCompConn;
     addCompConn.setModal(true);
     QString temp = ui->treeWidget_comp->currentItem()->text(3);
-    int idcomp = temp.toInt();
+    int idcomp = temp.toUInt();
     Computer c1 = core.getData().getSingleComp(idcomp);
     QString title = "Adding connection for computer: " + QString::fromStdString(c1.getName());
     addCompConn.setWindowTitle(title);
     int idsci = addCompConn.exec();
-
     if(idsci != -1)
     {
         core.addConnection(idsci, idcomp);
     }
     setTreeComp();
     setTreeSci();
-    disableButtons();
+     disableButtons();
 }
 
 void MainWindow::on_treeWidget_sci_itemSelectionChanged()
@@ -695,4 +704,11 @@ void MainWindow::on_comboBox_searchComp_activated(const QString &arg1)
 {
     (void)arg1;
     disableButtons();
+}
+
+void MainWindow::on_Button_startProgram_clicked()
+{
+    ui->tab_sci->setEnabled(true);
+    ui->tab_comp->setEnabled(true);
+    ui->tab_front->removeTab(0);
 }

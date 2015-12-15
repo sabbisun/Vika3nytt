@@ -71,6 +71,8 @@ private slots:
     void on_comboBox_searchComp_activated(const QString &arg1);
     // Disables error messages from unused variables
 
+    void on_Button_startProgram_clicked();
+
 private:
     Ui::MainWindow *ui;
     Core core;
@@ -100,6 +102,7 @@ private:
 
     void setColumnWidth();
     // Sets the column width of both treeWidgets
+    void setFrontPagelook();
 };
 
 #endif // MAINWINDOW_H
