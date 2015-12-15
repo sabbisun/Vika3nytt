@@ -23,6 +23,7 @@ public:
     void setByear(QString& q);
     void setDyear(QString& q);
     void setDesc(QString& q);
+    // Fills current info about scientist into edit lines
 
 private slots:
     void on_checkBox_alive_clicked();
@@ -34,7 +35,9 @@ private slots:
 private:
     Ui::DialogEditSci *ui;
     Core core;
+
     void clearErrorLabels();
+    // Clears all error messages in window
 };
 
 #endif // DIALOGEDITSCI_H

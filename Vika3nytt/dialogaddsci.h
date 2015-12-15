@@ -26,8 +26,9 @@ private slots:
     void on_pushButton_cancelAdd_clicked();
 
 private:
-    Core core;
     Ui::DialogAddSci *ui;
+    Core core;
+
     void clearErrorLabels();
     // Clears all error messages in window
 };

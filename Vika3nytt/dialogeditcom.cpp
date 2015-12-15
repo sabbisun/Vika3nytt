@@ -13,6 +13,7 @@ DialogEditCom::DialogEditCom(QWidget *parent) :
     ui->label_nameError->setFont(f);
     ui->label_typeError->setFont(f);
     ui->label_buildYearError->setFont(f);
+    // Changes font of the error labels
 }
 
 DialogEditCom::~DialogEditCom()
