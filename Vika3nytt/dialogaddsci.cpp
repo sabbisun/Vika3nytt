@@ -59,6 +59,7 @@ void DialogAddSci::on_confirmAddButton_clicked()
     QString deathYear = ui->lineEdit_addDeathYear->text();
     int dead = deathYear.toInt();
     string about = ui->lineEdit_descriptionSci->document()->toPlainText().toStdString();
+    int currentYear = QDate::currentDate().year();
 
     if(ui->checkBox_male->isChecked())
     {
@@ -68,45 +69,66 @@ void DialogAddSci::on_confirmAddButton_clicked()
     {
         gender = 'f';
     }
+
     if(ui->checkBox_alive->isChecked())
     {
         dead = 0;
     }
+
     if(name.isEmpty())
     {
         ui->label_errorSciName->setText("<font color=\"Red\">Name cannot be empty");
         error = true;
     }
+
     if(surName.isEmpty())
     {
         ui->label_errorSciSurname->setText("<font color=\"Red\">Surname cannot be empty");
         error = true;
     }
+
     if(!ui->checkBox_female->isChecked() && !ui->checkBox_male->isChecked())
     {
         ui->label_errorSciGender->setText("<font color=\"Red\">Scientist must have a gender!");
         error = true;
     }
+
     if(birthYear.isEmpty()||live == 0)
     {
         ui->label_errorSciBirth->setText("<font color=\"Red\">Invalid birth year!");
         error = true;
     }
+
+    if(live > currentYear)
+    {
+        ui->label_errorSciBirth->setText("<font color=\"Red\">Invalid birth year!");
+        error = true;
+    }
+
     if((deathYear.isEmpty() && !ui->checkBox_alive->isChecked()))
     {
         ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
         error = true;
     }
+
     if(dead > 0 && live > dead)
     {
          ui->label_errorSciDeath->setText("<font color=\"Red\">You cannot die before you die");
          error = true;
     }
+
     if(dead == 0 && !ui->checkBox_alive->isChecked())
     {
         ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
         error = true;
     }
+
+    if(dead > currentYear)
+    {
+        ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
+        error = true;
+    }
+
     if(!error)
     {
         Individual i1(nafn2,nafn, gender, live, dead,about);

@@ -71,6 +71,7 @@ void DialogEditCom::on_Button_confirm_clicked()
 {
     bool isLegalEdit = true;
     clearErrorLabels();
+    int currentYear = QDate::currentDate().year();
 
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
@@ -89,7 +90,8 @@ void DialogEditCom::on_Button_confirm_clicked()
     {
         yearBuilt = QString::number(0);
     }
-    else if(!ui->checkBox_built->isChecked() && !yearBuilt.isEmpty() && yearBuilt.toInt() != 0)
+    else if(!ui->checkBox_built->isChecked() && !yearBuilt.isEmpty() && yearBuilt.toInt() != 0
+            && yearBuilt.toInt() <= currentYear)
     {
         yearBuilt = ui->lineEdit_yearBuilt->text();
     }

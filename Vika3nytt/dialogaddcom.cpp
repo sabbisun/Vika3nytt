@@ -42,6 +42,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
     QString creationYear = ui->lineEdit_creationYear->text();
     string about = ui->textEdit_addComp->document()->toPlainText().toStdString();
     int live = creationYear.toInt();
+    int currentYear = QDate::currentDate().year();
 
     if(name.isEmpty())
     {
@@ -53,7 +54,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
     {
         live = 0;
     }
-    else if(live == 0 || creationYear.isEmpty() || live > 2015)
+    else if(live == 0 || creationYear.isEmpty() || live > currentYear)
     {
         ui->label_errorCompYear->setText("<font color=\"Red\">That is not a possible creation year!");
         error = true;
