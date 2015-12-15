@@ -197,7 +197,6 @@
   </layout>
   <zorder>label_Dialogname</zorder>
   <zorder>label_errorCompYear</zorder>
-  <zorder></zorder>
  </widget>
  <resources/>
  <connections/>

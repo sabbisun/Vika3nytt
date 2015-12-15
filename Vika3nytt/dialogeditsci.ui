@@ -257,8 +257,6 @@
   <zorder>checkBox_alive</zorder>
   <zorder>Button_cancel</zorder>
   <zorder>Button_confirm</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>horizontalSpacer_2</zorder>
   <zorder>lineEdit_editSciDesc</zorder>
  </widget>
  <resources/>
