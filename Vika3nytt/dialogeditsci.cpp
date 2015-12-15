@@ -174,6 +174,7 @@ void DialogEditSci::on_Button_confirm_clicked()
             dyear = ui->lineEdit_yearDeth->text();
         }
     }
+
     string desc = ui->lineEdit_editSciDesc->document()->toPlainText().toStdString();
     if(isLegalEdit)
     {

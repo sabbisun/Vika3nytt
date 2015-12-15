@@ -77,13 +77,13 @@ void DialogAddSci::on_confirmAddButton_clicked()
 
     if(name.isEmpty())
     {
-        ui->label_errorSciName->setText("<font color=\"Red\">Name cannot be empty");
+        ui->label_errorSciName->setText("<font color=\"Red\">Please enter a name");
         error = true;
     }
 
     if(surName.isEmpty())
     {
-        ui->label_errorSciSurname->setText("<font color=\"Red\">Surname cannot be empty");
+        ui->label_errorSciSurname->setText("<font color=\"Red\">Please enter a surname");
         error = true;
     }
 
@@ -95,7 +95,7 @@ void DialogAddSci::on_confirmAddButton_clicked()
 
     if(birthYear.isEmpty()||live == 0)
     {
-        ui->label_errorSciBirth->setText("<font color=\"Red\">Invalid birth year!");
+        ui->label_errorSciBirth->setText("<font color=\"Red\">Please enter a birth year");
         error = true;
     }
 
@@ -107,23 +107,23 @@ void DialogAddSci::on_confirmAddButton_clicked()
 
     if((deathYear.isEmpty() && !ui->checkBox_alive->isChecked()))
     {
-        ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
+        ui->label_errorSciDeath->setText("<font color=\"Red\">Please enter a death year");
         error = true;
     }
 
-    if(dead > 0 && live > dead)
+    else if(dead > 0 && live > dead)
     {
-         ui->label_errorSciDeath->setText("<font color=\"Red\">You cannot die before you die");
+         ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year");
          error = true;
     }
 
-    if(dead == 0 && !ui->checkBox_alive->isChecked())
+    else if(dead == 0 && !ui->checkBox_alive->isChecked())
     {
         ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
         error = true;
     }
 
-    if(dead > currentYear)
+    else if(dead > currentYear)
     {
         ui->label_errorSciDeath->setText("<font color=\"Red\">Invalid death year!");
         error = true;
