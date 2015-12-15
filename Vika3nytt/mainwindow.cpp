@@ -112,7 +112,7 @@ void MainWindow::setTreeSci()
     ui->treeWidget_sci->setColumnCount(5);
     ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Birth year" << "Id" << "Death year");
     ui->treeWidget_sci->setColumnHidden(3, true);
-    People scientists = core.sortSciAlpabetBack();
+    People scientists = core.sortSciAlpabetFront();
 
     for(int i = 0; i < scientists.getSize(); i++)
     {
@@ -141,7 +141,7 @@ void MainWindow::setTreeComp()
     ui->treeWidget_comp->setHeaderLabels(QStringList() << "Name" << "Type" << "Built" << "Id");
     ui->treeWidget_comp->setColumnHidden(3, true);
 
-    Machines computers = core.sortCompAlpabetBack();
+    Machines computers = core.sortCompAlpabetFront();
 
     for(int i = 0; i < computers.getSize(); i++)
     {

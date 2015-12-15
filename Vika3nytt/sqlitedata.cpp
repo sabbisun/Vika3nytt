@@ -12,27 +12,6 @@ People SQLiteData::sortIndiAlphaFront()
     return p1;
 }
 
-People SQLiteData::sortIndiAlphaBack()
-{
-    string Query = selectAllSci + " " + orderBySurnameDe;
-    People p1 = doQuerySci(Query);
-    return p1;
-}
-
-People SQLiteData::sortIndiBYear()
-{
-    string Query = selectAllSci + " " + orderByBYear;
-    People p1 = doQuerySci(Query);
-    return p1;
-}
-
-People SQLiteData::sortIndiByDYear()
-{
-    string Query = selectAllSci + " " + orderByDYear;
-    People p1 = doQuerySci(Query);
-    return p1;
-}
-
 People SQLiteData::searchIndiByByear(const int year)
 {
     string Query1 = selectAllSci + " " + searchbYear + intToString(year);
@@ -127,27 +106,6 @@ void SQLiteData::updateIndiDesc(const string desc, const int id)
 Machines SQLiteData::sortCompAlphaFront()
 {
     string Query = selectAllComp + " " + orderByName;
-    Machines p1 = doQueryComp(Query);
-    return p1;
-}
-
-Machines  SQLiteData::sortCompAlphaBack()
-{
-    string Query = selectAllComp + " " + orderByNameDe;
-    Machines p1 = doQueryComp(Query);
-    return p1;
-}
-
-Machines SQLiteData::sortCompBYear()
-{
-    string Query = selectAllComp + " " + orderByBYear;
-    Machines p1 = doQueryComp(Query);
-    return p1;
-}
-
-Machines SQLiteData::sortCompByType()
-{
-    string Query = selectAllComp + " " + orderByType;
     Machines p1 = doQueryComp(Query);
     return p1;
 }

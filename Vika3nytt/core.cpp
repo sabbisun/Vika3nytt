@@ -40,61 +40,9 @@ People Core::sortSciAlpabetFront()
     return newdata.sortIndiAlphaFront();
 }
 
-People Core::sortSciAlpabetBack()
-{
-    return newdata.sortIndiAlphaBack();
-}
-
-People Core::sortSciByBirthYear()
-{
-    return newdata.sortIndiBYear();
-}
-
-People Core::sortSciByDeathYear()
-{
-    People temp = newdata.sortIndiByDYear();
-    People alive, dead;
-
-    for(int i = 0; i < temp.getSize(); i++)
-    {
-        if(temp.getIndi(i).getDeath() == 0)
-        {
-            alive.addIndi(temp.getIndi(i));
-        }
-        else
-        {
-            dead.addIndi(temp.getIndi(i));
-        }
-    }
-    // Seperates alive and dead computer scientists
-
-    for(int i = 0; i < alive.getSize(); i++)
-    {
-        dead.addIndi(alive.getIndi(i));
-    }
-    // Puts those alive at the end of the list
-
-    return dead;
-}
-
 Machines Core::sortCompAlpabetFront()
 {
     return newdata.sortCompAlphaFront();
-}
-
-Machines Core::sortCompAlpabetBack()
-{
-    return newdata.sortCompAlphaBack();
-}
-
-Machines Core::sortCompBuildYear()
-{
-    return newdata.sortCompBYear();
-}
-
-Machines Core::sortCompType()
-{
-    return newdata.sortCompByType();
 }
 
 Machines Core::getConnectedComp(int id)
@@ -228,17 +176,6 @@ void Core::createConnection(const Individual& i1, const Computer& c1, bool& foun
         newdata.createConnection(i1.getId(),c1.getId());
     }
 }
-
-int Core::getMachineSizeInNewdata()
-{
-    return newdata.getDatabaseSize("computer");
-}
-
-int Core::getPeopleSizeInNewdata()
-{
-    return newdata.getDatabaseSize("scientist");
-}
-
 void Core::updateIndiName(const string name, const int id)
 {
     newdata.updateIndiName(name, id);
@@ -303,20 +240,3 @@ SQLiteData Core::getData() const
 {
     return newdata;
 }
-/*
-void Core::updateIndiAll(const string name, const string surname, const char gender, const int byear, const int dyear, const int id)
-{
-    newdata.updateIndiName(name, id);
-    newdata.updateIndiSurname(surname, id);
-    newdata.updateCompBYear(byear, id);
-    newdata.updateIndiDYear(dyear, id);
-    newdata.updateIndiGender(gender, id);
-}
-void Core::updateCompAll(const int year,const string name,const string type,const int id)
-{
-    newdata.updateCompName(name, id);
-    newdata.updateCompType(type, id);
-    newdata.updateCompBYear(year, id);
-}
-*/
-//The functions above are not used in current version

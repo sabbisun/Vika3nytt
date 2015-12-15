@@ -17,9 +17,6 @@ public:
     // Returns the newdata variable
 
     People sortSciAlpabetFront();
-    People sortSciAlpabetBack();
-    People sortSciByBirthYear();
-    People sortSciByDeathYear();
     // Returns a sorted People class variable
 
     void addIndividual(const Individual& ind, bool& notfound);
@@ -58,9 +55,6 @@ public:
     // Functions used to search for Computers in database with specific traits
 
     Machines sortCompAlpabetFront();
-    Machines sortCompAlpabetBack();
-    Machines sortCompBuildYear();
-    Machines sortCompType();
     // Returns a sorted Machine class variable
 
     void updateIndiName(const string name, const int id);
@@ -95,10 +89,6 @@ public:
 
     void createConnection(const Individual& i1, const Computer& c1, bool& found);
     // Creates connections between a Scientist and a Computer
-
-    int getMachineSizeInNewdata();
-    int getPeopleSizeInNewdata();
-    // Returns the size of the database
 
 private:
     People list;

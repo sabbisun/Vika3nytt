@@ -23,15 +23,9 @@ public:
     // Deletes a scientist or computer from database
 
     People sortIndiAlphaFront();
-    People sortIndiAlphaBack();
-    People sortIndiBYear();
-    People sortIndiByDYear();
     // Returns a people vector where the elements have been sorted
 
     Machines sortCompAlphaFront();
-    Machines sortCompAlphaBack();
-    Machines sortCompBYear();
-    Machines sortCompByType();
     // Returns a machine vector where the elements have been sorted
 
     People searchIndiByName(const string name);
