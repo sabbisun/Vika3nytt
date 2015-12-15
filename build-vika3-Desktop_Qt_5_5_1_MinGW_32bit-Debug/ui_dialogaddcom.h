@@ -58,18 +58,21 @@ public:
         if (DialogAddCom->objectName().isEmpty())
             DialogAddCom->setObjectName(QStringLiteral("DialogAddCom"));
         DialogAddCom->resize(500, 291);
+        QFont font;
+        font.setFamily(QStringLiteral("Arial"));
+        DialogAddCom->setFont(font);
         verticalLayout = new QVBoxLayout(DialogAddCom);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_addCom = new QLabel(DialogAddCom);
         label_addCom->setObjectName(QStringLiteral("label_addCom"));
-        QFont font;
-        font.setFamily(QStringLiteral("Arial"));
-        font.setPointSize(36);
-        font.setBold(true);
-        font.setItalic(false);
-        font.setWeight(75);
-        font.setKerning(false);
-        label_addCom->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Arial"));
+        font1.setPointSize(36);
+        font1.setBold(true);
+        font1.setItalic(false);
+        font1.setWeight(75);
+        font1.setKerning(false);
+        label_addCom->setFont(font1);
         label_addCom->setTextFormat(Qt::RichText);
         label_addCom->setAlignment(Qt::AlignCenter);
 

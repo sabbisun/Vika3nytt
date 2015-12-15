@@ -37,6 +37,9 @@ public:
         if (DialogAddSciConnection->objectName().isEmpty())
             DialogAddSciConnection->setObjectName(QStringLiteral("DialogAddSciConnection"));
         DialogAddSciConnection->resize(410, 127);
+        QFont font;
+        font.setFamily(QStringLiteral("Arial"));
+        DialogAddSciConnection->setFont(font);
         horizontalLayout_2 = new QHBoxLayout(DialogAddSciConnection);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout = new QHBoxLayout();
@@ -48,6 +51,9 @@ public:
 
         comboBox_AddSciCon = new QComboBox(DialogAddSciConnection);
         comboBox_AddSciCon->setObjectName(QStringLiteral("comboBox_AddSciCon"));
+        QFont font1;
+        font1.setItalic(true);
+        comboBox_AddSciCon->setFont(font1);
 
         horizontalLayout->addWidget(comboBox_AddSciCon);
 

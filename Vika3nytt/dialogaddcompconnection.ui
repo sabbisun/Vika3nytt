@@ -10,6 +10,11 @@
     <height>164</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -26,7 +31,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_addCompCon"/>
+        <widget class="QComboBox" name="comboBox_addCompCon">
+         <property name="font">
+          <font>
+           <italic>true</italic>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

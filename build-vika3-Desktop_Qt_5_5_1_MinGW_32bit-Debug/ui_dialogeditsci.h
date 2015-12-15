@@ -86,11 +86,13 @@ public:
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
         label_name = new QLabel(DialogEditSci);
         label_name->setObjectName(QStringLiteral("label_name"));
+        label_name->setFont(font);
 
         horizontalLayout_7->addWidget(label_name);
 
         lineEdit_name = new QLineEdit(DialogEditSci);
         lineEdit_name->setObjectName(QStringLiteral("lineEdit_name"));
+        lineEdit_name->setFont(font);
 
         horizontalLayout_7->addWidget(lineEdit_name);
 
@@ -106,11 +108,13 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         label_surname = new QLabel(DialogEditSci);
         label_surname->setObjectName(QStringLiteral("label_surname"));
+        label_surname->setFont(font);
 
         horizontalLayout_3->addWidget(label_surname);
 
         lineEdit_surname = new QLineEdit(DialogEditSci);
         lineEdit_surname->setObjectName(QStringLiteral("lineEdit_surname"));
+        lineEdit_surname->setFont(font);
 
         horizontalLayout_3->addWidget(lineEdit_surname);
 
@@ -126,16 +130,19 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label_gender = new QLabel(DialogEditSci);
         label_gender->setObjectName(QStringLiteral("label_gender"));
+        label_gender->setFont(font);
 
         horizontalLayout->addWidget(label_gender);
 
         checkBox_male = new QCheckBox(DialogEditSci);
         checkBox_male->setObjectName(QStringLiteral("checkBox_male"));
+        checkBox_male->setFont(font);
 
         horizontalLayout->addWidget(checkBox_male);
 
         checkBox_female = new QCheckBox(DialogEditSci);
         checkBox_female->setObjectName(QStringLiteral("checkBox_female"));
+        checkBox_female->setFont(font);
 
         horizontalLayout->addWidget(checkBox_female);
 
@@ -150,11 +157,13 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_birth = new QLabel(DialogEditSci);
         label_birth->setObjectName(QStringLiteral("label_birth"));
+        label_birth->setFont(font);
 
         horizontalLayout_2->addWidget(label_birth);
 
         lineEdit_yearBirth = new QLineEdit(DialogEditSci);
         lineEdit_yearBirth->setObjectName(QStringLiteral("lineEdit_yearBirth"));
+        lineEdit_yearBirth->setFont(font);
 
         horizontalLayout_2->addWidget(lineEdit_yearBirth);
 
@@ -170,6 +179,7 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         checkBox_alive = new QCheckBox(DialogEditSci);
         checkBox_alive->setObjectName(QStringLiteral("checkBox_alive"));
+        checkBox_alive->setFont(font);
 
         verticalLayout->addWidget(checkBox_alive);
 
@@ -177,12 +187,14 @@ public:
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         label_death = new QLabel(DialogEditSci);
         label_death->setObjectName(QStringLiteral("label_death"));
+        label_death->setFont(font);
 
         horizontalLayout_5->addWidget(label_death);
 
         lineEdit_yearDeth = new QLineEdit(DialogEditSci);
         lineEdit_yearDeth->setObjectName(QStringLiteral("lineEdit_yearDeth"));
         lineEdit_yearDeth->setEnabled(true);
+        lineEdit_yearDeth->setFont(font);
 
         horizontalLayout_5->addWidget(lineEdit_yearDeth);
 
@@ -201,6 +213,7 @@ public:
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         label_editSciDesc = new QLabel(DialogEditSci);
         label_editSciDesc->setObjectName(QStringLiteral("label_editSciDesc"));
+        label_editSciDesc->setFont(font);
 
         horizontalLayout_4->addWidget(label_editSciDesc);
 
@@ -213,6 +226,7 @@ public:
         lineEdit_editSciDesc->setSizePolicy(sizePolicy);
         lineEdit_editSciDesc->setMinimumSize(QSize(100, 100));
         lineEdit_editSciDesc->setMaximumSize(QSize(371, 16777215));
+        lineEdit_editSciDesc->setFont(font);
 
         horizontalLayout_4->addWidget(lineEdit_editSciDesc);
 
@@ -227,11 +241,13 @@ public:
 
         Button_confirm = new QPushButton(DialogEditSci);
         Button_confirm->setObjectName(QStringLiteral("Button_confirm"));
+        Button_confirm->setFont(font);
 
         horizontalLayout_6->addWidget(Button_confirm);
 
         Button_cancel = new QPushButton(DialogEditSci);
         Button_cancel->setObjectName(QStringLiteral("Button_cancel"));
+        Button_cancel->setFont(font);
 
         horizontalLayout_6->addWidget(Button_cancel);
 
@@ -242,11 +258,6 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_6);
 
-        label_Dialogname->raise();
-        checkBox_alive->raise();
-        Button_cancel->raise();
-        Button_confirm->raise();
-        lineEdit_editSciDesc->raise();
 
         retranslateUi(DialogEditSci);
 

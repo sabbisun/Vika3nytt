@@ -42,13 +42,24 @@
     <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
       <widget class="QLabel" name="label_name">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Given Name:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_name"/>
+      <widget class="QLineEdit" name="lineEdit_name">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_nameError">
@@ -63,13 +74,24 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QLabel" name="label_surname">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Surname:    </string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_surname"/>
+      <widget class="QLineEdit" name="lineEdit_surname">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_surnameError">
@@ -84,6 +106,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label_gender">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Gender:</string>
        </property>
@@ -91,6 +118,11 @@
      </item>
      <item>
       <widget class="QCheckBox" name="checkBox_male">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Male</string>
        </property>
@@ -98,6 +130,11 @@
      </item>
      <item>
       <widget class="QCheckBox" name="checkBox_female">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Female</string>
        </property>
@@ -122,13 +159,24 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label_birth">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Year of birth  </string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_yearBirth"/>
+      <widget class="QLineEdit" name="lineEdit_yearBirth">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_birthError">
@@ -143,6 +191,11 @@
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QCheckBox" name="checkBox_alive">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Alive</string>
        </property>
@@ -152,6 +205,11 @@
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QLabel" name="label_death">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+          </font>
+         </property>
          <property name="text">
           <string>Year of death</string>
          </property>
@@ -161,6 +219,11 @@
         <widget class="QLineEdit" name="lineEdit_yearDeth">
          <property name="enabled">
           <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+          </font>
          </property>
         </widget>
        </item>
@@ -179,6 +242,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
       <widget class="QLabel" name="label_editSciDesc">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Description</string>
        </property>
@@ -204,6 +272,11 @@
          <height>16777215</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
       </widget>
      </item>
     </layout>
@@ -225,6 +298,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="Button_confirm">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Confirm</string>
        </property>
@@ -232,6 +310,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="Button_cancel">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+        </font>
+       </property>
        <property name="text">
         <string>Cancel</string>
        </property>
@@ -253,13 +336,6 @@
     </layout>
    </item>
   </layout>
-  <zorder>label_Dialogname</zorder>
-  <zorder>checkBox_alive</zorder>
-  <zorder>Button_cancel</zorder>
-  <zorder>Button_confirm</zorder>
-  <zorder>horizontalSpacer_3</zorder>
-  <zorder>horizontalSpacer_2</zorder>
-  <zorder>lineEdit_editSciDesc</zorder>
  </widget>
  <resources/>
  <connections/>

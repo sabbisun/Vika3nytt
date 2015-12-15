@@ -10,6 +10,11 @@
     <height>127</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string/>
   </property>
@@ -24,7 +29,13 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_AddSciCon"/>
+      <widget class="QComboBox" name="comboBox_AddSciCon">
+       <property name="font">
+        <font>
+         <italic>true</italic>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="button_confirmSciCon">

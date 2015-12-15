@@ -7,8 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>350</height>
+    <height>432</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Add scientist</string>
@@ -248,8 +253,6 @@
   <zorder>checkBox_alive</zorder>
   <zorder>label_addSci</zorder>
   <zorder></zorder>
-  <zorder>lineEdit_descriptionSci</zorder>
-  <zorder>label_descriptionSci</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -37,10 +37,8 @@ People SQLiteData::searchIndiByName(const string name)
 {
     string Query = selectAllSci + " " + searchName + name + "%'" + "OR s.deleted = 0 " + "AND s.surname LIKE '%" + name + "%'";
     People p1 = doQuerySci(Query);
-    /*
     if(p1.getSize() == 0)
     {
-        qDebug()<<QString::fromStdString("for herna inn");
         Query = "SELECT (name ||' '||surname)AS expr1 FROM Scientist WHERE expr1 LIKE '%" + name + "%'";
         db = getDatabase();
         QString Q = QString::fromStdString(Query);
@@ -63,7 +61,7 @@ People SQLiteData::searchIndiByName(const string name)
                 }
             }
         }
-    }*/
+    }
     return p1;
 }
 

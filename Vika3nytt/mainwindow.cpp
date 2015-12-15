@@ -123,6 +123,7 @@ void MainWindow::setTreeSci()
 
 void MainWindow::setTreeSci(People & scientists)
 {
+     QFont f( "Arial", 8, QFont::Bold);
     ui->treeWidget_sci->clear();
     ui->treeWidget_sci->setColumnCount(5);
     ui->treeWidget_sci->setHeaderLabels(QStringList() << "Name" << "Gender" << "Birth year" << "Id" << "Death year");

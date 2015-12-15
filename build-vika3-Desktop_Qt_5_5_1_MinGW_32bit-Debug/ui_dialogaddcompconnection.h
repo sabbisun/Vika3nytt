@@ -39,6 +39,9 @@ public:
         if (DialogAddCompConnection->objectName().isEmpty())
             DialogAddCompConnection->setObjectName(QStringLiteral("DialogAddCompConnection"));
         DialogAddCompConnection->resize(432, 164);
+        QFont font;
+        font.setFamily(QStringLiteral("Arial"));
+        DialogAddCompConnection->setFont(font);
         horizontalLayout_4 = new QHBoxLayout(DialogAddCompConnection);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();
@@ -52,6 +55,9 @@ public:
 
         comboBox_addCompCon = new QComboBox(DialogAddCompConnection);
         comboBox_addCompCon->setObjectName(QStringLiteral("comboBox_addCompCon"));
+        QFont font1;
+        font1.setItalic(true);
+        comboBox_addCompCon->setFont(font1);
 
         horizontalLayout->addWidget(comboBox_addCompCon);
 

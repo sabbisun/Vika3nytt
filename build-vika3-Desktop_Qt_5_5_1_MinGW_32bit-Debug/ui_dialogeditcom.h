@@ -78,11 +78,13 @@ public:
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         label_name = new QLabel(DialogEditCom);
         label_name->setObjectName(QStringLiteral("label_name"));
+        label_name->setFont(font);
 
         horizontalLayout_4->addWidget(label_name);
 
         lineEdit_name = new QLineEdit(DialogEditCom);
         lineEdit_name->setObjectName(QStringLiteral("lineEdit_name"));
+        lineEdit_name->setFont(font);
 
         horizontalLayout_4->addWidget(lineEdit_name);
 
@@ -98,11 +100,13 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         label_type = new QLabel(DialogEditCom);
         label_type->setObjectName(QStringLiteral("label_type"));
+        label_type->setFont(font);
 
         horizontalLayout_3->addWidget(label_type);
 
         lineEdit_type = new QLineEdit(DialogEditCom);
         lineEdit_type->setObjectName(QStringLiteral("lineEdit_type"));
+        lineEdit_type->setFont(font);
 
         horizontalLayout_3->addWidget(lineEdit_type);
 
@@ -118,6 +122,7 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         checkBox_built = new QCheckBox(DialogEditCom);
         checkBox_built->setObjectName(QStringLiteral("checkBox_built"));
+        checkBox_built->setFont(font);
 
         verticalLayout->addWidget(checkBox_built);
 
@@ -125,6 +130,7 @@ public:
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         label_buildYear = new QLabel(DialogEditCom);
         label_buildYear->setObjectName(QStringLiteral("label_buildYear"));
+        label_buildYear->setFont(font);
 
         horizontalLayout_5->addWidget(label_buildYear);
 
@@ -154,12 +160,14 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label_editCompDesc = new QLabel(DialogEditCom);
         label_editCompDesc->setObjectName(QStringLiteral("label_editCompDesc"));
+        label_editCompDesc->setFont(font);
 
         horizontalLayout->addWidget(label_editCompDesc);
 
         textEdit_descComp = new QPlainTextEdit(DialogEditCom);
         textEdit_descComp->setObjectName(QStringLiteral("textEdit_descComp"));
         textEdit_descComp->setMaximumSize(QSize(650, 100));
+        textEdit_descComp->setFont(font);
         textEdit_descComp->setContextMenuPolicy(Qt::ActionsContextMenu);
 
         horizontalLayout->addWidget(textEdit_descComp);
@@ -175,11 +183,13 @@ public:
 
         Button_confirm = new QPushButton(DialogEditCom);
         Button_confirm->setObjectName(QStringLiteral("Button_confirm"));
+        Button_confirm->setFont(font);
 
         horizontalLayout_6->addWidget(Button_confirm);
 
         Button_cancel = new QPushButton(DialogEditCom);
         Button_cancel->setObjectName(QStringLiteral("Button_cancel"));
+        Button_cancel->setFont(font);
 
         horizontalLayout_6->addWidget(Button_cancel);
 
