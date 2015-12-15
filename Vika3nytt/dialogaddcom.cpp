@@ -53,7 +53,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
     {
         live = 0;
     }
-    else if(live == 0 || creationYear.isEmpty())
+    else if(live == 0 || creationYear.isEmpty() || live > 2015)
     {
         ui->label_errorCompYear->setText("<font color=\"Red\">That is not a possible creation year!");
         error = true;

@@ -610,13 +610,14 @@ void MainWindow::on_treeWidget_comp_itemSelectionChanged()
 void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
 {
     (void)arg1;
+     disableButtons();
     if(ui->comboBox_searchSci->currentText().toStdString() == "")
     {
         ui->lineEdit_searchSci->setDisabled(true);
     }
     else
     {
-         ui->lineEdit_searchSci->setEnabled(true);
+        ui->lineEdit_searchSci->setEnabled(true);
     }
     setTreeSci();
 }
@@ -624,13 +625,14 @@ void MainWindow::on_comboBox_searchSci_currentIndexChanged(const QString &arg1)
 void MainWindow::on_comboBox_searchComp_currentIndexChanged(const QString &arg1)
 {
     (void)arg1;
+    disableButtons();
     if(ui->comboBox_searchComp->currentText().toStdString() == "")
     {
         ui->lineEdit_searchComp->setDisabled(true);
     }
     else
     {
-         ui->lineEdit_searchComp->setEnabled(true);
+        ui->lineEdit_searchComp->setEnabled(true);
     }
 }
 
@@ -670,4 +672,11 @@ void MainWindow::on_Button_aboutcomp_clicked()
     msgBox.setInformativeText(QString::fromStdString(about));
     msgBox.setStandardButtons(QMessageBox::Close);
     msgBox.exec();
+}
+
+void MainWindow::on_lineEdit_searchComp_cursorPositionChanged(int arg1, int arg2)
+{
+    (void)arg1;
+    (void)arg2;
+    disableButtons();
 }

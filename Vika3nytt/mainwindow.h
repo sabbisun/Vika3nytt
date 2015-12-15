@@ -59,6 +59,8 @@ private slots:
     void on_Button_aboutcomp_clicked();
     // The slots, descriptive names
 
+    void on_lineEdit_searchComp_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::MainWindow *ui;
     Core core;
