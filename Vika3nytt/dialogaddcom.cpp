@@ -67,7 +67,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
 
     if(!error)
     {
-        Computer c1(live, nafn, type,about);
+        Computer c1(live, nafn, type, about);
         core.addComputer(c1, found);
         if(found)
         {

@@ -40,11 +40,8 @@ void MainWindow::searchSciMenu(string search)
     else if(searching == "Gender")
     {
         char sea = tolower(search[0]);
-        if(sea=='m' || sea == 'f')
-        {
-            p1 = core.searchGend(sea);
-            setTreeSci(p1);
-        }
+        p1 = core.searchGend(sea);
+        setTreeSci(p1);
     }
     else if(searching == "Year of birth")
     {
