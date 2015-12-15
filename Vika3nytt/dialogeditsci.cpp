@@ -15,6 +15,11 @@ DialogEditSci::DialogEditSci(QWidget *parent) :
     ui->label_birthError->setFont(f);
     ui->label_deathError->setFont(f);
     // Changes font of the error labels
+    if(ui->checkBox_alive->isChecked())
+    {
+        ui->lineEdit_yearDeth->setEnabled(false);
+        ui->lineEdit_yearDeth->setText("");
+    }
 }
 
 DialogEditSci::~DialogEditSci()
@@ -80,6 +85,7 @@ void DialogEditSci::on_checkBox_alive_clicked()
     if(ui->checkBox_alive->isChecked())
     {
         ui->lineEdit_yearDeth->setEnabled(false);
+        ui->lineEdit_yearDeth->setText("");
     }
     else
     {

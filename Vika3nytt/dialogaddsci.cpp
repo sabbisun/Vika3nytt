@@ -36,6 +36,7 @@ void DialogAddSci::on_checkBox_alive_clicked(bool checked)
     bool temp;
     if(checked == true)
     {
+       ui->lineEdit_addDeathYear->setText("");
        temp = false;
     }
     else

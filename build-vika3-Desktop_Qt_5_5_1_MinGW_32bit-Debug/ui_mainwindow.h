@@ -91,6 +91,10 @@ public:
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        QFont font1;
+        font1.setBold(false);
+        font1.setWeight(50);
+        tabWidget->setFont(font1);
         tab_sci = new QWidget();
         tab_sci->setObjectName(QStringLiteral("tab_sci"));
         verticalLayout_5 = new QVBoxLayout(tab_sci);
@@ -105,36 +109,36 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         label_searchSci = new QLabel(tab_sci);
         label_searchSci->setObjectName(QStringLiteral("label_searchSci"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Arial"));
-        font1.setBold(true);
-        font1.setItalic(false);
-        font1.setWeight(75);
-        label_searchSci->setFont(font1);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Arial"));
+        font2.setBold(true);
+        font2.setItalic(false);
+        font2.setWeight(75);
+        label_searchSci->setFont(font2);
 
         horizontalLayout_3->addWidget(label_searchSci);
 
         comboBox_searchSci = new QComboBox(tab_sci);
         comboBox_searchSci->setObjectName(QStringLiteral("comboBox_searchSci"));
         comboBox_searchSci->setEnabled(true);
-        QFont font2;
-        font2.setFamily(QStringLiteral("Arial"));
-        font2.setBold(false);
-        font2.setItalic(true);
-        font2.setWeight(50);
-        comboBox_searchSci->setFont(font2);
+        QFont font3;
+        font3.setFamily(QStringLiteral("Arial"));
+        font3.setBold(false);
+        font3.setItalic(true);
+        font3.setWeight(50);
+        comboBox_searchSci->setFont(font3);
 
         horizontalLayout_3->addWidget(comboBox_searchSci);
 
         lineEdit_searchSci = new QLineEdit(tab_sci);
         lineEdit_searchSci->setObjectName(QStringLiteral("lineEdit_searchSci"));
         lineEdit_searchSci->setEnabled(true);
-        QFont font3;
-        font3.setFamily(QStringLiteral("Arial"));
-        font3.setPointSize(8);
-        font3.setBold(false);
-        font3.setWeight(50);
-        lineEdit_searchSci->setFont(font3);
+        QFont font4;
+        font4.setFamily(QStringLiteral("Arial"));
+        font4.setPointSize(8);
+        font4.setBold(false);
+        font4.setWeight(50);
+        lineEdit_searchSci->setFont(font4);
 
         horizontalLayout_3->addWidget(lineEdit_searchSci);
 
@@ -150,6 +154,10 @@ public:
         __qtreewidgetitem->setText(0, QStringLiteral("1"));
         treeWidget_sci->setHeaderItem(__qtreewidgetitem);
         treeWidget_sci->setObjectName(QStringLiteral("treeWidget_sci"));
+        QFont font5;
+        font5.setFamily(QStringLiteral("Arial"));
+        font5.setPointSize(8);
+        treeWidget_sci->setFont(font5);
         treeWidget_sci->setAlternatingRowColors(true);
         treeWidget_sci->setSortingEnabled(true);
         treeWidget_sci->setAnimated(false);
@@ -161,12 +169,12 @@ public:
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         Button_addSci = new QPushButton(tab_sci);
         Button_addSci->setObjectName(QStringLiteral("Button_addSci"));
-        QFont font4;
-        font4.setPointSize(8);
-        font4.setBold(true);
-        font4.setItalic(true);
-        font4.setWeight(75);
-        Button_addSci->setFont(font4);
+        QFont font6;
+        font6.setPointSize(8);
+        font6.setBold(true);
+        font6.setItalic(true);
+        font6.setWeight(75);
+        Button_addSci->setFont(font6);
         Button_addSci->setAutoDefault(false);
         Button_addSci->setFlat(false);
 
@@ -175,26 +183,26 @@ public:
         Button_editSci = new QPushButton(tab_sci);
         Button_editSci->setObjectName(QStringLiteral("Button_editSci"));
         Button_editSci->setEnabled(false);
-        QFont font5;
-        font5.setFamily(QStringLiteral("Arial"));
-        font5.setPointSize(8);
-        font5.setBold(true);
-        font5.setWeight(75);
-        Button_editSci->setFont(font5);
+        QFont font7;
+        font7.setFamily(QStringLiteral("Arial"));
+        font7.setPointSize(8);
+        font7.setBold(true);
+        font7.setWeight(75);
+        Button_editSci->setFont(font7);
 
         horizontalLayout_4->addWidget(Button_editSci);
 
         Button_removeSci = new QPushButton(tab_sci);
         Button_removeSci->setObjectName(QStringLiteral("Button_removeSci"));
         Button_removeSci->setEnabled(false);
-        Button_removeSci->setFont(font5);
+        Button_removeSci->setFont(font7);
 
         horizontalLayout_4->addWidget(Button_removeSci);
 
         Button_addSciConnection = new QPushButton(tab_sci);
         Button_addSciConnection->setObjectName(QStringLiteral("Button_addSciConnection"));
         Button_addSciConnection->setEnabled(false);
-        Button_addSciConnection->setFont(font5);
+        Button_addSciConnection->setFont(font7);
 
         horizontalLayout_4->addWidget(Button_addSciConnection);
 
@@ -225,17 +233,17 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_searchComp = new QLabel(tab_comp);
         label_searchComp->setObjectName(QStringLiteral("label_searchComp"));
-        QFont font6;
-        font6.setFamily(QStringLiteral("Arial"));
-        font6.setBold(true);
-        font6.setWeight(75);
-        label_searchComp->setFont(font6);
+        QFont font8;
+        font8.setFamily(QStringLiteral("Arial"));
+        font8.setBold(true);
+        font8.setWeight(75);
+        label_searchComp->setFont(font8);
 
         horizontalLayout_2->addWidget(label_searchComp);
 
         comboBox_searchComp = new QComboBox(tab_comp);
         comboBox_searchComp->setObjectName(QStringLiteral("comboBox_searchComp"));
-        comboBox_searchComp->setFont(font2);
+        comboBox_searchComp->setFont(font3);
 
         horizontalLayout_2->addWidget(comboBox_searchComp);
 
@@ -246,10 +254,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(lineEdit_searchComp->sizePolicy().hasHeightForWidth());
         lineEdit_searchComp->setSizePolicy(sizePolicy);
-        QFont font7;
-        font7.setBold(false);
-        font7.setWeight(50);
-        lineEdit_searchComp->setFont(font7);
+        lineEdit_searchComp->setFont(font1);
 
         horizontalLayout_2->addWidget(lineEdit_searchComp);
 
@@ -265,6 +270,7 @@ public:
         __qtreewidgetitem1->setText(0, QStringLiteral("1"));
         treeWidget_comp->setHeaderItem(__qtreewidgetitem1);
         treeWidget_comp->setObjectName(QStringLiteral("treeWidget_comp"));
+        treeWidget_comp->setFont(font5);
         treeWidget_comp->setAlternatingRowColors(true);
         treeWidget_comp->setSortingEnabled(true);
 
@@ -275,35 +281,41 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         Button_addComp = new QPushButton(tab_comp);
         Button_addComp->setObjectName(QStringLiteral("Button_addComp"));
-        QFont font8;
-        font8.setItalic(true);
-        Button_addComp->setFont(font8);
+        QFont font9;
+        font9.setBold(true);
+        font9.setItalic(true);
+        font9.setWeight(75);
+        Button_addComp->setFont(font9);
 
         horizontalLayout->addWidget(Button_addComp);
 
         Button_editComp = new QPushButton(tab_comp);
         Button_editComp->setObjectName(QStringLiteral("Button_editComp"));
         Button_editComp->setEnabled(false);
-        Button_editComp->setFont(font5);
+        Button_editComp->setFont(font7);
 
         horizontalLayout->addWidget(Button_editComp);
 
         Button_removeComp = new QPushButton(tab_comp);
         Button_removeComp->setObjectName(QStringLiteral("Button_removeComp"));
         Button_removeComp->setEnabled(false);
-        Button_removeComp->setFont(font5);
+        Button_removeComp->setFont(font7);
 
         horizontalLayout->addWidget(Button_removeComp);
 
         Button_addCompConnection = new QPushButton(tab_comp);
         Button_addCompConnection->setObjectName(QStringLiteral("Button_addCompConnection"));
         Button_addCompConnection->setEnabled(false);
-        Button_addCompConnection->setFont(font6);
+        Button_addCompConnection->setFont(font8);
 
         horizontalLayout->addWidget(Button_addCompConnection);
 
         Button_aboutcomp = new QPushButton(tab_comp);
         Button_aboutcomp->setObjectName(QStringLiteral("Button_aboutcomp"));
+        QFont font10;
+        font10.setBold(true);
+        font10.setWeight(75);
+        Button_aboutcomp->setFont(font10);
 
         horizontalLayout->addWidget(Button_aboutcomp);
 
@@ -330,7 +342,7 @@ public:
         QObject::connect(comboBox_searchSci, SIGNAL(currentIndexChanged(QString)), lineEdit_searchSci, SLOT(clear()));
         QObject::connect(comboBox_searchComp, SIGNAL(currentIndexChanged(QString)), lineEdit_searchComp, SLOT(clear()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
         Button_addSci->setDefault(true);
 
 

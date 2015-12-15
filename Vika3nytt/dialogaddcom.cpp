@@ -24,6 +24,7 @@ void DialogAddCom::on_checkBox_created_clicked()
     if(ui->checkBox_created->isChecked())
     {
         ui->lineEdit_creationYear->setEnabled(false);
+        ui->lineEdit_creationYear->setText("");
     }
     else
     {

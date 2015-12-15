@@ -31,6 +31,7 @@ void DialogEditCom::on_checkBox_built_clicked()
     if(ui->checkBox_built->isChecked())
     {
         ui->lineEdit_yearBuilt->setEnabled(false);
+        ui->lineEdit_yearBuilt->setText("");
     }
     else
     {
