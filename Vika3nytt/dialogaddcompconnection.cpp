@@ -27,7 +27,7 @@ void DialogAddCompConnection::on_button_confirmCompCon_clicked()
 {
     string name = ui->comboBox_addCompCon->currentText().toStdString();
     People p1 = core.sortSciAlpabetFront();
-    int id;
+    int id = -1;
     for(int i = 0; i < p1.getSize(); i++)
     {
         string label = p1.getIndi(i).getSurname()+", " + p1.getIndi(i).getName() ;
