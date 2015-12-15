@@ -64,8 +64,8 @@ static const uint qt_meta_data_DialogAddSci[] = {
        1,    0,   44,    2, 0x08 /* Private */,
        3,    0,   45,    2, 0x08 /* Private */,
        4,    1,   46,    2, 0x08 /* Private */,
-       6,    0,   49,    2, 0x08 /* Private */,
-       4,    0,   50,    2, 0x08 /* Private */,
+       4,    0,   49,    2, 0x08 /* Private */,
+       6,    0,   50,    2, 0x08 /* Private */,
        7,    0,   51,    2, 0x08 /* Private */,
 
  // slots: parameters
@@ -88,8 +88,8 @@ void DialogAddSci::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 0: _t->on_checkBox_male_clicked(); break;
         case 1: _t->on_checkBox_female_clicked(); break;
         case 2: _t->on_checkBox_alive_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 3: _t->on_confirmAddButton_clicked(); break;
-        case 4: _t->on_checkBox_alive_clicked(); break;
+        case 3: _t->on_checkBox_alive_clicked(); break;
+        case 4: _t->on_confirmAddButton_clicked(); break;
         case 5: _t->on_pushButton_cancelAdd_clicked(); break;
         default: ;
         }

@@ -34,36 +34,42 @@ public:
 
 private slots:
     void on_tabWidget_tabBarClicked(int index);
+    // Switch between scientist database and computer database
+
+    void on_comboBox_searchSci_currentIndexChanged(const QString &arg1);
+    void on_comboBox_searchComp_currentIndexChanged(const QString &arg1);
+    // Choose what shall be searched for
 
     void on_lineEdit_searchSci_textChanged(const QString &arg1);
     void on_lineEdit_searchComp_textChanged(const QString &arg1);
+    // Input a search string
 
     void on_Button_addSci_clicked();
     void on_Button_editSci_clicked();
     void on_Button_removeSci_clicked();
+    // Changes to scientist database
 
     void on_Button_addComp_clicked();
     void on_Button_editComp_clicked();
     void on_Button_removeComp_clicked();
+    // Changes to computer database
 
     void on_treeWidget_sci_itemSelectionChanged();
     void on_treeWidget_comp_itemSelectionChanged();
+    // Controls what actions can be done with entries, depends if the selected in tree table is parent or child
 
     void on_Button_addSciConnection_clicked();
     void on_Button_addCompConnection_clicked();
-
-    void on_comboBox_searchSci_currentIndexChanged(const QString &arg1);
-    void on_comboBox_searchComp_currentIndexChanged(const QString &arg1);
+    // To add a connection between a scientist and a computer
 
     void on_Button_aboutSci_clicked();
     void on_Button_aboutcomp_clicked();
-    // The slots, descriptive names
+    // Display info about entries when selected
 
     void on_lineEdit_searchComp_cursorPositionChanged(int arg1, int arg2);
-
     void on_comboBox_searchSci_activated(const QString &arg1);
-
     void on_comboBox_searchComp_activated(const QString &arg1);
+    // Disables error messages from unused variables
 
 private:
     Ui::MainWindow *ui;
@@ -88,9 +94,6 @@ private:
     void addTreeRootComp(Computer computer);
     void addTreeChildComp(QTreeWidgetItem *parent, Individual scientist);
     // Creates and adds root items and child items to treeWidget
-
-    void setAltRowColor();
-    // Unused function to set alternate background colors for rows
 
     void disableButtons();
     // Disables certain buttons when no computer or scientist is selected

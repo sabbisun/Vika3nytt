@@ -19,6 +19,7 @@ public:
 private slots:
     void on_button_confirmCompCon_clicked();
     void on_button_cancelConComp_clicked();
+    // To cancel or confirm added connection
 
 private:
     Ui::DialogAddCompConnection *ui;

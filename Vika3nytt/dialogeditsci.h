@@ -27,10 +27,15 @@ public:
 
 private slots:
     void on_checkBox_alive_clicked();
+    // Disables input for death year
+
     void on_checkBox_female_clicked();
     void on_checkBox_male_clicked();
+    // Allow only one checkbox to be checked at a time
+
     void on_Button_cancel_clicked();
     void on_Button_confirm_clicked();
+    // Confirm or cancel changes made
 
 private:
     Ui::DialogEditSci *ui;
