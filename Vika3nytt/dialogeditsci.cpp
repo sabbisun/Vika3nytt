@@ -119,6 +119,7 @@ void DialogEditSci::on_Button_confirm_clicked()
 {
     bool isLegalEdit = true;
     clearErrorLabels();
+    int currentYear = QDate::currentDate().year();
 
     QString name = ui->lineEdit_name->text();
     if(name.isEmpty())
@@ -144,11 +145,12 @@ void DialogEditSci::on_Button_confirm_clicked()
     }
 
     QString byear = ui->lineEdit_yearBirth->text();
-    if(byear.isEmpty() || (byear.toInt() == 0))
+    if(byear.isEmpty() || (byear.toInt() == 0) || byear.toInt() > currentYear)
     {
         ui->label_birthError->setText("<font color=\"Red\">Please enter a birth year.");
         isLegalEdit = false;
     }
+
     QString dyear = ui->lineEdit_yearDeth->text();
     if(ui->checkBox_alive->isChecked())
     {
@@ -162,7 +164,7 @@ void DialogEditSci::on_Button_confirm_clicked()
     else if(!ui->checkBox_alive->isChecked() && !dyear.isEmpty())
     {
         dyear = ui->lineEdit_yearDeth->text();
-        if(dyear.toInt() < byear.toInt())
+        if(dyear.toInt() < byear.toInt() || dyear.toInt() > currentYear)
         {
             ui->label_deathError->setText("<font color=\"Red\">Invalid deathyear.");
             isLegalEdit = false;
