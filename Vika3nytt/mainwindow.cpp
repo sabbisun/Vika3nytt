@@ -82,7 +82,7 @@ void MainWindow::searchCompMenu(const string search)
         c1 = core.searchComYear(year);
         setTreeComp(c1);
     }
-    if(searching=="Type")
+    if(searching == "Type")
     {
         c1 = core.searchComType(search);
         setTreeComp(c1);
@@ -321,14 +321,6 @@ void MainWindow::disableButtons()
     ui->Button_aboutcomp->setEnabled(false);
 }
 
-void MainWindow::setAltRowColor()
-{
-    ui->treeWidget_sci->setAlternatingRowColors(true);
-    ui->treeWidget_sci->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
-    ui->treeWidget_comp->setAlternatingRowColors(true);
-    ui->treeWidget_comp->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
-}
-
 void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
     (void)index;
@@ -412,7 +404,7 @@ void MainWindow::on_Button_removeSci_clicked()
         msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int read = msgBox.exec();
-        // Messagebox asks if user wants to remove or not
+        // Messagebox asks if user wants to remove scientist or not
 
         switch (read) {
             case QMessageBox::Yes:  core.removeIndividual(id);
@@ -438,6 +430,8 @@ void MainWindow::on_Button_removeSci_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+        // Messagebox asks if user wants to remove the connection
+
         switch(ret)
         {
             case QMessageBox::Yes:  core.removeConnection(sciId, comId);
@@ -501,7 +495,7 @@ void MainWindow::on_Button_removeComp_clicked()
         msgBox.setInformativeText("Are you sure you want to remove the selected computer?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBox.exec();
-        // Messagebox asks if user wants to remove or not
+        // Messagebox asks if user wants to remove the computer or not
 
         switch (ret) {
             case QMessageBox::Yes:  core.removeComputer(id);
@@ -527,6 +521,7 @@ void MainWindow::on_Button_removeComp_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+        // Messagebox asks if user wants to remove the connection
 
         switch(ret)
         {
