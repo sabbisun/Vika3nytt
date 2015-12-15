@@ -39,7 +39,23 @@ void MainWindow::searchSciMenu(string search)
     }
     else if(searching == "Gender")
     {
-        char sea = tolower(search[0]);
+        char sea;
+        if(search == "male" || search == "Male")
+        {
+            sea = 'm';
+        }
+        else if(search == "female" || search == "Female")
+        {
+            sea = 'f';
+        }
+        else if(search.length() > 1)
+        {
+            sea = ' ';
+        }
+        else
+        {
+            sea = search[0];
+        }
         p1 = core.searchGend(sea);
         setTreeSci(p1);
     }
