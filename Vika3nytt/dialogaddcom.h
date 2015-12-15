@@ -19,8 +19,11 @@ public:
 
 private slots:
     void on_checkBox_created_clicked();
+    // Disables input for creation year
+
     void on_confirmAddButton_clicked();
     void on_pushButton_cancelAdd_pressed();
+    // Confirm or cancel added computer
 
 private:
     Ui::DialogAddCom *ui;

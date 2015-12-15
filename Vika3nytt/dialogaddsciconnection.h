@@ -19,6 +19,7 @@ public:
 private slots:
     void on_button_confirmSciCon_clicked();
     void on_button_cancelConSci_clicked();
+    // To cancel or confirm added connection
 
 private:
     Ui::DialogAddSciConnection *ui;

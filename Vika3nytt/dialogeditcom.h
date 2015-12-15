@@ -26,8 +26,11 @@ public:
 
 private slots:
     void on_checkBox_built_clicked();
+    // Disables input for creation year
+
     void on_Button_confirm_clicked();
     void on_Button_cancel_clicked();
+    // Confirm or cancel changes made
 
 private:
     Ui::DialogEditCom *ui;
