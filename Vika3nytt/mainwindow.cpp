@@ -11,15 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setTreeSci();
     createDropSearchForComp();
     setTreeComp();
-
-    ui->Button_removeSci->setEnabled(false);
-    ui->Button_removeComp->setEnabled(false);
-    ui->Button_editComp->setEnabled(false);
-    ui->Button_addCompConnection->setEnabled(false);
-    ui->Button_aboutSci->setEnabled(false);
-
     setColumnWidth();
-
     disableButtons();
 }
 
@@ -75,24 +67,24 @@ void MainWindow::searchSciMenu(string search)
 
 void MainWindow::searchCompMenu(const string search)
 {
-   Machines c1;
-   string searching = ui->comboBox_searchComp->currentText().toStdString();
-   if(searching == "Name")
-   {
+    Machines c1;
+    string searching = ui->comboBox_searchComp->currentText().toStdString();
+    if(searching == "Name")
+    {
         c1 = core.searchComName(search);
         setTreeComp(c1);
-   }
-   if(searching == "Year of creation")
-   {
-       int year = atoi(search.c_str());
-       c1 = core.searchComYear(year);
-       setTreeComp(c1);
-   }
-   if(searching=="Type")
-   {
+    }
+    if(searching == "Year of creation")
+    {
+        int year = atoi(search.c_str());
+        c1 = core.searchComYear(year);
+        setTreeComp(c1);
+    }
+    if(searching == "Type")
+    {
         c1 = core.searchComType(search);
         setTreeComp(c1);
-   }
+    }
 }
 
 void MainWindow::createDropSearchForSci()
@@ -126,7 +118,7 @@ void MainWindow::setTreeSci()
     {
         addTreeRootSci(scientists.getIndi(i));
     }
-     ui->treeWidget_sci->sortByColumn(0, Qt::AscendingOrder);
+    ui->treeWidget_sci->sortByColumn(0, Qt::AscendingOrder);
 }
 
 void MainWindow::setTreeSci(People & scientists)
@@ -213,7 +205,6 @@ void MainWindow::addTreeRootSci(Individual scientist)
 
 void MainWindow::addTreeChildSci(QTreeWidgetItem *parent, Computer computer)
 {
-    // QString name, QString type, QString built
     int id = computer.getId();
     QString name, type, built;
     name = QString::fromStdString(computer.getName());
@@ -274,7 +265,6 @@ void MainWindow::addTreeRootComp(Computer computer)
 void MainWindow::addTreeChildComp(QTreeWidgetItem *parent, Individual scientist)
 {
     int id = scientist.getId();
-    // QString name, QString type, QString built
     QString name, gender, age;
 
     name = QString::fromStdString(scientist.getSurname() + ", " + scientist.getName());
@@ -293,7 +283,7 @@ void MainWindow::addTreeChildComp(QTreeWidgetItem *parent, Individual scientist)
     }
     else
     {
-    age = QString::number(scientist.getBirth()) + " - " + QString::number(scientist.getDeath());
+        age = QString::number(scientist.getBirth()) + " - " + QString::number(scientist.getDeath());
     }
 
     QString idNumber = QString::number(id);
@@ -308,16 +298,13 @@ void MainWindow::addTreeChildComp(QTreeWidgetItem *parent, Individual scientist)
 
 void MainWindow::setColumnWidth()
 {
-    int col = 3;
-    int max = 200;
-    for(int i = 0; i < col; i++)
-    {
-        ui->treeWidget_sci->setColumnWidth(i, max);
-        ui->treeWidget_comp->setColumnWidth(i, max);
-        max = max - 50;
-    }
     ui->treeWidget_sci->setColumnWidth(0, 250);
     ui->treeWidget_comp->setColumnWidth(0, 250);
+    ui->treeWidget_sci->setColumnWidth(1, 100);
+    ui->treeWidget_comp->setColumnWidth(1, 200);
+    ui->treeWidget_sci->setColumnWidth(2, 100);
+    ui->treeWidget_comp->setColumnWidth(2, 100);
+    ui->treeWidget_sci->setColumnWidth(3, 100);
 }
 
 void MainWindow::disableButtons()
@@ -332,19 +319,10 @@ void MainWindow::disableButtons()
     ui->Button_aboutcomp->setEnabled(false);
 }
 
-void MainWindow::setAltRowColor()
-{
-    ui->treeWidget_sci->setAlternatingRowColors(true);
-    ui->treeWidget_sci->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
-    ui->treeWidget_comp->setAlternatingRowColors(true);
-    ui->treeWidget_comp->setStyleSheet("alternate-background-color: rgb(204, 255, 255);background-color: rgb(255, 204, 204);");
-}
-
 void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
     (void)index;
     disableButtons();
-
 }
 
 void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
@@ -352,7 +330,6 @@ void MainWindow::on_lineEdit_searchSci_textChanged(const QString &arg1)
     string search = arg1.toStdString();
     disableButtons();
     searchSciMenu(search);
-
 }
 
 void MainWindow::on_lineEdit_searchComp_textChanged(const QString &arg1)
@@ -364,11 +341,11 @@ void MainWindow::on_lineEdit_searchComp_textChanged(const QString &arg1)
 
 void MainWindow::on_Button_addSci_clicked()
 {
-   DialogAddSci addSciWindow;
-   addSciWindow.setModal(true);
-   addSciWindow.exec();
-   setTreeSci();
-   disableButtons();
+    DialogAddSci addSciWindow;
+    addSciWindow.setModal(true);
+    addSciWindow.exec();
+    setTreeSci();
+    disableButtons();
 }
 
 void MainWindow::on_Button_editSci_clicked()
@@ -378,7 +355,7 @@ void MainWindow::on_Button_editSci_clicked()
     {
         QString id = ui->treeWidget_sci->currentItem()->text(3);
         QString gender = ui->treeWidget_sci->currentItem()->text(1);
-        int trueID = id.toInt(); //leita að gaur með þetta id og fá nöfnin og árin
+        int trueID = id.toInt();
         QString name, surname, bYear, dYear,desc;
         // Now a search begins for the scientist with this id
 
@@ -425,7 +402,7 @@ void MainWindow::on_Button_removeSci_clicked()
         msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int read = msgBox.exec();
-        // Messagebox asks if user wants to remove or not
+        // Messagebox asks if user wants to remove scientist or not
 
         switch (read) {
             case QMessageBox::Yes:  core.removeIndividual(id);
@@ -451,6 +428,8 @@ void MainWindow::on_Button_removeSci_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+        // Messagebox asks if user wants to remove the connection
+
         switch(ret)
         {
             case QMessageBox::Yes:  core.removeConnection(sciId, comId);
@@ -514,7 +493,7 @@ void MainWindow::on_Button_removeComp_clicked()
         msgBox.setInformativeText("Are you sure you want to remove the selected computer?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBox.exec();
-        // Messagebox asks if user wants to remove or not
+        // Messagebox asks if user wants to remove the computer or not
 
         switch (ret) {
             case QMessageBox::Yes:  core.removeComputer(id);
@@ -540,6 +519,7 @@ void MainWindow::on_Button_removeComp_clicked()
         msgBoxRmCon.setInformativeText(text);
         msgBoxRmCon.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBoxRmCon.exec();
+        // Messagebox asks if user wants to remove the connection
 
         switch(ret)
         {

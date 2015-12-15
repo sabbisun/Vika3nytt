@@ -58,8 +58,10 @@ People SQLiteData::searchIndiByName(const string name)
 {
     string Query = selectAllSci + " " + searchName + name + "%'" + "OR s.deleted = 0 " + "AND s.surname LIKE '%" + name + "%'";
     People p1 = doQuerySci(Query);
+    /*
     if(p1.getSize() == 0)
     {
+        qDebug()<<QString::fromStdString("for herna inn");
         Query = "SELECT (name ||' '||surname)AS expr1 FROM Scientist WHERE expr1 LIKE '%" + name + "%'";
         db = getDatabase();
         QString Q = QString::fromStdString(Query);
@@ -82,7 +84,7 @@ People SQLiteData::searchIndiByName(const string name)
                 }
             }
         }
-    }
+    }*/
     return p1;
 }
 
@@ -311,7 +313,6 @@ Machines SQLiteData::doQueryComp(const string que)
     db.close();
     return p1;
 }
-
 People SQLiteData::doQuerySci(const string que)
 {
     db = getDatabase();
@@ -334,91 +335,6 @@ People SQLiteData::doQuerySci(const string que)
     db.close();
     return p1;
 }
-
-People SQLiteData::doQuerySciOrOther(const string que1, const string que2, bool& found)
-{
-    db = getDatabase();
-    QString Q = QString::fromStdString(que1);
-    QSqlQuery queryname(db);
-    queryname.exec(Q);
-    People p1;
-    while(queryname.next())
-    {
-        int id  = queryname.value("id").toUInt();
-        string surname = queryname.value("surname").toString().toStdString();
-        string name = queryname.value("name").toString().toStdString();
-        string gender = queryname.value("gender").toString().toStdString();
-        int byear  = queryname.value("byear").toUInt();
-        int dyear  = queryname.value("dyear").toUInt();
-        string about = queryname.value("about").toString().toStdString();
-        Individual i1(id, surname, name, gender, byear, dyear,about);
-        p1.addIndi(i1);
-    }
-    if(p1.getSize() != 0)
-    {
-        found = true;
-    }
-    if(p1.getSize() == 0)
-    {
-        Q =  QString::fromStdString(que2);
-        queryname.exec(Q);
-        while(queryname.next())
-        {
-            int id  = queryname.value("id").toUInt();
-            string surname = queryname.value("surname").toString().toStdString();
-            string name = queryname.value("name").toString().toStdString();
-            string gender = queryname.value("gender").toString().toStdString();
-            int byear  = queryname.value("byear").toUInt();
-            int dyear  = queryname.value("dyear").toUInt();
-            string about = queryname.value("about").toString().toStdString();
-            Individual i1(id, surname, name, gender, byear, dyear,about);
-            p1.addIndi(i1);
-        }
-    }
-    db.close();
-    return p1;
-}
-
-Machines SQLiteData::doQueryCompOrOther(const string que1, const string que2, bool& found)
-{
-    db = getDatabase();
-    QString Q = QString::fromStdString(que1);
-    QSqlQuery queryname(db);
-    queryname.exec(Q);
-    Machines p1;
-    while(queryname.next())
-    {
-        int id  = queryname.value("id").toUInt();
-        string name = queryname.value("name").toString().toStdString();
-        string type = queryname.value("type").toString().toStdString();
-        int byear  = queryname.value("byear").toUInt();
-        string about = queryname.value("about").toString().toStdString();
-        Computer c1(id, byear, name, type,about);
-        p1.addMach(c1);
-    }
-    if(p1.getSize() != 0)
-    {
-        found = true;
-    }
-    if(p1.getSize() == 0)
-    {
-        Q =  QString::fromStdString(que2);
-        queryname.exec(Q);
-        while(queryname.next())
-        {
-            int id  = queryname.value("id").toUInt();
-            string name = queryname.value("name").toString().toStdString();
-            string type = queryname.value("type").toString().toStdString();
-            int byear  = queryname.value("byear").toUInt();
-            string about = queryname.value("about").toString().toStdString();
-            Computer c1(id, byear, name, type,about);
-            p1.addMach(c1);
-        }
-    }
-    db.close();
-    return p1;
-}
-
 void SQLiteData::executeQuery(const string query)
 {
     db = getDatabase();
