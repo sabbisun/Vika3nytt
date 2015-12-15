@@ -112,7 +112,7 @@ void  SQLiteData::updateIndiDYear(const int year, const int id)
 
 void  SQLiteData::updateIndiGender(const char gender, const int id)
 {
-    string Query = updateSci + " " + setGender + gender + " '" + " " + findId + intToString(id);
+    string Query = updateSci + " " + setGender + gender + "'" + " " + findId + intToString(id);
     executeQuery(Query);
 }
 
