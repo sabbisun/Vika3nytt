@@ -61,6 +61,10 @@ private slots:
 
     void on_lineEdit_searchComp_cursorPositionChanged(int arg1, int arg2);
 
+    void on_comboBox_searchSci_activated(const QString &arg1);
+
+    void on_comboBox_searchComp_activated(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     Core core;

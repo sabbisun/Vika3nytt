@@ -45,6 +45,7 @@ void MainWindow::searchSciMenu(string search)
             p1 = core.searchGend(sea);
             setTreeSci(p1);
         }
+        else if(search.size()>1 && search=="Female" || search.size()>1 && search=="")
     }
     else if(searching == "Year of birth")
     {
