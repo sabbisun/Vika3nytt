@@ -91,14 +91,14 @@ void DialogEditCom::on_Button_confirm_clicked()
     {
         yearBuilt = QString::number(0);
     }
-    else if(!ui->checkBox_built->isChecked() && !yearBuilt.isEmpty() && yearBuilt.toInt() != 0
-            && yearBuilt.toInt() <= currentYear)
-    {
-        yearBuilt = ui->lineEdit_yearBuilt->text();
-    }
-    else
+    else if(!ui->checkBox_built->isChecked() && yearBuilt.isEmpty())
     {
         ui->label_buildYearError->setText("<font color=\"Red\">Please enter a year of creation.");
+        isLegalEdit = false;
+    }
+    else if(yearBuilt.toInt() == 0 || yearBuilt.toInt() > currentYear)
+    {
+        ui->label_buildYearError->setText("<font color=\"Red\">Invalid death year!");
         isLegalEdit = false;
     }
     string desc = ui->textEdit_descComp->document()->toPlainText().toStdString();

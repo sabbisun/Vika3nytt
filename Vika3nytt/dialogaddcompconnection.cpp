@@ -19,7 +19,7 @@ void DialogAddCompConnection::createComboBox()
     People p1 = core.sortSciAlpabetFront();
     for(int i = 0; i < p1.getSize(); i++)
     {
-        ui->comboBox_addCompCon->addItem(QString::fromStdString(p1.getIndi(i).getName() + " " + p1.getIndi(i).getSurname()));
+        ui->comboBox_addCompCon->addItem(QString::fromStdString(p1.getIndi(i).getSurname() + ", " + p1.getIndi(i).getName()));
     }
 }
 

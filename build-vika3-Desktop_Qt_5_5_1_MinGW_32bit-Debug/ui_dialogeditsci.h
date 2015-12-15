@@ -258,6 +258,11 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_6);
 
+        label_Dialogname->raise();
+        checkBox_alive->raise();
+        Button_cancel->raise();
+        Button_confirm->raise();
+        lineEdit_editSciDesc->raise();
 
         retranslateUi(DialogEditSci);
 

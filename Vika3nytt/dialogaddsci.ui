@@ -253,6 +253,8 @@
   <zorder>checkBox_alive</zorder>
   <zorder>label_addSci</zorder>
   <zorder></zorder>
+  <zorder>lineEdit_descriptionSci</zorder>
+  <zorder>label_descriptionSci</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -247,6 +247,8 @@ public:
 
         checkBox_alive->raise();
         label_addSci->raise();
+        lineEdit_descriptionSci->raise();
+        label_descriptionSci->raise();
 
         retranslateUi(DialogAddSci);
 

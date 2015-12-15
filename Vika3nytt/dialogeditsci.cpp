@@ -186,7 +186,7 @@ void DialogEditSci::on_Button_confirm_clicked()
         core.updateIndiGender(QString(gender).toStdString()[0], id);
         core.updateIndiBYear(byear.toUInt(), id);
         core.updateIndiDYear(dyear.toUInt(), id);
-        core.updateIndiDesc(desc,id);
+        core.updateIndiDesc(desc, id);
         qId = "";
         this->close();
     }

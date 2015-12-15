@@ -336,6 +336,11 @@
     </layout>
    </item>
   </layout>
+  <zorder>label_Dialogname</zorder>
+  <zorder>checkBox_alive</zorder>
+  <zorder>Button_cancel</zorder>
+  <zorder>Button_confirm</zorder>
+  <zorder>lineEdit_editSciDesc</zorder>
  </widget>
  <resources/>
  <connections/>
