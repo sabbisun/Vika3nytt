@@ -438,9 +438,9 @@ void MainWindow::on_Button_removeSci_clicked()
                                     break;
             default:                // Close without changes made
                                     break;
-        }
-        setTreeComp();
+        } 
     }
+    setTreeComp();
     setTreeSci();
     disableButtons();
 }
@@ -533,8 +533,8 @@ void MainWindow::on_Button_removeComp_clicked()
             default:                // Close without changes made
                                     break;
         }
-        setTreeSci();
     }
+    setTreeSci();
     setTreeComp();
     disableButtons();
 }
