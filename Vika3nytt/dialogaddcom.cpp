@@ -47,7 +47,7 @@ void DialogAddCom::on_confirmAddButton_clicked()
 
     if(name.isEmpty())
     {
-        ui->label_errorNameComp->setText("<font color=\"Red\">Name cannot be empty!");
+        ui->label_errorNameComp->setText("<font color=\"Red\">Please enter a name!");
         error = true;
     }
 
@@ -55,15 +55,20 @@ void DialogAddCom::on_confirmAddButton_clicked()
     {
         live = 0;
     }
-    else if(live == 0 || creationYear.isEmpty() || live > currentYear)
+    else if(creationYear.isEmpty())
     {
-        ui->label_errorCompYear->setText("<font color=\"Red\">That is not a possible creation year!");
+        ui->label_errorCompYear->setText("<font color=\"Red\">Please enter a creation year!");
+        error = true;
+    }
+    else if(live == 0 || live > currentYear)
+    {
+        ui->label_errorCompYear->setText("<font color=\"Red\">Invalid death year!");
         error = true;
     }
 
     if(qType.isEmpty())
     {
-        ui->label_errorTypeComp->setText("<font color=\"Red\">Type cannot be empty!");
+        ui->label_errorTypeComp->setText("<font color=\"Red\">Please enter a type");
         error = true;
     }
 
