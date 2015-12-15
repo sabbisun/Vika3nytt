@@ -397,10 +397,11 @@ void MainWindow::on_Button_removeSci_clicked()
         QString temp = ui->treeWidget_sci->currentItem()->text(3);
         int id = temp.toInt();
         // The Id from row 3 of the currently selected scientist in table
-
+        Individual i1 = core.getData().getSingleIndi(id);
+        string q = "Are you sure you want to remove <b>" + i1.getSurname() + ", " + i1.getName() + "</b> from the database?";
         QMessageBox msgBox;
-        msgBox.setText("Removal of a scientist");
-        msgBox.setInformativeText("Are you sure you want to remove the selected scientist?");
+        msgBox.setWindowTitle("Removal of a scientist");
+        msgBox.setInformativeText(QString::fromStdString(q));
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int read = msgBox.exec();
         // Messagebox asks if user wants to remove scientist or not
@@ -488,10 +489,12 @@ void MainWindow::on_Button_removeComp_clicked()
         QString temp = ui->treeWidget_comp->currentItem()->text(3);
         int id = temp.toInt();
         // The Id from row 3 of the currently selected computer in table
+        Computer c1 = core.getData().getSingleComp(id);
+        string q = "Are you sure you want to remove <b>" + c1.getName() + "</b> from the database?";
 
         QMessageBox msgBox;
-        msgBox.setText("Removal of a scomputer");
-        msgBox.setInformativeText("Are you sure you want to remove the selected computer?");
+        msgBox.setWindowTitle("Removal of a computer");
+        msgBox.setInformativeText(QString::fromStdString(q));
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::Cancel);
         int ret = msgBox.exec();
         // Messagebox asks if user wants to remove the computer or not

@@ -39,7 +39,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_sci">
        <attribute name="title">
@@ -219,6 +219,12 @@
               <property name="enabled">
                <bool>false</bool>
               </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>About Scientist</string>
               </property>
@@ -388,6 +394,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="Button_aboutcomp">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="font">
                <font>
                 <weight>75</weight>
