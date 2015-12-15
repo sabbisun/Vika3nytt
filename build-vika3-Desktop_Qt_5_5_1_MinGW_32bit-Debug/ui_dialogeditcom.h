@@ -19,9 +19,9 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -48,7 +48,7 @@ public:
     QLabel *label_errorCompYear;
     QHBoxLayout *horizontalLayout;
     QLabel *label_editCompDesc;
-    QTextEdit *textEdit_descComp;
+    QPlainTextEdit *textEdit_descComp;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *Button_confirm;
@@ -157,7 +157,7 @@ public:
 
         horizontalLayout->addWidget(label_editCompDesc);
 
-        textEdit_descComp = new QTextEdit(DialogEditCom);
+        textEdit_descComp = new QPlainTextEdit(DialogEditCom);
         textEdit_descComp->setObjectName(QStringLiteral("textEdit_descComp"));
         textEdit_descComp->setMaximumSize(QSize(650, 100));
         textEdit_descComp->setContextMenuPolicy(Qt::ActionsContextMenu);
@@ -192,7 +192,6 @@ public:
 
         label_Dialogname->raise();
         label_errorCompYear->raise();
-        label_editCompDesc->raise();
 
         retranslateUi(DialogEditCom);
 

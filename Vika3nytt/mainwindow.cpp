@@ -659,7 +659,7 @@ void MainWindow::on_Button_aboutcomp_clicked()
     QString temp = ui->treeWidget_comp->currentItem()->text(3);
     int id = temp.toUInt();
     Computer c1 = core.getData().getSingleComp(id);
-    string name = "Information on computer: " +  c1.getName();
+    string name = "Information on computer: <b>" +  c1.getName()+"</b>";
     string about = c1.getAbout();
     if(about.empty())
     {

@@ -136,7 +136,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEdit_descComp">
+      <widget class="QPlainTextEdit" name="textEdit_descComp">
        <property name="maximumSize">
         <size>
          <width>650</width>
@@ -197,12 +197,7 @@
   </layout>
   <zorder>label_Dialogname</zorder>
   <zorder>label_errorCompYear</zorder>
-  <zorder>label</zorder>
-  <zorder>textEdit_descSci</zorder>
-  <zorder>textEdit_descSci</zorder>
-  <zorder>label_editCompDesc</zorder>
   <zorder></zorder>
-  <zorder>horizontalSpacer_2</zorder>
  </widget>
  <resources/>
  <connections/>
