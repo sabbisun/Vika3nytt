@@ -18,6 +18,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/ouricon.png</normaloff>icons/ouricon.png</iconset>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout_4">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">

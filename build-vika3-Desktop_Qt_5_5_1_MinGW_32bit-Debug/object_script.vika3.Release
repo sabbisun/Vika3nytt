@@ -13,6 +13,7 @@ INPUT(
 ./release\dialogaddcom.o
 ./release\dialogaddsciconnection.o
 ./release\dialogaddcompconnection.o
+./release\qrc_icons.o
 ./release\moc_mainwindow.o
 ./release\moc_dialogaddsci.o
 ./release\moc_dialogeditsci.o

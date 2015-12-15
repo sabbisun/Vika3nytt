@@ -51,3 +51,6 @@ FORMS    += mainwindow.ui \
     dialogaddcom.ui \
     dialogaddsciconnection.ui \
     dialogaddcompconnection.ui \
+
+RESOURCES += \
+    icons/icons.qrc

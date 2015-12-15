@@ -69,6 +69,9 @@ public:
             DialogEditSci->setObjectName(QStringLiteral("DialogEditSci"));
         DialogEditSci->setEnabled(true);
         DialogEditSci->resize(450, 350);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/head/ouricon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        DialogEditSci->setWindowIcon(icon);
         verticalLayout_2 = new QVBoxLayout(DialogEditSci);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label_Dialogname = new QLabel(DialogEditSci);
@@ -258,11 +261,6 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_6);
 
-        label_Dialogname->raise();
-        checkBox_alive->raise();
-        Button_cancel->raise();
-        Button_confirm->raise();
-        lineEdit_editSciDesc->raise();
 
         retranslateUi(DialogEditSci);
 

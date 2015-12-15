@@ -16,6 +16,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="icons/icons.qrc">
+    <normaloff>:/head/ouricon.png</normaloff>:/head/ouricon.png</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="label_Dialogname">
@@ -336,12 +340,9 @@
     </layout>
    </item>
   </layout>
-  <zorder>label_Dialogname</zorder>
-  <zorder>checkBox_alive</zorder>
-  <zorder>Button_cancel</zorder>
-  <zorder>Button_confirm</zorder>
-  <zorder>lineEdit_editSciDesc</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -22,8 +22,18 @@
   <property name="windowTitle">
    <string>Database application for Scientists and Computers</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="icons/icons.qrc">
+    <normaloff>:/head/ouricon.png</normaloff>:/head/ouricon.png</iconset>
+  </property>
   <property name="autoFillBackground">
    <bool>false</bool>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -435,7 +445,9 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>comboBox_searchSci</sender>

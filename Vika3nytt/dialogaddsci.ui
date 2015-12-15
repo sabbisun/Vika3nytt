@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>432</height>
+    <height>433</height>
    </rect>
   </property>
   <property name="font">
@@ -17,6 +17,10 @@
   </property>
   <property name="windowTitle">
    <string>Add scientist</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons/icons.qrc">
+    <normaloff>:/head/ouricon.png</normaloff>:/head/ouricon.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -253,9 +257,9 @@
   <zorder>checkBox_alive</zorder>
   <zorder>label_addSci</zorder>
   <zorder></zorder>
-  <zorder>lineEdit_descriptionSci</zorder>
-  <zorder>label_descriptionSci</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

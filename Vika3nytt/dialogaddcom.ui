@@ -18,6 +18,10 @@
   <property name="windowTitle">
    <string>Add Computer</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="icons/icons.qrc">
+    <normaloff>:/head/ouricon.png</normaloff>:/head/ouricon.png</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label_addCom">
@@ -178,6 +182,8 @@
   <zorder>checkBox_created</zorder>
   <zorder>label_addCom</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -42,6 +42,9 @@ public:
         QFont font;
         font.setFamily(QStringLiteral("Arial"));
         DialogAddCompConnection->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral("icons/ouricon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        DialogAddCompConnection->setWindowIcon(icon);
         horizontalLayout_4 = new QHBoxLayout(DialogAddCompConnection);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();

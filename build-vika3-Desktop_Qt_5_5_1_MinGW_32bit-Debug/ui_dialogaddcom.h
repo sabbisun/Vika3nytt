@@ -61,6 +61,9 @@ public:
         QFont font;
         font.setFamily(QStringLiteral("Arial"));
         DialogAddCom->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/head/ouricon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        DialogAddCom->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(DialogAddCom);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_addCom = new QLabel(DialogAddCom);

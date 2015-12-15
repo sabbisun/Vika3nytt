@@ -81,7 +81,11 @@ public:
         font.setItalic(false);
         font.setWeight(50);
         MainWindow->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/head/ouricon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         MainWindow->setAutoFillBackground(false);
+        MainWindow->setIconSize(QSize(30, 30));
         MainWindow->setTabShape(QTabWidget::Rounded);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));

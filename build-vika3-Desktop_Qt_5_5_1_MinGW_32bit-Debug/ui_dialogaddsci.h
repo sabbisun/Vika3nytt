@@ -68,10 +68,13 @@ public:
     {
         if (DialogAddSci->objectName().isEmpty())
             DialogAddSci->setObjectName(QStringLiteral("DialogAddSci"));
-        DialogAddSci->resize(450, 432);
+        DialogAddSci->resize(450, 433);
         QFont font;
         font.setFamily(QStringLiteral("Arial"));
         DialogAddSci->setFont(font);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/head/ouricon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        DialogAddSci->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(DialogAddSci);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_addSci = new QLabel(DialogAddSci);
@@ -247,8 +250,6 @@ public:
 
         checkBox_alive->raise();
         label_addSci->raise();
-        lineEdit_descriptionSci->raise();
-        label_descriptionSci->raise();
 
         retranslateUi(DialogAddSci);
 
