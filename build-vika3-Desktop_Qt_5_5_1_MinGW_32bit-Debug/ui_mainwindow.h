@@ -167,6 +167,7 @@ public:
         font4.setItalic(true);
         font4.setWeight(75);
         Button_addSci->setFont(font4);
+        Button_addSci->setAutoFillBackground(false);
         Button_addSci->setAutoDefault(false);
         Button_addSci->setFlat(false);
 
@@ -331,7 +332,7 @@ public:
         QObject::connect(comboBox_searchComp, SIGNAL(currentIndexChanged(QString)), lineEdit_searchComp, SLOT(clear()));
 
         tabWidget->setCurrentIndex(0);
-        Button_addSci->setDefault(true);
+        Button_addSci->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

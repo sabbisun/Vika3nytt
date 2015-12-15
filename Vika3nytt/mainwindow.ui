@@ -134,6 +134,9 @@
                 <bold>true</bold>
                </font>
               </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Add Scientist</string>
               </property>
@@ -141,7 +144,7 @@
                <bool>false</bool>
               </property>
               <property name="default">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="flat">
                <bool>false</bool>
