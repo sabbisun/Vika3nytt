@@ -109,7 +109,7 @@ void DialogAddSci::on_confirmAddButton_clicked()
     }
     if(!error)
     {
-        Individual i1(nafn, nafn2, gender, live, dead,about);
+        Individual i1(nafn2,nafn, gender, live, dead,about);
         core.addIndividual(i1,found);
         if(found)
         {
