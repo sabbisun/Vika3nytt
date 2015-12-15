@@ -27,7 +27,7 @@ void DialogAddSciConnection::on_button_confirmSciCon_clicked()
 {
     string name = ui->comboBox_AddSciCon->currentText().toStdString();
     Machines c1 = core.sortCompAlpabetFront();
-    int id;
+    int id = -1;
     for(int i = 0; i < c1.getSize(); i++)
     {
         if(name == c1.getComputer(i).getName())
