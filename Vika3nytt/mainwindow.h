@@ -93,6 +93,7 @@ private:
     // Unused function to set alternate background colors for rows
 
     void disableButtons();
+    // Disables certain buttons when no computer or scientist is selected
 
     void setColumnWidth();
     // Sets the column width of both treeWidgets
