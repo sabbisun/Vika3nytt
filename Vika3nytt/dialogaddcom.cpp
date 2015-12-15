@@ -11,6 +11,7 @@ DialogAddCom::DialogAddCom(QWidget *parent) :
     ui->label_errorNameComp->setFont(f);
     ui->label_errorTypeComp->setFont(f);
     ui->label_errorCompYear->setFont(f);
+    // Changes font of the error labels
 }
 
 DialogAddCom::~DialogAddCom()

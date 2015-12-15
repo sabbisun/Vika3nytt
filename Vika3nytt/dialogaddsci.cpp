@@ -13,6 +13,7 @@ DialogAddSci::DialogAddSci(QWidget *parent) :
     ui->label_errorSciGender->setFont(f);
     ui->label_errorSciBirth->setFont(f);
     ui->label_errorSciDeath->setFont(f);
+    // Changes font of the error labels
 }
 
 DialogAddSci::~DialogAddSci()

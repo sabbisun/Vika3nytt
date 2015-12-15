@@ -8,11 +8,13 @@ DialogEditSci::DialogEditSci(QWidget *parent) :
     ui(new Ui::DialogEditSci)
 {
     ui->setupUi(this);
+
     QFont f( "Arial", 10, QFont::Bold);
     ui->label_nameError->setFont(f);
     ui->label_surnameError->setFont(f);
     ui->label_birthError->setFont(f);
     ui->label_deathError->setFont(f);
+    // Changes font of the error labels
 }
 
 DialogEditSci::~DialogEditSci()

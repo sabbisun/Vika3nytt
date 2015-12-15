@@ -22,6 +22,7 @@ public:
     void setType(QString& q);
     void setBuildYear(QString& q);
     void setAbout(QString& q);
+    // Fills current info about computer into edit lines
 
 private slots:
     void on_checkBox_built_clicked();
@@ -31,7 +32,9 @@ private slots:
 private:
     Ui::DialogEditCom *ui;
     Core core;
+
     void clearErrorLabels();
+    // Clears all error messages in window
 };
 
 #endif // DIALOGEDITCOM_H
