@@ -712,5 +712,5 @@ void MainWindow::on_Button_startProgram_clicked()
 {
     ui->tab_sci->setEnabled(true);
     ui->tab_comp->setEnabled(true);
-    ui->tab_front->removeTab(0);
+    ui->tabWidget->removeTab(0);
 }

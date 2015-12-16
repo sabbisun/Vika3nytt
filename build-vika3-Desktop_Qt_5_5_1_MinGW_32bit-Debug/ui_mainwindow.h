@@ -35,7 +35,7 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout_5;
-    QTabWidget *tab_front;
+    QTabWidget *tabWidget;
     QWidget *Frontpage;
     QLabel *label_picture;
     QPushButton *Button_startProgram;
@@ -96,13 +96,13 @@ public:
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        tab_front = new QTabWidget(centralWidget);
-        tab_front->setObjectName(QStringLiteral("tab_front"));
-        tab_front->setEnabled(true);
+        tabWidget = new QTabWidget(centralWidget);
+        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setEnabled(true);
         QFont font1;
         font1.setBold(false);
         font1.setWeight(50);
-        tab_front->setFont(font1);
+        tabWidget->setFont(font1);
         Frontpage = new QWidget();
         Frontpage->setObjectName(QStringLiteral("Frontpage"));
         label_picture = new QLabel(Frontpage);
@@ -120,7 +120,7 @@ public:
         font2.setWeight(75);
         Button_startProgram->setFont(font2);
         Button_startProgram->setFlat(true);
-        tab_front->addTab(Frontpage, QString());
+        tabWidget->addTab(Frontpage, QString());
         tab_sci = new QWidget();
         tab_sci->setObjectName(QStringLiteral("tab_sci"));
         verticalLayout_5 = new QVBoxLayout(tab_sci);
@@ -250,7 +250,7 @@ public:
 
         verticalLayout_5->addLayout(verticalLayout_4);
 
-        tab_front->addTab(tab_sci, QString());
+        tabWidget->addTab(tab_sci, QString());
         tab_comp = new QWidget();
         tab_comp->setObjectName(QStringLiteral("tab_comp"));
         verticalLayout_2 = new QVBoxLayout(tab_comp);
@@ -355,9 +355,9 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
-        tab_front->addTab(tab_comp, QString());
+        tabWidget->addTab(tab_comp, QString());
 
-        horizontalLayout_5->addWidget(tab_front);
+        horizontalLayout_5->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralWidget);
         mainToolBar = new QToolBar(MainWindow);
@@ -372,7 +372,7 @@ public:
         QObject::connect(comboBox_searchSci, SIGNAL(currentIndexChanged(QString)), lineEdit_searchSci, SLOT(clear()));
         QObject::connect(comboBox_searchComp, SIGNAL(currentIndexChanged(QString)), lineEdit_searchComp, SLOT(clear()));
 
-        tab_front->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
         Button_addSci->setDefault(false);
 
 
@@ -384,21 +384,21 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Database application for Scientists and Computers", 0));
         label_picture->setText(QString());
         Button_startProgram->setText(QApplication::translate("MainWindow", "Press to open the database", 0));
-        tab_front->setTabText(tab_front->indexOf(Frontpage), QApplication::translate("MainWindow", "Frontpage", 0));
+        tabWidget->setTabText(tabWidget->indexOf(Frontpage), QApplication::translate("MainWindow", "Frontpage", 0));
         label_searchSci->setText(QApplication::translate("MainWindow", "Search by:", 0));
         Button_addSci->setText(QApplication::translate("MainWindow", "Add Scientist", 0));
         Button_editSci->setText(QApplication::translate("MainWindow", "Edit Scientist", 0));
         Button_removeSci->setText(QApplication::translate("MainWindow", "Remove", 0));
         Button_addSciConnection->setText(QApplication::translate("MainWindow", "Add Connection", 0));
         Button_aboutSci->setText(QApplication::translate("MainWindow", "About Scientist", 0));
-        tab_front->setTabText(tab_front->indexOf(tab_sci), QApplication::translate("MainWindow", "Scientists", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_sci), QApplication::translate("MainWindow", "Scientists", 0));
         label_searchComp->setText(QApplication::translate("MainWindow", "Search by:", 0));
         Button_addComp->setText(QApplication::translate("MainWindow", "Add Computer", 0));
         Button_editComp->setText(QApplication::translate("MainWindow", "Edit Computer", 0));
         Button_removeComp->setText(QApplication::translate("MainWindow", "Remove", 0));
         Button_addCompConnection->setText(QApplication::translate("MainWindow", "Add Connection", 0));
         Button_aboutcomp->setText(QApplication::translate("MainWindow", "About Computer", 0));
-        tab_front->setTabText(tab_front->indexOf(tab_comp), QApplication::translate("MainWindow", "Computers", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_comp), QApplication::translate("MainWindow", "Computers", 0));
     } // retranslateUi
 
 };
