@@ -170,7 +170,10 @@ compiler_no_pch_compiler_clean:
 compiler_rcc_make_all: debug/qrc_icons.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_icons.cpp
-debug/qrc_icons.cpp: ../Vika3nytt/icons/icons.qrc
+debug/qrc_icons.cpp: ../Vika3nytt/icons/icons.qrc \
+		../Vika3nytt/icons/matrix.gif \
+		../Vika3nytt/icons/newfront.gif \
+		../Vika3nytt/icons/ouricon.png
 	C:\Qt\5.5\mingw492_32\bin\rcc.exe -name icons ..\Vika3nytt\icons\icons.qrc -o debug\qrc_icons.cpp
 
 compiler_moc_header_make_all: debug/moc_mainwindow.cpp debug/moc_dialogaddsci.cpp debug/moc_dialogeditsci.cpp debug/moc_dialogeditcom.cpp debug/moc_dialogaddcom.cpp debug/moc_dialogaddsciconnection.cpp debug/moc_dialogaddcompconnection.cpp
@@ -2610,7 +2613,11 @@ debug/mainwindow.o: ../Vika3nytt/mainwindow.cpp ../Vika3nytt/mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QToolBar \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtoolbar.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
+		C:/Qt/5.5/mingw492_32/include/QtGui/QMovie \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qmovie.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimagereader.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimageiohandler.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Vika3nytt\mainwindow.cpp
 
 debug/core.o: ../Vika3nytt/core.cpp ../Vika3nytt/core.h \
